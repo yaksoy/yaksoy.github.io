@@ -1,15 +1,307 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="1; url=https://www.cs.sfu.ca/~yagiz/keying/">
-        <script type="text/javascript">
-            window.location.href = "https://www.cs.sfu.ca/~yagiz/keying/"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this <a href='https://www.cs.sfu.ca/~yagiz/keying/'>link to my website</a>.
-    </body>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Interactive High-Quality Green-Screen Keying via Color Unmixing &#8211; Yağız Aksoy</title>
+<meta name="description" content="Keying">
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Interactive High-Quality Green-Screen Keying via Color Unmixing">
+<meta name="twitter:description" content="Keying">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yaksoy.github.com/images/keyingTeaser.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interactive High-Quality Green-Screen Keying via Color Unmixing">
+<meta property="og:description" content="Keying">
+<meta property="og:url" content="http://yaksoy.github.com/keying/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.com/keying/">
+<link href="http://yaksoy.github.com/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.com/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.com/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Interactive High-Quality Green-Screen Keying via Color Unmixing</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <a href="../" target="_blank">Yagiz Aksoy</a>, <a href="http://zurich.disneyresearch.com/~taydin/" target="_blank">Tunc Ozan Aydin</a>, <a href="https://www.inf.ethz.ch/personal/marc.pollefeys/" target="_blank">Marc Pollefeys</a> and Aljoscha Smolic
+      </div>
+      <div class="entry-titleVenue">
+        ACM Transactions on Graphics (TOG), 2016
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="http://yaksoy.github.com/images/keyingTeaser.png" class="entry-feature-image" alt="Interactive High-Quality Green-Screen Keying via Color Unmixing" style="margin-top:-40;"><p class="image-caption">Major steps of our method. First, parameters of a global color model are obtained from a key frame via a simple scribble interface (a). For a different query frame (b), the global color model is refined into local color models (c) which are utilized for extracting multiple color layers via color unmixing (d). A subset of layers is then combined to get the final keying result (e). The layers can be used for compositing as well as color editing (f).</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+Due to the widespread use of compositing in contemporary feature films, green-screen keying has become an essential part of post-production workflows. 
+To comply with the ever-increasing quality requirements of the industry, specialized compositing artists spend countless hours using multiple commercial software tools, while eventually having to resort to manual painting because of the many shortcomings of these tools.
+Due to the sheer amount of manual labor involved in the process, new green-screen keying approaches that produce better keying results with less user interaction are welcome additions to the compositing artist's arsenal.
+We found that --- contrary to the common belief in the research community --- production-quality green-screen keying is still an unresolved problem with its unique challenges. In this paper, we propose a novel green-screen keying method utilizing a new energy minimization-based color unmixing algorithm.
+We present comprehensive comparisons with commercial software packages and relevant methods in literature, which show
+that the quality of our results is superior to any other currently available green-screen keying solution.
+Importantly, using the proposed method, these high-quality results can be generated using only one-tenth of the manual editing time
+that a professional compositing artist requires to process the same content having all previous state-of-the-art tools at his disposal.
+</p>
+
+<p style="text-align:center;"><b>Paper</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="http://yaksoy.github.com/papers/TOG16-keying.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG16Paper.png" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.com/papers/TOG16-supp-currentPractice.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG16Supp.png" title="Supplementary Material" /></a></td>
+	</tr></table>
+
+<p style="text-align:center;"><b>Paper Video</b></p>
+
+<p style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u22QPAp5rx0" frameborder="0"> </iframe>
+</p>
+
+<p style="text-align:center;"><b>Media Coverage</b></p>
+
+<p>Two Minute Papers - <a href="https://www.youtube.com/watch?v=343n8xwozJI" target="_blank">Interactive Green-Screen Keying | Two Minute Papers #174</a></p>
+
+<p>Gizmodo UK - <a href="http://www.gizmodo.co.uk/2016/11/disney-algorithm-makes-green-screen-visual-effects-even-easier/" target="_blank">Disney Algorithm Makes Green-Screen Visual Effects Even Easier</a></p>
+
+<p>TVTechnology - <a href="https://www.tvtechnology.com/news/disney-research-creates-keying-algorithm-ai-see-n-say" target="_blank">Disney Research Creates Keying Algorithm, AI See 'n Say</a></p>
+
+<p>phys.org - <a href="https://phys.org/news/2016-11-green-screen-keying-method-boosts-quality.html" target="_blank">Green-screen keying method cuts time, boosts quality in film compositing</a></p>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@ARTICLE{keying,<br />
+	author={Ya\u{g}{\i}z Aksoy and Tun\c{c} Ozan Ayd{\i}n and Marc Pollefeys and Aljo\v{s}a Smoli\'{c}},<br />
+	title={Interactive High-Quality Green-Screen Keying via Color Unmixing},<br />
+	journal={ACM Trans. Graph.},<br />
+	year={2016},<br />
+  volume = {35},<br />
+  number = {5},<br />
+  pages = {152:1--152:12},<br />
+  }
+  </div>
+  </p>
+
+<p style="text-align:center;"><b>Data</b></p>
+<table style="text-align:center;">
+  <tr>
+		<td><a href="http://cvg.ethz.ch/research/green-screen-keying/input.zip" target="_blank"><i class="fa fa-download fa-3x"></i></a></td>
+		<td><a href="http://cvg.ethz.ch/research/green-screen-keying/keyingResults.zip" target="_blank"><i class="fa fa-download fa-3x"></i></a></td>
+	</tr>
+  <tr>
+		<td>Input sequences (780MB)</td>
+		<td>Keying results (255MB)</td>
+	</tr>
+  </table>
+
+<p style="text-align:center;"><b>Related Publications</b></p>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../scs" target="_blank"><img src="http://yaksoy.github.com/images/research/scs.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../scs" target="_blank">Unmixing-Based Soft Color Segmentation for Image Manipulation <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>, Tunç Ozan Aydın, Aljoša Smolić and Marc Pollefeys 
+</div>
+<div class="pub-venue">
+	ACM Transactions on Graphics, 2017
+</div>
+
+<div class="accordion">
+  <input id="TOG17-item1" name="accordion1" type="checkbox" />
+  <label for="TOG17-item1">Abstract</label>
+  <div class="pub-abstract">
+We present a new method for decomposing an image into a set of soft color segments, which are analogous to color layers with alpha channels that have been commonly utilized in modern image manipulation software.
+We show that the resulting decomposition serves as an effective intermediate image representation, which can be utilized for performing various, seemingly unrelated image manipulation tasks.
+We identify a set of requirements that soft color segmentation methods have to fulfill, and present an in-depth theoretical analysis of prior work.
+We propose an energy formulation for producing compact layers of homogeneous colors and a color refinement procedure, as well as a method for automatically estimating a statistical color model from an image.
+This results in a novel framework for automatic and high-quality soft color segmentation, which is efficient, parallelizable, and scalable.
+We show that our technique is superior in quality compared to previous methods through quantitative analysis as well as visually through an extensive set of examples. 
+We demonstrate that our soft color segments can easily be exported to familiar image manipulation software packages and used to produce compelling results for numerous image manipulation applications without forcing the user to learn new tools and workflows.
+  </div>
+
+  <input id="TOG17-item2" name="accordion1" type="checkbox" />
+  <label for="TOG17-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/TOG17-scs.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG17Paper.png" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.com/papers/TOG17-supp-additionalFigures.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG17Supp.png" title="Additional Figures" /></a></td>
+		<td><a href="https://www.youtube.com/watch?v=gf7R_DArdSM" target="_blank"><img src="http://yaksoy.github.com/images/research/TOG17Video.png" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="TOG17-item3" name="accordion1" type="checkbox" />
+  <label for="TOG17-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@ARTICLE{scs,<br />
+	author={Ya\u{g}{\i}z Aksoy and Tun\c{c} Ozan Ayd{\i}n and Aljo\v{s}a Smoli\'{c} and Marc Pollefeys},<br />
+	title={Unmixing-Based Soft Color Segmentation for Image Manipulation},<br />
+	journal={ACM Trans. Graph.},<br />
+	year={2017},<br />
+	pages = {19:1-19:19},<br />
+	volume = {36},<br />
+	number = {2}<br />
+  }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="http://yaksoy.github.com/ssi/" target="_blank"><img src="http://yaksoy.github.com/images/jorge.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="http://yaksoy.github.com/ssi/" target="_blank">Soft Segmentation of Images</a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>
+</div>
+<div class="pub-venue">
+	PhD Thesis, ETH Zurich, 2019
+</div>
+
+<div class="accordion">
+  <input id="ETH19-item2" name="accordion1" type="checkbox" />
+  <label for="ETH19-item2">Dissertation</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/ETH19-PhD-Aksoy.pdf" target="_blank"><img src="http://yaksoy.github.com/images/research/ETH19Paper.png" title="Paper" /></a></td>
+	</tr></table>
+	</div>
+  
+  <input id="ETH19-item3" name="accordion1" type="checkbox" />
+  <label for="ETH19-item3">BibTeX</label>
+  <div class="pub-bibtex">
+		@phdthesis{ssi,<br />
+			author={Ya\u{g}{\i}z Aksoy},<br />
+			title={Soft Segmentation of Images},<br />
+			year={2019},<br />
+			school={ETH Zurich},<br />
+			}	 
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2019 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.com';
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.com/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
 </html>

@@ -1,15 +1,348 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="1; url=https://www.cs.sfu.ca/~yagiz/ifm/">
-        <script type="text/javascript">
-            window.location.href = "https://www.cs.sfu.ca/~yagiz/ifm/"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this <a href='https://www.cs.sfu.ca/~yagiz/ifm/'>link to my website</a>.
-    </body>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Designing Effective Inter-Pixel Information Flow for Natural Image Matting &#8211; Yağız Aksoy</title>
+<meta name="description" content="Information Flow Matting">
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Designing Effective Inter-Pixel Information Flow for Natural Image Matting">
+<meta name="twitter:description" content="Information Flow Matting">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yaksoy.github.com/images/ifmTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Designing Effective Inter-Pixel Information Flow for Natural Image Matting">
+<meta property="og:description" content="Information Flow Matting">
+<meta property="og:url" content="http://yaksoy.github.com/ifm/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.com/ifm/">
+<link href="http://yaksoy.github.com/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.com/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.com/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Designing Effective Inter-Pixel Information Flow for Natural Image Matting</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <a href="../" target="_blank">Yagiz Aksoy</a>, <a href="http://zurich.disneyresearch.com/~taydin/" target="_blank">Tunc Ozan Aydin</a> and <a href="https://www.inf.ethz.ch/personal/marc.pollefeys/" target="_blank">Marc Pollefeys</a>
+      </div>
+      <div class="entry-titleVenue">
+        CVPR, 2017 <br><br> Extended version on arXiv
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="http://yaksoy.github.com/images/ifmTeaser.jpg" class="entry-feature-image" alt="Designing Effective Inter-Pixel Information Flow for Natural Image Matting" style="margin-top:-40;"><p class="image-caption">For an input image and a trimap (a), we define several forms of information flow inside the image. We begin with color-mixture flow (b), then add direct channels of information flow from known to unknown regions (c), and let effective share of information inside the unknown region (d) to increase the matte quality in challenging regions. We finally add local information flow to get our spatially smooth result (e).</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+We present a novel, purely affinity-based natural image matting algorithm. Our method relies on carefully defined pixel-to-pixel connections that enable effective use of information available in the image. We control the information flow from the known-opacity regions into the unknown region, as well as within the unknown region itself, by utilizing multiple definitions of pixel affinities. Among other forms of information flow, we introduce color-mixture flow, which builds upon local linear embedding and effectively encapsulates the relation between different pixel opacities. Our resulting novel linear system formulation can be solved in closed-form and is robust against several fundamental challenges of natural matting such as holes and remote intricate structures. Our evaluation using the alpha matting benchmark suggests a significant performance improvement over the current methods. While our method is primarily designed as a standalone matting tool, we show that it can also be used for regularizing mattes obtained by sampling-based methods. We extend our formulation to layer color estimation and show that the use of multiple channels of flow increases the layer color quality. We also demonstrate our performance in green-screen keying and further analyze the characteristics of the affinities used in our method.
+</p>
+
+<p style="text-align:center;"><b>Manuscript</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="https://arxiv.org/abs/1707.05055" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/arXiv17Paper.png" title="Extended Version" /></a></td>
+		<td><a href="http://yaksoy.github.com/papers/CVPR17-ifm.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/CVPR17Paper.png" title="Pre-print" /></a></td>
+	</tr></table>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@INPROCEEDINGS{ifm,<br />
+	author={Aksoy, Ya\u{g}{\i}z and Ayd{\i}n, Tun\c{c} Ozan and Pollefeys, Marc}, <br />
+	booktitle={Proc. CVPR}, <br />
+	title={Designing Effective Inter-Pixel Information Flow for Natural Image Matting}, <br />
+	year={2017}, <br />
+	}
+  </div>
+  </p>
+
+<p>
+<div class="pub-bibtex">
+	@ARTICLE{ifmExt,<br />
+	author={Aksoy, Ya\u{g}{\i}z and Ayd{\i}n, Tun\c{c} Ozan and Pollefeys, Marc}, <br />
+  journal = {\tt arXiv:1707.05055 [cs.CV]}, <br />
+	title={Designing Effective Inter-Pixel Information Flow for Natural Image Matting}, <br />
+	year={2017}, <br />
+	}
+  </div>
+  </p>
+
+<p style="text-align:center;"><b>Benchmark results</b></p>
+<table style="text-align:center;">
+  <tr>
+		<td><a href="benchmarkResults.zip" target="_blank"><i class="fa fa-download fa-3x"></i></a></td>
+	</tr>
+  </table>
+
+<p style="text-align:center;"><b>Implementation</b></p>
+
+<p>We can not release the original source code.
+However, a reimplementation of the method is available as a part of the <a href="https://github.com/yaksoy/AffinityBasedMattingToolbox" target="_blank">affinity-based matting toolbox</a>.
+While this reimplementation does not give the same results as the original implementation, we recommend its use in comparisons and extensions.</p>
+
+<p style="text-align:center;"><b>Related Publications</b></p>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../sss" target="_blank"><img src="http://yaksoy.github.com/images/research/sss.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../sss" target="_blank">Semantic Soft Segmentation <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>, Tae-Hyun Oh, Sylvain Paris, Marc Pollefeys and Wojciech Matusik 
+</div>
+<div class="pub-venue">
+	ACM Transactions on Graphics (Proc. SIGGRAPH), 2018
+</div>
+
+<div class="accordion">
+  <input id="TOG18-item1" name="accordion1" type="checkbox" />
+  <label for="TOG18-item1">Abstract</label>
+  <div class="pub-abstract">
+		Accurate representation of soft transitions between image regions is essential for high-quality image editing and compositing. 
+		Current techniques for generating such representations depend heavily on interaction by a skilled visual artist, as creating such accurate object selections is a tedious task.
+		In this work, we introduce <i>semantic soft segments</i>, a set of layers that correspond to semantically meaningful regions in an image with accurate soft transitions between different objects.
+		We approach this problem from a spectral segmentation angle and propose a graph structure that embeds texture and color features from the image as well as higher-level semantic information generated by a neural network.
+		The soft segments are generated via eigendecomposition of the carefully constructed Laplacian matrix fully automatically.
+		We demonstrate that otherwise complex image editing tasks can be done with little effort using semantic soft segments.
+  </div>
+
+  <input id="TOG18-item2" name="accordion1" type="checkbox" />
+  <label for="TOG18-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/TOG18-sss.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG18paper.png" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.com/papers/TOG18-sss-supp.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG18supp.png" title="Supplementary" /></a></td>
+		<td><a href="https://youtu.be/QYIQbfnS9jA" target="_blank"><img src="http://yaksoy.github.com/images/research/TOG18Video.png" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="TOG18-item3" name="accordion1" type="checkbox" />
+  <label for="TOG18-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@ARTICLE{sss,<br />
+	author={Ya\u{g}{\i}z Aksoy and Tae-Hyun Oh and Sylvain Paris and Marc Pollefeys and Wojciech Matusik},<br />
+	title={Semantic Soft Segmentation},<br />
+	journal={ACM Trans. Graph. (Proc. SIGGRAPH)},<br />
+	year={2018},<br />
+	pages = {72:1-72:13},<br />
+	volume = {37},<br />
+	number = {4}<br />
+  }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../samplenet" target="_blank"><img src="http://yaksoy.github.com/images/research/samplenet.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../samplenet" target="_blank">Learning-based Sampling for Natural Image Matting <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Jingwei Tang, <b>Yağız Aksoy</b>, Cengiz Öztireli, Markus Gross and Tunç Ozan Aydın 
+</div>
+<div class="pub-venue">
+	CVPR, 2019
+</div>
+
+<div class="accordion">
+  <input id="CVPR19-item1" name="accordion1" type="checkbox" />
+  <label for="CVPR19-item1">Abstract</label>
+  <div class="pub-abstract">
+The goal of natural image matting is the estimation of opacities of a user-defined foreground object that is essential in creating realistic composite imagery. 
+Natural matting is a challenging process due to the high number of unknowns in the mathematical modeling of the problem, namely the opacities as well as the foreground and background layer colors, while the original image serves as the single observation. 
+In this paper, we propose the estimation of the layer colors through the use of deep neural networks prior to the opacity estimation. 
+The layer color estimation is a better match for the capabilities of neural networks, and the availability of these colors substantially increase the performance of opacity estimation due to the reduced number of unknowns in the compositing equation. 
+A prominent approach to matting in parallel to ours is called sampling-based matting, which involves gathering
+color samples from known-opacity regions to predict the layer colors. 
+Our approach outperforms not only the previous hand-crafted sampling algorithms, but also current data-driven methods. 
+We hence classify our method as a hybrid sampling- and learning-based approach to matting, and demonstrate the effectiveness of our approach through detailed ablation studies using alternative network architectures.
+</div>
+
+  <input id="CVPR19-item2" name="accordion1" type="checkbox" />
+  <label for="CVPR19-item2">Manuscript</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/CVPR19-samplenet.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/CVPR19Paper.png" title="Paper" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="CVPR19-item3" name="accordion1" type="checkbox" />
+  <label for="CVPR19-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{samplenet,<br />
+	author={Tang, Jingwei and Aksoy, Ya\u{g}{\i}z and \"Oztireli, Cengiz and Gross, Markus and Ayd{\i}n, Tun\c{c} Ozan}, <br />
+	booktitle={Proc. CVPR}, <br />
+	title={Learning-based Sampling for Natural Image Matting}, <br />
+	year={2019}, <br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="http://yaksoy.github.com/ssi/" target="_blank"><img src="http://yaksoy.github.com/images/jorge.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="http://yaksoy.github.com/ssi/" target="_blank">Soft Segmentation of Images</a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>
+</div>
+<div class="pub-venue">
+	PhD Thesis, ETH Zurich, 2019
+</div>
+
+<div class="accordion">
+  <input id="ETH19-item2" name="accordion1" type="checkbox" />
+  <label for="ETH19-item2">Dissertation</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/ETH19-PhD-Aksoy.pdf" target="_blank"><img src="http://yaksoy.github.com/images/research/ETH19Paper.png" title="Paper" /></a></td>
+	</tr></table>
+	</div>
+  
+  <input id="ETH19-item3" name="accordion1" type="checkbox" />
+  <label for="ETH19-item3">BibTeX</label>
+  <div class="pub-bibtex">
+		@phdthesis{ssi,<br />
+			author={Ya\u{g}{\i}z Aksoy},<br />
+			title={Soft Segmentation of Images},<br />
+			year={2019},<br />
+			school={ETH Zurich},<br />
+			}	 
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2019 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.com';
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.com/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
 </html>

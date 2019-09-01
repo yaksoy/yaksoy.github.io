@@ -1,15 +1,381 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="1; url=https://www.cs.sfu.ca/~yagiz/sss/">
-        <script type="text/javascript">
-            window.location.href = "https://www.cs.sfu.ca/~yagiz/sss/"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this <a href='https://www.cs.sfu.ca/~yagiz/sss/'>link to my website</a>.
-    </body>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Semantic Soft Segmentation &#8211; Yağız Aksoy</title>
+<meta name="description" content="Semantic Soft Segmentation">
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Semantic Soft Segmentation">
+<meta name="twitter:description" content="Semantic Soft Segmentation">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yaksoy.github.com/images/sssTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Semantic Soft Segmentation">
+<meta property="og:description" content="Semantic Soft Segmentation">
+<meta property="og:url" content="http://yaksoy.github.com/sss/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.com/sss/">
+<link href="http://yaksoy.github.com/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.com/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.com/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Semantic Soft Segmentation</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <a href="../" target="_blank">Yagiz Aksoy</a>, <a href="http://taehyunoh.com/" target="_blank">Tae-Hyun Oh</a>, <a href="http://people.csail.mit.edu/sparis/" target="_blank">Sylvain Paris</a>, <a href="https://www.inf.ethz.ch/personal/marc.pollefeys/" target="_blank">Marc Pollefeys</a> and <a href="http://people.csail.mit.edu/wojciech/" target="_blank">Wojciech Matusik</a>
+      </div>
+      <div class="entry-titleVenue">
+        ACM Transactions on Graphics (Proc. SIGGRAPH), 2018
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="http://yaksoy.github.com/images/sssTeaser.jpg" class="entry-feature-image" alt="Semantic Soft Segmentation" style="margin-top:-40;"><p class="image-caption">We propose a method that can generate soft segments, i.e. layers that represent the semantically meaningful regions as well as the soft transitions between them, automatically by fusing high-level and low-level image features in a single graph structure. The semantic soft segments, visualized by assigning each segment a solid color, can be used as masks for targeted image editing tasks, or selected layers can be used for compositing after layer color estimation.</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+Accurate representation of soft transitions between image regions is essential for high-quality image editing and compositing. 
+Current techniques for generating such representations depend heavily on interaction by a skilled visual artist, as creating such accurate object selections is a tedious task.
+In this work, we introduce <i>semantic soft segments</i>, a set of layers that correspond to semantically meaningful regions in an image with accurate soft transitions between different objects.
+We approach this problem from a spectral segmentation angle and propose a graph structure that embeds texture and color features from the image as well as higher-level semantic information generated by a neural network.
+The soft segments are generated via eigendecomposition of the carefully constructed Laplacian matrix fully automatically.
+We demonstrate that otherwise complex image editing tasks can be done with little effort using semantic soft segments.
+</p>
+
+<p style="text-align:center;"><b>Implementation</b></p>
+
+<p style="text-align:center;"><a href="https://github.com/yaksoy/SemanticSoftSegmentation" target="_blank">Spectral segmentation implementation <i class="fa fa-external-link"></i></a></p>
+
+<p style="text-align:center;"><a href="https://github.com/iyah4888/SIGGRAPH18SSS" target="_blank">Semantic feature generator <i class="fa fa-external-link"></i></a></p>
+
+<p style="text-align:center;"><b>Paper</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="http://yaksoy.github.com/papers/TOG18-sss.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG18paper.png" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.com/papers/TOG18-sss-supp.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG18supp.png" title="Supplementary" /></a></td>
+	</tr></table>
+
+<p style="text-align:center;"><b>Video</b></p>
+
+<p style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QYIQbfnS9jA" frameborder="0"> </iframe>
+</p>
+
+<p style="text-align:center;"><b>Media Coverage</b></p>
+
+<p>CSAIL Announcement - <a href="https://www.csail.mit.edu/news/ai-cgi" target="_blank">An AI for CGI</a></p>
+
+<p>BBC News - <a href="https://www.bbc.com/news/av/technology-45361794/how-artificial-intelligence-can-edit-your-pictures" target="_blank">How artificial intelligence can edit your pictures</a></p>
+
+<p>NVIDIA News - <a href="https://news.developer.nvidia.com/this-ai-can-automatically-remove-the-background-from-a-photo/" target="_blank">This AI Can Automatically Remove the Background from a Photo</a></p>
+
+<p>TNW - <a href="https://thenextweb.com/artificial-intelligence/2018/08/21/mit-made-an-image-editing-ai-that-can-replace-the-background-in-any-image/" target="_blank">MIT made an image editing AI that can replace the background in any image</a></p>
+
+<p>Synced Review - <a href="https://syncedreview.com/2018/08/24/how-ai-generates-a-furry-dog-silhouette/" target="_blank">How AI Generates a “Furry Dog Silhouette”</a></p>
+
+<p>20 Minutes (CH) - <a href="https://www.20min.ch/ro/multimedia/stories/story/Cette-IA-sait-modifier-l-arriere-plan-d-une-photo-15826128" target="_blank">Cette IA sait modifier l'arrière-plan d'une photo</a></p>
+
+<p>
+<a href="https://www.techworm.net/2018/08/mit-image-editing-ai-tool-background-image.html" target="_blank">[TechWorm]</a> 
+
+<a href="https://www.digitaltrends.com/photography/mit-adobe-microsoft-background-removal-ai/" target="_blank">[Digital Trends]</a> 
+
+<a href="https://www.digit.in/machine-learning-and-ai/mits-semantic-soft-segmentation-tool-uses-ai-for-accurately-replacing-the-background-of-any-image-43029.html" target="_blank">[DIGIT IN]</a> 
+
+<a href="https://www.analyticsvidhya.com/blog/2018/08/mits-open-source-algorithm-automates-object-detection-images/" target="_blank">[Analytics Vidhya]</a> 
+
+<a href="https://www.slashgear.com/mits-cgi-ai-could-make-movies-better-looking-and-easier-to-edit-24542686/" target="_blank">[Slash Gear]</a> 
+
+<a href="https://techstory.in/mit-ai-picture-2018/" target="_blank">[TechStory]</a> 
+
+<a href="https://www.eyerys.com/articles/news/mits-ai-can-change-background-any-image-ai-cgi" target="_blank">[Eyerys]</a> 
+
+<a href="https://technewsboss.com/mit-adobes-new-a-i-could-bring-one-click-background-removal-social-filters/" target="_blank">[Tech News Boss]</a> 
+
+<a href="https://www.ibtimes.co.in/this-ai-assisted-photo-editing-makes-wonders-blending-objects-others-realistically-778477" target="_blank">[International Business Times (IN)]</a> 
+
+<a href="https://shiropen.com/seamless/semantic-soft-segmentation" target="_blank">[Seamless (JP)]</a> 
+</p>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@ARTICLE{sss,<br />
+	author={Ya\u{g}{\i}z Aksoy and Tae-Hyun Oh and Sylvain Paris and Marc Pollefeys and Wojciech Matusik},<br />
+	title={Semantic Soft Segmentation},<br />
+	journal={ACM Trans. Graph. (Proc. SIGGRAPH)},<br />
+	year={2018},<br />
+	pages = {72:1-72:13},<br />
+	volume = {37},<br />
+	number = {4}<br />
+  }
+  </div>
+  </p>
+
+<p style="text-align:center;"><b>Related Publications</b></p>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../scs" target="_blank"><img src="http://yaksoy.github.com/images/research/scs.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../scs" target="_blank">Unmixing-Based Soft Color Segmentation for Image Manipulation <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>, Tunç Ozan Aydın, Aljoša Smolić and Marc Pollefeys 
+</div>
+<div class="pub-venue">
+	ACM Transactions on Graphics, 2017
+</div>
+
+<div class="accordion">
+  <input id="TOG17-item1" name="accordion1" type="checkbox" />
+  <label for="TOG17-item1">Abstract</label>
+  <div class="pub-abstract">
+We present a new method for decomposing an image into a set of soft color segments, which are analogous to color layers with alpha channels that have been commonly utilized in modern image manipulation software.
+We show that the resulting decomposition serves as an effective intermediate image representation, which can be utilized for performing various, seemingly unrelated image manipulation tasks.
+We identify a set of requirements that soft color segmentation methods have to fulfill, and present an in-depth theoretical analysis of prior work.
+We propose an energy formulation for producing compact layers of homogeneous colors and a color refinement procedure, as well as a method for automatically estimating a statistical color model from an image.
+This results in a novel framework for automatic and high-quality soft color segmentation, which is efficient, parallelizable, and scalable.
+We show that our technique is superior in quality compared to previous methods through quantitative analysis as well as visually through an extensive set of examples. 
+We demonstrate that our soft color segments can easily be exported to familiar image manipulation software packages and used to produce compelling results for numerous image manipulation applications without forcing the user to learn new tools and workflows.
+  </div>
+
+  <input id="TOG17-item2" name="accordion1" type="checkbox" />
+  <label for="TOG17-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/TOG17-scs.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG17Paper.png" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.com/papers/TOG17-supp-additionalFigures.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/TOG17Supp.png" title="Additional Figures" /></a></td>
+		<td><a href="https://www.youtube.com/watch?v=gf7R_DArdSM" target="_blank"><img src="http://yaksoy.github.com/images/research/TOG17Video.png" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="TOG17-item3" name="accordion1" type="checkbox" />
+  <label for="TOG17-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@ARTICLE{scs,<br />
+	author={Ya\u{g}{\i}z Aksoy and Tun\c{c} Ozan Ayd{\i}n and Aljo\v{s}a Smoli\'{c} and Marc Pollefeys},<br />
+	title={Unmixing-Based Soft Color Segmentation for Image Manipulation},<br />
+	journal={ACM Trans. Graph.},<br />
+	year={2017},<br />
+	pages = {19:1-19:19},<br />
+	volume = {36},<br />
+	number = {2}<br />
+  }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../ifm" target="_blank"><img src="http://yaksoy.github.com/images/research/ifmExt.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../ifm" target="_blank">Designing Effective Inter-Pixel Information Flow for Natural Image Matting <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>, Tunç Ozan Aydın and Marc Pollefeys 
+</div>
+<div class="pub-venue">
+	CVPR, 2017 (<i>spotlight</i>)
+</div>
+
+<div class="accordion">
+  <input id="CVPR17-item1" name="accordion1" type="checkbox" />
+  <label for="CVPR17-item1">Abstract</label>
+  <div class="pub-abstract">
+We present a novel, purely affinity-based natural image matting algorithm. 
+Our method relies on carefully defined pixel-to-pixel connections that enable effective use of information available in the image and the trimap. 
+We control the information flow from the known-opacity regions into the unknown region, as well as within the unknown region itself, by utilizing multiple definitions of pixel affinities. 
+This way we achieve significant improvements on matte quality near challenging regions of the foreground object. 
+Among other forms of information flow, we introduce color-mixture flow, which builds upon local linear embedding and effectively encapsulates the relation between different pixel opacities. 
+Our resulting novel linear system formulation can be solved in closed-form and is robust against several fundamental challenges in natural matting such as holes and remote intricate structures. 
+While our method is primarily designed as a standalone natural matting tool, we show that it can also be used for regularizing mattes obtained by various sampling-based methods. 
+Our evaluation using the public alpha matting benchmark suggests a significant performance improvement over the state-of-the-art.
+  </div>
+
+  <input id="CVPR17-item2" name="accordion1" type="checkbox" />
+  <label for="CVPR17-item2">Manuscript</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/CVPR17-ifm.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/CVPR17Paper.png" title="Paper" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="CVPR17-item3" name="accordion1" type="checkbox" />
+  <label for="CVPR17-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{ifm,<br />
+	author={Aksoy, Ya\u{g}{\i}z and Ayd{\i}n, Tun\c{c} Ozan and Pollefeys, Marc}, <br />
+	booktitle={Proc. CVPR}, <br />
+	title={Designing Effective Inter-Pixel Information Flow for Natural Image Matting}, <br />
+	year={2017}, <br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="http://yaksoy.github.com/ssi/" target="_blank"><img src="http://yaksoy.github.com/images/jorge.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="http://yaksoy.github.com/ssi/" target="_blank">Soft Segmentation of Images</a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>
+</div>
+<div class="pub-venue">
+	PhD Thesis, ETH Zurich, 2019
+</div>
+
+<div class="accordion">
+  <input id="ETH19-item2" name="accordion1" type="checkbox" />
+  <label for="ETH19-item2">Dissertation</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/ETH19-PhD-Aksoy.pdf" target="_blank"><img src="http://yaksoy.github.com/images/research/ETH19Paper.png" title="Paper" /></a></td>
+	</tr></table>
+	</div>
+  
+  <input id="ETH19-item3" name="accordion1" type="checkbox" />
+  <label for="ETH19-item3">BibTeX</label>
+  <div class="pub-bibtex">
+		@phdthesis{ssi,<br />
+			author={Ya\u{g}{\i}z Aksoy},<br />
+			title={Soft Segmentation of Images},<br />
+			year={2019},<br />
+			school={ETH Zurich},<br />
+			}	 
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2019 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.com';
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.com/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
 </html>

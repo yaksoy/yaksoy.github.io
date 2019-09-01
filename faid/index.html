@@ -1,15 +1,320 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="1; url=https://www.cs.sfu.ca/~yagiz/faid/">
-        <script type="text/javascript">
-            window.location.href = "https://www.cs.sfu.ca/~yagiz/faid/"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this <a href='https://www.cs.sfu.ca/~yagiz/faid/'>link to my website</a>.
-    </body>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Flash and Ambient Illuminations Dataset &#8211; Yağız Aksoy</title>
+<meta name="description" content="Flash-Ambient Illumination Pairs">
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Flash and Ambient Illuminations Dataset">
+<meta name="twitter:description" content="Flash-Ambient Illumination Pairs">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yaksoy.github.com/images/faiTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flash and Ambient Illuminations Dataset">
+<meta property="og:description" content="Flash-Ambient Illumination Pairs">
+<meta property="og:url" content="http://yaksoy.github.com/faid/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.com/faid/">
+<link href="http://yaksoy.github.com/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.com/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.com/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Flash and Ambient Illuminations Dataset</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <a href="../" target="_blank">Yagiz Aksoy</a>, <a href="http://people.csail.mit.edu/changil/" target="_blank">Changil Kim</a>, <a href="http://people.csail.mit.edu/pkellnho/" target="_blank">Petr Kellnhofer</a>, <a href="http://people.csail.mit.edu/sparis/" target="_blank">Sylvain Paris</a>, <a href="http://people.mpi-inf.mpg.de/~elgharib/" target="_blank">Mohamed Elgharib</a>, <a href="https://www.inf.ethz.ch/personal/marc.pollefeys/" target="_blank">Marc Pollefeys</a> and <a href="http://people.csail.mit.edu/wojciech/" target="_blank">Wojciech Matusik</a>
+      </div>
+      <div class="entry-titleVenue">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="http://yaksoy.github.com/images/faiTeaser.jpg" class="entry-feature-image" alt="Flash and Ambient Illuminations Dataset" style="margin-top:-40;"><p class="image-caption">Our dataset consists of 2775 pairs with flash-only and ambient-only illuminations, collected via crowdsourcing.</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>The Dataset</b></p>
+<p>
+The Flash and Ambient Illuminations Dataset (FAID) consists of aligned flash-only and ambient-only illumination pairs captured with mobile devices by many crowd-workers participated in our collection effort. 
+This dataset accompanies our <a href="../flashambient/" target="_blank">ECCV 2018 paper</a>.
+</p>
+
+<p style="text-align:center;"><b>Capture Setup</b></p>
+<p>
+The photographs were captured in 12-bit raw and jpeg formats using iPhone 6s and iPhone 7 devices by the crowd-workers we reached through the Amazon's Mechanical Turk platform.
+The raw images were used to generate and represent the flash and ambient illuminations.
+The jpeg images proccesed by iPhones are provided as well in the dataset.
+In our setup, the flash and no-flash photograph pairs were captured in burst, typically 0.5-1.0 seconds apart. 
+The two photographs were then aligned via homography estimations, cropped and resized to 1080x1440 resolution.
+The aligned raw flash and no-flash photographs are then used to compute the flash-only illumination.
+The photographs and their alignment went through a review process before getting included in the dataset.
+</p>
+
+<p style="text-align:center;"><b>Scenes and Illumination Conditions</b></p>
+<p>
+The scenes are typically well-illuminated indoor spaces, without any visible direct light sources. 
+The objects and materials otherwise has a wide variety. 
+We defined the scenes to be indoors for a reliable flash illumination estimation, and well-illuminated in order to get a useful ambient illumination as well. 
+As two illuminations are provided separately, the ambient illumination can be made dimmer and added to the flash illumination using the raw values to create a typical flash photograph taken in a dark envrionment.
+</p>
+
+<p style="text-align:center;"><b>Categories</b></p>
+<p>
+The dataset is divided into 6 categories: People, Shelves, Plants, Toys, Rooms, and Objects. 
+The first 5 categories were defined in order to give the crowd-workers a starting point when they are photographing, and the Objects category was then defined to include images that did not fit well in any of the defined categories. 
+</p>
+
+<p style="text-align:center;"><b>Color Mapping</b></p>
+<p>
+The illuminations are provided as raw sensor readings, and the corresponding exif information are available in the dataset as separate files. 
+The illuminations can be mapped to first XYZ and then RGB color spaces via the color matrix.
+The color matrix and the calibration illuminant we used are available in the exif data of the PNG files as well as the .mat files with the complete exif information. 
+A sample code in MATLAB for the color mapping is <a href="cameraToXYZtoSRGB.m" target="_blank">available here</a>.
+Note that even after the color mapping, the images will not match the colors of the jpeg photographs we provide, as the jpeg photographs went through the pre-processing pipeline of the cameras. 
+</p>
+
+<p style="text-align:center;"><b>File Description</b></p>
+<p>
+We provide the illumination pairs in 16-bit PNG files. 
+These files already have the color matrix and calibration illuminant information necessary for the color mapping. 
+The full exif information originally attached to the DNG files are provided as .mat files separately. 
+We also provide the flash and no-flash photographs processed by the iPhones.
+Note that the flash photograph in this case includes both flash and ambient illuminations.
+</p>
+
+<p style="text-align:center;"><b>License and Credit</b></p>
+<p>
+We provide this dataset for research purposes only, and it is licensed under a <b><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a></b>.
+We hereby give the rights to use the images in figures and supplementary material of scientific publications. 
+If you use this dataset, please cite our paper:
+</p>
+
+<p>
+<div class="pub-bibtex">
+	@INPROCEEDINGS{flashambient,<br />
+	author={Ya\u{g}{\i}z Aksoy and Changil Kim and Petr Kellnhofer and Sylvain Paris and Mohamed Elgharib and Marc Pollefeys and Wojciech Matusik}, <br />
+	booktitle={Proc. ECCV}, <br />
+	title={A Dataset of Flash and Ambient Illumination Pairs from the Crowd}, <br />
+	year={2018}, <br />
+	}
+  </div>
+  </p>
+
+<hr />
+
+<p style="text-align:center;"><b>Files</b></p>
+
+<table>
+<tr>
+  <td class="homepage" colspan="2" style="vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/FlashAmbient_SampleSet.zip" target="_blank">Sample Set (1GB)</a></td>
+</tr>
+<tr>
+  <td colspan="2" style="vertical-align:middle;text-align:center">The sample set includes illuminations, photographs and EXIF files for 60 pairs, 10 from each category.</td>
+</tr>
+<tr>
+  <td style="width:200px;vertical-align:middle;text-align:center"><b>Illuminations</b></td>
+  <td style="width:200px;vertical-align:middle;text-align:center"><b>Photographs</b></td>
+</tr>
+<tr>
+  <td style="width:200px;vertical-align:middle;text-align:center"><i>The main dataset</i></td>
+  <td style="width:200px;vertical-align:middle;text-align:center"><i>Processed photographs</i></td>
+</tr>
+<tr>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/People_Illuminations.zip" target="_blank">People (4.3GB)</a></td>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/People_Photos.zip" target="_blank">People (1.3GB)</a></td>
+</tr>
+<tr>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Shelves_Illuminations.zip" target="_blank">Shelves (5.4GB)</a></td>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Shelves_Photos.zip" target="_blank">Shelves (1.7GB)</a></td>
+</tr>
+<tr>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Plants_Illuminations.zip" target="_blank">Plants (3.2GB)</a></td>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Plants_Photos.zip" target="_blank">Plants (1.1GB)</a></td>
+</tr>
+<tr>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Toys_Illuminations.zip" target="_blank">Toys (5.3GB)</a></td>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Toys_Photos.zip" target="_blank">Toys (1.7GB)</a></td>
+</tr>
+
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Rooms_Illuminations.zip" target="_blank">Rooms (10.3GB)</a></td>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Rooms_Photos.zip" target="_blank">Rooms (3.0GB)</a></td>
+
+<tr>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Objects_Illuminations.zip" target="_blank">Objects (7.5GB)</a></td>
+  <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Objects_Photos.zip" target="_blank">Objects (2.3GB)</a></td>
+</tr>
+<!-- <tr>
+  <td colspan = "2" style="vertical-align:middle;text-align:center"><b>People Category</b></td>
+</tr>
+<tr>
+  <td colspan = "2" style="vertical-align:middle;text-align:center">Please contact the first author for the people category, preferebly with your professional e-mail address and a short description of intended use.</td>
+</tr> -->
+<tr>
+  <td colspan="2" style="vertical-align:middle;text-align:center"><b>EXIF info</b></td>
+</tr>
+<tr>
+  <td class="homepage" colspan="2" style="vertical-align:middle;text-align:center"><a href="" target="_blank">EXIFs (32MB)</a></td>
+</tr>
+</table>
+
+<hr />
+
+<p style="text-align:center;"><b>ECCV Publication</b></p>
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../flashambient" target="_blank"><img src="http://yaksoy.github.com/images/research/fai.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../flashambient" target="_blank">A Dataset of Flash and Ambient Illumination Pairs from the Crowd <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>, Changil Kim, Petr Kellnhofer, Sylvain Paris, Mohamed Elgharib, Marc Pollefeys and Wojciech Matusik 
+</div>
+<div class="pub-venue">
+	ECCV, 2018
+</div>
+
+<div class="accordion">
+  <input id="ECCV18-item1" name="accordion1" type="checkbox" />
+  <label for="ECCV18-item1">Abstract</label>
+  <div class="pub-abstract">
+Illumination is a critical element of photography and is essential for many computer vision tasks. 
+Flash light is unique in the sense that it is a widely available tool for easily manipulating the scene illumination. 
+We present a dataset of thousands of ambient and flash illumination pairs to enable studying flash photography and other applications that can benefit from having separate illuminations. 
+Different than the typical use of crowdsourcing in generating computer vision datasets, we make use of the crowd to directly take the photographs that make up our dataset. 
+As a result, our dataset covers a wide variety of scenes captured by many casual photographers. 
+We detail the advantages and challenges of our approach to crowdsourcing as well as the computational effort to generate completely separate flash illuminations from the ambient light in an uncontrolled setup. 
+We present a brief examination of illumination decomposition, a challenging and underconstrained problem in flash photography, to demonstrate the use of our dataset in a data-driven approach.
+  </div>
+
+  <input id="ECCV18-item2" name="accordion1" type="checkbox" />
+  <label for="ECCV18-item2">Manuscript</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.com/papers/ECCV18-flashambient.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/ECCV18paper.png" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.com/papers/ECCV18-flashambient-supp.zip" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/ECCV18supp.png" title="Paper" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="ECCV18-item3" name="accordion1" type="checkbox" />
+  <label for="ECCV18-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{flashambient,<br />
+	author={Ya\u{g}{\i}z Aksoy and Changil Kim and Petr Kellnhofer and Sylvain Paris and Mohamed Elgharib and Marc Pollefeys and Wojciech Matusik}, <br />
+	booktitle={Proc. ECCV}, <br />
+	title={A Dataset of Flash and Ambient Illumination Pairs from the Crowd}, <br />
+	year={2018}, <br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2019 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.com';
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.com/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
 </html>

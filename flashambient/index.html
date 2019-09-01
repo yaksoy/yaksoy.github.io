@@ -1,15 +1,266 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="1; url=https://www.cs.sfu.ca/~yagiz/flashambient/">
-        <script type="text/javascript">
-            window.location.href = "https://www.cs.sfu.ca/~yagiz/flashambient/"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this <a href='https://www.cs.sfu.ca/~yagiz/flashambient/'>link to my website</a>.
-    </body>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>A Dataset of Flash and Ambient Illumination Pairs from the Crowd &#8211; Yağız Aksoy</title>
+<meta name="description" content="Flash-Ambient Illumination Pairs">
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="A Dataset of Flash and Ambient Illumination Pairs from the Crowd">
+<meta name="twitter:description" content="Flash-Ambient Illumination Pairs">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yaksoy.github.com/images/faiTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Dataset of Flash and Ambient Illumination Pairs from the Crowd">
+<meta property="og:description" content="Flash-Ambient Illumination Pairs">
+<meta property="og:url" content="http://yaksoy.github.com/flashambient/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.com/flashambient/">
+<link href="http://yaksoy.github.com/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.com/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.com/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">A Dataset of Flash and Ambient Illumination Pairs from the Crowd</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <a href="../" target="_blank">Yagiz Aksoy</a>, <a href="http://people.csail.mit.edu/changil/" target="_blank">Changil Kim</a>, <a href="http://people.csail.mit.edu/pkellnho/" target="_blank">Petr Kellnhofer</a>, <a href="http://people.csail.mit.edu/sparis/" target="_blank">Sylvain Paris</a>, <a href="http://people.mpi-inf.mpg.de/~elgharib/" target="_blank">Mohamed Elgharib</a>, <a href="https://www.inf.ethz.ch/personal/marc.pollefeys/" target="_blank">Marc Pollefeys</a> and <a href="http://people.csail.mit.edu/wojciech/" target="_blank">Wojciech Matusik</a>
+      </div>
+      <div class="entry-titleVenue">
+        ECCV, 2018
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="http://yaksoy.github.com/images/faiTeaser.jpg" class="entry-feature-image" alt="A Dataset of Flash and Ambient Illumination Pairs from the Crowd" style="margin-top:-40;"><p class="image-caption">We introduce a diverse dataset of thousands of photograph pairs with flash-only and ambient-only illuminations, collected via crowdsourcing.</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+Illumination is a critical element of photography and is essential for many computer vision tasks. 
+Flash light is unique in the sense that it is a widely available tool for easily manipulating the scene illumination. 
+We present a dataset of thousands of ambient and flash illumination pairs to enable studying flash photography and other applications that can benefit from having separate illuminations. 
+Different than the typical use of crowdsourcing in generating computer vision datasets, we make use of the crowd to directly take the photographs that make up our dataset. 
+As a result, our dataset covers a wide variety of scenes captured by many casual photographers. 
+We detail the advantages and challenges of our approach to crowdsourcing as well as the computational effort to generate completely separate flash illuminations from the ambient light in an uncontrolled setup. 
+We present a brief examination of illumination decomposition, a challenging and underconstrained problem in flash photography, to demonstrate the use of our dataset in a data-driven approach.
+</p>
+
+<p style="text-align:center;"><b>The Dataset</b></p>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../faid" target="_blank"><img src="http://yaksoy.github.com/images/research/fai.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../faid" target="_blank">Flash and Ambient Illuminations Dataset <i class="fa fa-external-link"></i></a>
+</div>
+
+<div class="accordion">
+  <input id="FAID-item1" name="accordion1" type="checkbox" />
+  <label for="FAID-item1">Brief Description</label>
+  <div class="pub-abstract">
+		The Flash and Ambient Illuminations Dataset (FAID) consists of aligned flash-only and ambient-only illumination pairs captured with mobile devices by many crowd-workers participated in our collection effort. 
+		This dataset accompanies our <a href="../flashambient/" target="_blank">ECCV 2018 paper</a>.
+  </div>
+
+  <input id="FAID-item3" name="accordion1" type="checkbox" />
+  <label for="FAID-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{flashambient,<br />
+	author={Ya\u{g}{\i}z Aksoy and Changil Kim and Petr Kellnhofer and Sylvain Paris and Mohamed Elgharib and Marc Pollefeys and Wojciech Matusik}, <br />
+	booktitle={Proc. ECCV}, <br />
+	title={A Dataset of Flash and Ambient Illumination Pairs from the Crowd}, <br />
+	year={2018}, <br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<p style="text-align:center;"><b>Manuscript</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="http://yaksoy.github.com/papers/ECCV18-flashambient.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/ECCV18paper.png" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.com/papers/ECCV18-flashambient-supp.zip" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/ECCV18supp.png" title="Supplementary (zip)" /></a></td>
+	</tr></table>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@INPROCEEDINGS{flashambient,<br />
+	author={Ya\u{g}{\i}z Aksoy and Changil Kim and Petr Kellnhofer and Sylvain Paris and Mohamed Elgharib and Marc Pollefeys and Wojciech Matusik}, <br />
+	booktitle={Proc. ECCV}, <br />
+	title={A Dataset of Flash and Ambient Illumination Pairs from the Crowd}, <br />
+	year={2018}, <br />
+	}
+  </div>
+  </p>
+
+<p style="text-align:center;"><b>Related Publications</b></p>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+  <a href="../crowdroto" target="_blank"><img src="http://yaksoy.github.com/images/research/crowdroto2.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../crowdroto" target="_blank">Crowd-Guided Ensembles: How Can We Choreograph Crowd Workers for Video Segmentation? <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Alexandre Kaspar, Geneviève Patterson, Changil Kim, <b>Yağız Aksoy</b>, Wojciech Matusik and Mohamed Elgharib 
+</div>
+<div class="pub-venue">
+	ACM CHI Conference on Human Factors in Computing Systems, 2018
+</div>
+
+<div class="accordion">
+  <input id="CHI18-item1" name="accordion1" type="checkbox" />
+  <label for="CHI18-item1">Abstract</label>
+  <div class="pub-abstract">
+In this work, we propose two ensemble methods leveraging a crowd workforce to improve video annotation, with a focus on video object segmentation.
+Their shared principle is that while individual candidate results may likely be insufficient, they often complement each other so that they can be combined into something better than any of the individual results - the very spirit of collaborative working.
+For one, we extend a standard polygon-drawing interface to allow workers to annotate negative space, and combine the work of multiple workers instead of relying on a single best one as commonly done in crowdsourced image segmentation.
+For the other, we present a method to combine multiple automatic propagation algorithms with the help of the crowd.
+Such combination requires an understanding of where the algorithms fail, which we gather using a novel coarse scribble video annotation task.
+We evaluate our ensemble methods, discuss our design choices for them, and make our web-based crowdsourcing tools and results publicly available.
+  </div>
+
+  <input id="CHI18-item2" name="accordion1" type="checkbox" />
+  <label for="CHI18-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+    <td><a href="http://yaksoy.github.com/papers/CHI18-ensembles.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/CHI18paper.png" title="Paper" /></a></td>
+    <td><a href="http://yaksoy.github.com/papers/CHI18-supp-additionalResults.pdf" target="_blank"><img width="200" src="http://yaksoy.github.com/images/research/CHI18supp.png" title="Additional Figures" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="CHI18-item3" name="accordion1" type="checkbox" />
+  <label for="CHI18-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{crowdensembles,<br />
+	author={Alexandre Kaspar and Genevi\`eve Patterson and Changil Kim and Ya\u{g}{\i}z Aksoy and Wojciech Matusik and Mohamed Elgharib},<br />
+	title={Crowd-Guided Ensembles: How Can We Choreograph Crowd Workers for Video Segmentation?},<br />
+	booktitle={Proc. ACM CHI},<br />
+	year={2018},<br />
+  }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2019 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.com';
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.com/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
 </html>

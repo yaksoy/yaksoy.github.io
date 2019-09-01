@@ -1,0 +1,73 @@
+[
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "Teaching",
+      "link"			: "http://yaksoy.github.com/teaching/",
+      "excerpt"		: "Teaching"
+    }
+  
+
+  
+
+  
+    ,{
+      "title"			: "Résumé",
+      "link"			: "http://yaksoy.github.com/resume/",
+      "excerpt"		: "Résumé"
+    }
+  
+
+  
+    ,{
+      "title"			: "Code & Data",
+      "link"			: "http://yaksoy.github.com/code/",
+      "excerpt"		: "Public Implementations"
+    }
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "Publications",
+      "link"			: "http://yaksoy.github.com/research/",
+      "excerpt"		: "Publications"
+    }
+  
+
+  
+
+  
+
+]

@@ -1,15 +1,323 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="1; url=https://www.cs.sfu.ca/~yagiz/code/">
-        <script type="text/javascript">
-            window.location.href = "https://www.cs.sfu.ca/~yagiz/code/"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this <a href='https://www.cs.sfu.ca/~yagiz/code/'>link to my website</a>.
-    </body>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Code & Data &#8211; Yağız Aksoy</title>
+<meta name="description" content="Public Implementations">
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Code & Data">
+<meta name="twitter:description" content="Public Implementations">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yaksoy.github.com/images/jorge.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code & Data">
+<meta property="og:description" content="Public Implementations">
+<meta property="og:url" content="http://yaksoy.github.com/code/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.com/code/">
+<link href="http://yaksoy.github.com/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.com/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.com/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		        
+		    
+		    <li><a href="http://yaksoy.github.com/" >Home</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://yaksoy.github.com/resume/" >Resume</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://yaksoy.github.com/research/" >Publications</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://yaksoy.github.com/code/" >Code & Data</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://yaksoy.github.com/teaching/" >Teaching</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://yaksoy.github.com/personal/" >Personal</a></li>
+		  
+		    
+		        
+		    
+		    <li><a href="http://yaksoy.github.com/contact/" >Contact</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://yaksoy.github.com/" class="site-logo" rel="home" title="Yağız Aksoy"><img src="http://yaksoy.github.com/images/jorge.png" width="200" height="200" alt="Yağız Aksoy logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://yaksoy.github.com/">Yağız Aksoy</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">Visual Computing Researcher</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="entry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <h1 class="entry-title" style="margin-top:-5px;">Code & Data</h1>
+      </header>
+      <div class="entry-content">
+        <h3 id="public-software-and-datasets">Public Software and Datasets</h3>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../faid" target="_blank"><img src="http://yaksoy.github.com/images/research/fai.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../faid" target="_blank">Flash and Ambient Illuminations Dataset <i class="fa fa-external-link"></i></a>
+</div>
+
+<div class="accordion">
+  <input id="FAID-item1" name="accordion1" type="checkbox" />
+  <label for="FAID-item1">Brief Description</label>
+  <div class="pub-abstract">
+		The Flash and Ambient Illuminations Dataset (FAID) consists of aligned flash-only and ambient-only illumination pairs captured with mobile devices by many crowd-workers participated in our collection effort. 
+		This dataset accompanies our <a href="../flashambient/" target="_blank">ECCV 2018 paper</a>.
+  </div>
+
+  <input id="FAID-item3" name="accordion1" type="checkbox" />
+  <label for="FAID-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{flashambient,<br />
+	author={Ya\u{g}{\i}z Aksoy and Changil Kim and Petr Kellnhofer and Sylvain Paris and Mohamed Elgharib and Marc Pollefeys and Wojciech Matusik}, <br />
+	booktitle={Proc. ECCV}, <br />
+	title={A Dataset of Flash and Ambient Illumination Pairs from the Crowd}, <br />
+	year={2018}, <br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="https://github.com/yaksoy/SemanticSoftSegmentation" target="_blank"><img src="http://yaksoy.github.com/images/research/sss.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="https://github.com/yaksoy/SemanticSoftSegmentation" target="_blank">Semantic Soft Segmentation <i class="fa fa-external-link"></i></a>
+</div>
+
+<div class="accordion">
+  <input id="sssSource-item1" name="accordion1" type="checkbox" />
+  <label for="sssSource-item1">Brief Description</label>
+  <div class="pub-abstract">
+The implementation of the spectral segmentation method presented in our namesake SIGGRAPH paper.
+  </div>
+
+  <input id="sssSource-item3" name="accordion1" type="checkbox" />
+  <label for="sssSource-item3">BibTeX</label>
+  <div class="pub-bibtex">
+    @ARTICLE{sss,<br />
+    author={Ya\u{g}{\i}z Aksoy and Tae-Hyun Oh and Sylvain Paris and Marc Pollefeys and Wojciech Matusik},<br />
+    title={Semantic Soft Segmentation},<br />
+    journal={ACM Trans. Graph. (Proc. SIGGRAPH)},<br />
+    year={2018},<br />
+    pages = {72:1-72:13},<br />
+    volume = {37},<br />
+    number = {4}<br />
+    }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="https://github.com/yaksoy/AffinityBasedMattingToolbox" target="_blank"><img src="http://yaksoy.github.com/images/research/ifm.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="https://github.com/yaksoy/AffinityBasedMattingToolbox" target="_blank">Affinity-based Matting Toolbox <i class="fa fa-external-link"></i></a>
+</div>
+
+<div class="accordion">
+  <input id="mattingtoolbox-item1" name="accordion1" type="checkbox" />
+  <label for="mattingtoolbox-item1">Brief Description</label>
+  <div class="pub-abstract">
+This toolbox includes a collection of common affinity-based image matting algorithms as well as matte refinement methods used by sampling-based image matting methods.
+It features the only public (re-)implementation of <a href="../ifm/" target="_blank">information-flow matting</a>, a faster implementation of matting Laplacian and a faster trimap trimming.
+The parameters for each algorithm are easily customizable.
+The toolbox is designed to be ease of use for an extended set of applications.
+Sparse affinity matrices defined and used in common matting method can be obtained by calling the corresponding functions.
+Please check the <a href="https://github.com/yaksoy/AffinityBasedMattingToolbox" target="_blank">github page</a> for more information and the source code.
+  </div>
+
+  <input id="mattingtoolbox-item3" name="accordion1" type="checkbox" />
+  <label for="mattingtoolbox-item3">BibTeX</label>
+  <div class="pub-bibtex">
+    @MISC{abmt,<br />
+    author={Ya\u{g}\{i}z Aksoy},<br />
+    title={Affinity-based matting toolbox},<br />
+    year={2017},<br />
+    howpublished = {\url{https://github.com/yaksoy/AffinityBasedMattingToolbox}},<br />
+    }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2019 Yagiz Aksoy <!--Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/" rel="nofollow">So Simple Theme</a>.--></span>
+<div class="social-icons">
+	<a href="https://scholar.google.com/citations?user=AC445kUAAAAJ" title="Yagiz Aksoy on Google Scholar" target="_blank"><img src="http://yaksoy.github.com/images/logos/scholar.png" alt="Scholar" width="20"></img></a>
+	<a href="http://dblp.uni-trier.de/pers/hd/a/Aksoy:Yagiz" title="Yagiz Aksoy on DBLP" target="_blank"><img src="http://yaksoy.github.com/images/logos/dblp.png" alt="DBLP" width="20"></img></a>
+	<a href="https://www.researchgate.net/profile/Yagiz_Aksoy" title="Yagiz Aksoy on ResearchGate" target="_blank"><img src="http://yaksoy.github.com/images/logos/rgnew.png" alt="RG" width="20"></img></a>
+	<a href="http://orcid.org/0000-0002-1495-0491" title="Yagiz Aksoy on ORCID" target="_blank"><img src="http://yaksoy.github.com/images/logos/orcid.png" alt="ORCID" width="20"></img></a>
+	<br><br>
+	<a href="http://twitter.com/yagizaksoy" title="Yagiz Aksoy on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+	<a href="http://facebook.com/yaksoy" title="Yagiz Aksoy on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+	
+	<a href="http://linkedin.com/in/yaksoy" title="Yagiz Aksoy on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+	
+	
+	
+	
+	<a href="http://github.com/yaksoy" title="Yagiz Aksoy on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <!--<a href="http://yaksoy.github.com/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>-->
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.com';
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.com/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
 </html>
