@@ -31,7 +31,7 @@
   
     ,{
       "title"			: "Teaching",
-      "link"			: "http://yaksoy.github.com/teaching/",
+      "link"			: "http://yaksoy.github.io/teaching/",
       "excerpt"		: "Teaching"
     }
   
@@ -41,7 +41,7 @@
   
     ,{
       "title"			: "Résumé",
-      "link"			: "http://yaksoy.github.com/resume/",
+      "link"			: "http://yaksoy.github.io/resume/",
       "excerpt"		: "Résumé"
     }
   
@@ -49,7 +49,7 @@
   
     ,{
       "title"			: "Code & Data",
-      "link"			: "http://yaksoy.github.com/code/",
+      "link"			: "http://yaksoy.github.io/code/",
       "excerpt"		: "Public Implementations"
     }
   
@@ -61,7 +61,7 @@
   
     ,{
       "title"			: "Publications",
-      "link"			: "http://yaksoy.github.com/research/",
+      "link"			: "http://yaksoy.github.io/research/",
       "excerpt"		: "Publications"
     }
   
