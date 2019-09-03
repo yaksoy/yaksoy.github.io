@@ -11,7 +11,11 @@
   
 
   
-
+    ,{
+      "title"			: "Code & Data",
+      "link"			: "http://yaksoy.github.io/code/",
+      "excerpt"		: "Public Implementations"
+    }
   
 
   
@@ -22,6 +26,14 @@
 
   
 
+  
+
+  
+    ,{
+      "title"			: "Résumé",
+      "link"			: "http://yaksoy.github.io/resume/",
+      "excerpt"		: "Résumé"
+    }
   
 
   
@@ -40,30 +52,20 @@
 
   
     ,{
-      "title"			: "Résumé",
-      "link"			: "http://yaksoy.github.io/resume/",
-      "excerpt"		: "Résumé"
-    }
-  
-
-  
-    ,{
-      "title"			: "Code & Data",
-      "link"			: "http://yaksoy.github.io/code/",
-      "excerpt"		: "Public Implementations"
-    }
-  
-
-  
-
-  
-
-  
-    ,{
       "title"			: "Publications",
       "link"			: "http://yaksoy.github.io/research/",
       "excerpt"		: "Publications"
     }
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
