@@ -1,0 +1,225 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Computational Photography and Image Manipulation &#8211; Yağız Aksoy</title>
+<meta name="description" content="PhD">
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Computational Photography and Image Manipulation">
+<meta name="twitter:description" content="PhD">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yaksoy.github.io/images/jorge.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computational Photography and Image Manipulation">
+<meta property="og:description" content="PhD">
+<meta property="og:url" content="http://yaksoy.github.io/cpim/p1/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.io/cpim/p1/">
+<link href="http://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Computational Photography and Image Manipulation</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        Programming Assignment 1
+      </div>
+      <div class="entry-titleVenue">
+        
+      </div>
+    </div><!-- /.entry-wrapper -->
+    
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p>This assignment is intended to familiarize you with image filtering and frequency representations.</p>
+
+<p>Save your images that you’ll use for the results and your report in png format.</p>
+
+<p><a href="./part2.zip" target="_blank"> <b>~~~ Find the helper data and code for Part 2 here. ~~~</b> </a></p>
+
+<p><b>Due date:</b> Tuesday, October 8, by midnight</p>
+
+<h4 id="part-1-gaussian-and-laplacian-filters-60-pts">Part 1: Gaussian and Laplacian filters (60 pts)</h4>
+
+<p>Find two natural photographs of your own, or over the internet. One of the photographs should have a lot of high-frequency content (sharp edges, complicated textures etc.) while the other should be balanced in content. Report the results using both of the images and comment on any significant differences between the results.</p>
+
+<h5 id="part-11-image-filtering-10-pts">Part 1.1: Image filtering (10 pts)</h5>
+
+<p>Implement two functions, LPF(image, sigma, kernelsize) and HPF(image, sigma, kernelsize), that return a low-pass or a high-pass filtered version the input image respectively using Gaussian kernels of the specified size and standard deviation.</p>
+
+<p><b>Hint:</b> The high pass content of an image can be extracted by subtracting the low pass filtered image from the original image. Hence, to get a high pass filter kernel from a low pass one, you can subtract the LPF kernel from a unit impulse filter.</p>
+
+<p><b>Hint:</b> Useful MATLAB functions: imfilter, fspecial</p>
+
+<p>Using your LPF and HPF functions, filter the input image using different standard deviations (0.5, 1, 3.5) and kernel sizes (5x5, 15x15), apply them to the test image and observe the results. Comment on the effects of filter size for LPF results and effects of the standard deviation for HPF results.</p>
+
+<p><b>Source files to be submitted:</b> LPF.m and HPF.m functions for the two filters, Part11.m script that reads your images, applies the filters and shows the requested results.</p>
+
+<h5 id="part-12-image-subsampling-and-aliasing-20-pts">Part 1.2: Image subsampling and aliasing (20 pts)</h5>
+
+<p>When downsampling an image, it is often necessary to apply a low-pass filter to the image prior to resampling. This is to ensure that spurious high-frequency information does not appear in the downsampled image, i.e. to prevent aliasing.</p>
+
+<p>In this part, we will implement a function subsampleImage(image, subs, sigma) to resize the input images to 1/2, 1/4, 1/8, and 1/16 by selecting every other, every 4th, 8th, or 16th of the pixels of the input image. The subs input will select the subsampling rate (2/4/8/16) and sigma will determine the amount of smoothing before subsampling. If sigma is equal to or smaller than zero, your function shouldn’t do any filtering. You should use your function LPF from the previous part.</p>
+
+<p><b>Hint:</b> In MATLAB, you can use subsample indices using the colon notation, e.g. (1:3:end).</p>
+
+<p>First, do the subsampling without any filtering. Observe at which size aliasing starts occuring for your images. We will analyze how to prevent aliasing using low-pass filtering. By experimentation with the standard deviation of your Gaussian filter, find the minimum standard deviation to (i) prevent aliasing for your high-frequency image for 1/16th subsampling and (ii) prevent aliasing for your low-pass image for 1/16th subsampling. Report them in your write-up.</p>
+
+<p>Put the resizing results in your report for both images for the unfiltered case and for two filters you determined above (hence, 3 cases for both images). Below each image, show the magnitude of the frequency content. Comment on the frequency content, aliasing, and effects of the filter size.</p>
+
+<p><b>Hint:</b> Useful MATLAB functions: fft2, fftshift, subplot</p>
+
+<p><b>Source files to be submitted:</b> subsampleImage.m function for the resizing, Part12.m script that reads your images, resizes images using different low-pass filters, and shows the requested results.</p>
+
+<h5 id="part-13-log-and-image-enhancement-30-pts">Part 1.3: LoG and image enhancement (30 pts)</h5>
+
+<p>Implement a function LoGfilt(image, sigma) for Laplacian of Gaussian filtering. In the function, use the kernel 
+[0 -1  0]
+[-1 4 -1]
+[0 -1  0]
+for the Laplacian filter. Generate a Gaussian kernel with the specified sigma. Select the filter size of the Gaussian kernel automatically, making sure that the kernel fits inside the filter size. Convolve the Gaussian kernel with your Laplacian kernel, and then apply the LoG filter to the input image. If sigma is equal to or smaller than zero, your function should only apply the Laplacian kernel.</p>
+
+<p><b>Hint:</b> Useful MATLAB functions: conv2</p>
+
+<p>Implement an image enhancement function enhanceImageLoG(image, sigma) using your Laplacian of Gaussian representation, that takes sigma as input. Comment on how your function works in the report. Enhance your two input images using Laplacian-only and LoG using an appropriate sigma. Comment on the results, especially around meaningful edges and noisy regions.</p>
+
+<p>In your report, show both the LoGfilt() result and enhancement results side by side for both cases and both images.</p>
+
+<p><b>Hint:</b> Useful MATLAB functions: imagesc, colormap</p>
+
+<p><b>Source files to be submitted:</b> LoGfilt.m and enhanceImageLoG.m functions, Part13.m script that reads your images, filters and enhances images and shows the requested results.</p>
+
+<h4 id="part-2-hybrid-images-40-pts">Part 2: Hybrid Images (40 pts)</h4>
+
+<p>Hybrid images are static images that change in interpretation as a function of the viewing distance. The basic idea is that high frequency tends to dominate perception when it is available, but, at a distance, only the low frequency (smooth) part of the signal can be seen. By blending the high frequency portion of one image with the low-frequency portion of another, you get a hybrid image that leads to different interpretations at different distances.</p>
+
+<p>Here, we have included two sample images and some starter code that can be used to load two images and align them. The alignment is important because it affects the perceptual grouping.</p>
+
+<p>First, you’ll need to get a few pairs of images that you want to make into hybrid images. You can use the sample images for debugging, but you should use your own images in your results. Then, you will need to write code to low-pass filter one image, high-pass filter the second image, and add (or average) the two images. Use your filters from Part 1.1 for all filtering operations. The cutoff-frequency of each filter should be chosen with some experimentation.</p>
+
+<p>We provide you with a backbone code with an interactive image alignment function.</p>
+
+<p>About cut-off frequency:</p>
+
+<p>The Gaussian filter impulse response is expressed by the relation in space domain:<br />
+h(x)= (1/sqroot 2 sigma) exp - (x^2/2 sigma^2),<br />
+and its frequency response is H(f) is expressed by H(f)= exp^- (f^2/2 sigmaf^2) and  sigma* sigmaf = 1/2 pi,<br />
+The cut off frequency is considered = sigmaf, then one can determine sigma from the last equation.</p>
+
+<p>Show two hybrid image results using two separate image pairs. For each hybrid result, please include the original images, the filtered input images, and the final hybrid image in two sizes: (i) the original size which reveals one image, (ii) a smaller version of the image that reveals the other. You should use your own image resizing function from Part 1.2.</p>
+
+<p><b>Source files to be submitted:</b> hybridImage.m function and Part20.m script that reads your aligned images and generate the hybrid results.</p>
+
+<h4 id="deliverables">Deliverables</h4>
+
+<p>Your implementation, your report, and input / output image files through CourSys. </p>
+
+<p>Your report should be in PDF format, and should consist of the requested results as well as your discussions on the questions asked above, the extra steps or considerations you needed when implementing the functions, and your parameter choices for the results. When showing your results in your report, make sure to include the original images next to the results.</p>
+
+<p>The source files should include all the requested files above, in addition to the helper functions you might have implemented as a part of this assignment.</p>
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2019 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.io';
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
