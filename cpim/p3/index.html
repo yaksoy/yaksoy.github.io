@@ -1,0 +1,188 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Computational Photography and Image Manipulation &#8211; Yağız Aksoy</title>
+
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Computational Photography and Image Manipulation">
+
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yaksoy.github.io/images/jorge.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computational Photography and Image Manipulation">
+
+<meta property="og:url" content="http://yaksoy.github.io/cpim/p3/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.io/cpim/p3/">
+<link href="http://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Computational Photography and Image Manipulation</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        Programming Assignment 3
+      </div>
+      <div class="entry-titleVenue">
+        
+      </div>
+    </div><!-- /.entry-wrapper -->
+    
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p>In this assignment, we will implement the texture synthesis method we covered in class: <a href="http://graphics.cs.cmu.edu/people/efros/research/quilting/quilting.pdf" target="_blank">Efros and Freeman , Image Quilting for Texture Synthesis and Transfer, SIGGRAPH 2001</a>.</p>
+
+<p><b>Due date:</b> Tuesday, November 26, by midnight
+<b>Assignment data:</b> <a href="./p3data.zip" target="_blank">Data - zip file</a></p>
+
+<h5 id="part-1-texture-synthesis-70-pts">Part 1: Texture synthesis (70 pts)</h5>
+
+<p>The general idea of the presented texture synthesis method is to sample patches from the input texture and compose them in an overlapping way. By given an input texture image, firstly sample patches from the input texture and compose them in an overlapping way. </p>
+
+<p>The simplest solution would be to just randomly select a patch from the input texture each time. With this solution the overlapping regions are not likely to match and this will result in noticeable edges in the result. We will call this method ‘Method 1’.</p>
+
+<p>A better approach, which you will need to implement, is to find a patch in the input texture that has some agreement with the pixels in the overlapping region (e.g., small SSD error). Specifically, Just taking the “best” patch according to SSD could result in repeating patterns in the result. To get a more stochastic result you can sample a patch within some tolerance of the minimum error:<br />
+[y, x] = find(errors_of_all_patches &lt;= minimum_error * (tolerance))<br />
+Or, you can sort all the patches according to their error and then randomly sample from the best N patches.
+This is ‘Method 2’.</p>
+
+<p>The method above will already produce pretty good results but still has some unwanted edge artifacts. To get rid of those, your will try to find a minimum error cut for the overlapping region in Method 3.
+Computing the minimum error cut path in the overlapping region of a new block, we can use dynamic programming in a similar way to seam carving for image retargeting as we covered in the lecture. The strategy can be summarized as follows:</p>
+
+<p>1- Compute the energy matrix E for the overlapping region (e.g., the overlapping error, the difference between two patches).<br />
+2-Initialize a scoring matrix M of size of the overlapping region with the energy matrix E values.<br />
+3- Set the values of every entry in the scoring matrix row by row (except for the first row) by adding to it the minimal value in any of the cells above it within one column distance.<br />
+4- Find the minimal value in the bottom row of the scoring matrix. This is the bottom of the minimal error cut.<br />
+5- To produce the final cut, trace back up M by following the smallest value in any of the positions above it.<br /></p>
+
+<p>Figure 2 of  <a href="http://graphics.cs.cmu.edu/people/efros/research/quilting/quilting.pdf" target="_blank">the original paper</a> provides a nice demonstration of these 3 methods.</p>
+
+<p>For these methods, we will have the patch size parameter. The ideal patch size changes from texture to texture, and you should determine a good patch size for each of the textures you synthesize and report this value in your report. Method 2 and Method 3 also have the size of the overlapping region as a parameter, which you should determine with experimentation and report.</p>
+
+<p>In the data provided for the assignment, you will find 10 texture examples that you will extend. The final size of the generated textures should be 5 times larger than the input image in both width and height. You should show the results for each texture using the 3 methods defined above. For ‘grass’, ‘random3’ and ‘text’, show additional results using Method 3 using a smaller and larger patch size than the one you determined and comment on the results. </p>
+
+<h5 id="part-2-texture-transfer-30-pts">Part 2: Texture transfer (30 pts)</h5>
+
+<p>Texture Transfer means re-rendering an image in the style of another one.</p>
+
+<p>We can augment the texture synthesis approach above to get a texture transfer algorithm. Like texture synthesis, each sample patch that we add to our synthesized image must now respect two different constraints: <br />
+(a) it should have some agreement with the already synthesized parts (this is the constraint we used in texture synthesis)<br />
+(b) it should have some correspondence with the image we want re-render. We will use a parameter <script type="math/tex">α</script> to determine the tradeoff between these to constraints.</p>
+
+<p>To come up with a term for part (b) we need some measurement of how much a patch agrees with the underlying image. We can do this by calculating the SSD of a patch and the image on some corresponding quantity. One such quantity could be image intensity or the blurred image intensity. So the error term will end up being something like this:</p>
+
+<p>error = (α) * (overlap_error + previous_synthezised_error) + (1−α) * correspondence_error</p>
+
+<p>You should transfer the rice and toast textures into the images of Lincoln and Monroe as provided in the assignment data, showing 4 examples in your report. You should experimentally determine and report the α values you end up using for each pair. For one example of your choosing, provide extra results with different α values and comment.</p>
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2019 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
