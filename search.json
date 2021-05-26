@@ -11,6 +11,8 @@
   
 
   
+
+  
     ,{
       "title"			: "Code & Data",
       "link"			: "http://yaksoy.github.io/code/",
@@ -29,11 +31,17 @@
   
 
   
-    ,{
-      "title"			: "Résumé",
-      "link"			: "http://yaksoy.github.io/resume/",
-      "excerpt"		: "Résumé"
-    }
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -42,10 +50,26 @@
 
   
     ,{
-      "title"			: "Teaching",
-      "link"			: "http://yaksoy.github.io/teaching/",
-      "excerpt"		: "Teaching"
+      "title"			: "Group Members",
+      "link"			: "http://yaksoy.github.io/group/",
+      "excerpt"		: "Group Members"
     }
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -59,13 +83,27 @@
   
 
   
-
+    ,{
+      "title"			: "Résumé",
+      "link"			: "http://yaksoy.github.io/resume/",
+      "excerpt"		: "Résumé"
+    }
   
 
   
 
   
 
+  
+
+  
+
+  
+    ,{
+      "title"			: "Teaching",
+      "link"			: "http://yaksoy.github.io/teaching/",
+      "excerpt"		: "Teaching"
+    }
   
 
   

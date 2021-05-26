@@ -2,78 +2,150 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://yaksoy.github.io/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
-    <loc>http://yaksoy.github.io/flashambient/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <loc>http://yaksoy.github.io/ais/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/ais/pa1/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
     <loc>http://yaksoy.github.io/code/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yaksoy.github.io/faculty/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yaksoy.github.io/crowdroto/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yaksoy.github.io/ifm/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
     <loc>http://yaksoy.github.io/contact/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
-    <loc>http://yaksoy.github.io/phd/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <loc>http://yaksoy.github.io/cpim/2019/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
-    <loc>http://yaksoy.github.io/resume/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <loc>http://yaksoy.github.io/cpim/2019/p1/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
-    <loc>http://yaksoy.github.io/sss/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <loc>http://yaksoy.github.io/cpim/2019/p2/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
-    <loc>http://yaksoy.github.io/ssi/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <loc>http://yaksoy.github.io/cpim/2019/p3/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
-    <loc>http://yaksoy.github.io/teaching/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yaksoy.github.io/keying/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yaksoy.github.io/research/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <loc>http://yaksoy.github.io/cpim/2019/p4/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
     <loc>http://yaksoy.github.io/cpim/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
-    <loc>http://yaksoy.github.io/samplenet/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <loc>http://yaksoy.github.io/cpim/p2/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/cpim/p3/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/cpim/p4/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/crowdroto/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/faculty/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
     <loc>http://yaksoy.github.io/faid/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/flashambient/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/group/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/highresdepth/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/ifm/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/introvc/assignment1/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/introvc/assignment2/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/introvc/cv/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/introvc/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/keying/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
     <loc>http://yaksoy.github.io/personal/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/phd/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/research/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/resume/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/samplenet/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
   </url>
   <url>
     <loc>http://yaksoy.github.io/scs/</loc>
-    <lastmod>2019-09-03T12:44:55-07:00</lastmod>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/ssi/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/sss/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/teaching/</loc>
+    <lastmod>2021-05-25T22:59:57-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/introvc/assignment1/hw1template.html</loc>
+    <lastmod>2020-09-27T00:01:54-07:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yaksoy.github.io/introvc/assignment2/hw2template.html</loc>
+    <lastmod>2020-10-28T15:50:29-07:00</lastmod>
   </url>
 </urlset>
