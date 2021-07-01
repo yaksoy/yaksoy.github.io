@@ -370,61 +370,6 @@ We present a brief examination of illumination decomposition, a challenging and 
 <table>
 <tr>
 <td class="pub-photocol">
-  <a href="../crowdroto" target="_blank"><img src="http://yaksoy.github.io/images/research/crowdroto2.jpg" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../crowdroto" target="_blank">Crowd-Guided Ensembles: How Can We Choreograph Crowd Workers for Video Segmentation? <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	Alexandre Kaspar, Geneviève Patterson, Changil Kim, <b>Yağız Aksoy</b>, Wojciech Matusik and Mohamed Elgharib 
-</div>
-<div class="pub-venue">
-	ACM CHI Conference on Human Factors in Computing Systems, 2018
-</div>
-
-<div class="accordion">
-  <input id="CHI18-item1" name="accordion1" type="checkbox" />
-  <label for="CHI18-item1">Abstract</label>
-  <div class="pub-abstract">
-In this work, we propose two ensemble methods leveraging a crowd workforce to improve video annotation, with a focus on video object segmentation.
-Their shared principle is that while individual candidate results may likely be insufficient, they often complement each other so that they can be combined into something better than any of the individual results - the very spirit of collaborative working.
-For one, we extend a standard polygon-drawing interface to allow workers to annotate negative space, and combine the work of multiple workers instead of relying on a single best one as commonly done in crowdsourced image segmentation.
-For the other, we present a method to combine multiple automatic propagation algorithms with the help of the crowd.
-Such combination requires an understanding of where the algorithms fail, which we gather using a novel coarse scribble video annotation task.
-We evaluate our ensemble methods, discuss our design choices for them, and make our web-based crowdsourcing tools and results publicly available.
-  </div>
-
-  <input id="CHI18-item2" name="accordion1" type="checkbox" />
-  <label for="CHI18-item2">Manuscript &amp; more</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-    <td><a href="http://yaksoy.github.io/papers/CHI18-ensembles.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CHI18paper.png" title="Paper" /></a></td>
-    <td><a href="http://yaksoy.github.io/papers/CHI18-supp-additionalResults.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CHI18supp.png" title="Additional Figures" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="CHI18-item3" name="accordion1" type="checkbox" />
-  <label for="CHI18-item3">BibTeX</label>
-  <div class="pub-bibtex">
-	@INPROCEEDINGS{crowdensembles,<br />
-	author={Alexandre Kaspar and Genevi\`eve Patterson and Changil Kim and Ya\u{g}{\i}z Aksoy and Wojciech Matusik and Mohamed Elgharib},<br />
-	title={Crowd-Guided Ensembles: How Can We Choreograph Crowd Workers for Video Segmentation?},<br />
-	booktitle={Proc. ACM CHI},<br />
-	year={2018},<br />
-  }
-  </div>
-</div>
-</td>
-</tr>
-</table>
-
-<hr />
-
-<table>
-<tr>
-<td class="pub-photocol">
 <a href="../ifm" target="_blank"><img src="http://yaksoy.github.io/images/research/ifmExt.png" class="pub-photo" /></a>
 </td>
 <td>
@@ -590,6 +535,118 @@ that a professional compositing artist requires to process the same content havi
   volume = {35},<br />
   number = {5},<br />
   pages = {152:1--152:12},<br />
+  }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<h3 id="minors-neighbors">Minors, neighbors</h3>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="http://www-sop.inria.fr/reves/Basilic/2021/TAAPDD21/" target="_blank"><img src="http://yaksoy.github.io/images/research/vbr.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="http://www-sop.inria.fr/reves/Basilic/2021/TAAPDD21/" target="_blank">Video-Based Rendering of Dynamic Stationary Environments from Unsynchronized Inputs
+		<i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Theo Thonat, <b>Yağız Aksoy</b>, Miika Aittala, Sylvain Paris, Frédo Durand, and George Drettakis
+</div>
+<div class="pub-venue">
+	Computer Graphics Forum (Proc. EGSR), 2021
+</div>
+
+<div class="accordion">
+  <input id="CGF21-item1" name="accordion1" type="checkbox" />
+  <label for="CGF21-item1">Abstract</label>
+  <div class="pub-abstract">
+	Image-Based Rendering allows users to easily capture a scene using a single camera and then navigate freely with realistic results. However, the resulting renderings are completely static, and dynamic effects – such as fire, waterfalls or small waves – cannot be reproduced. We tackle the challenging problem of enabling free-viewpoint navigation including such stationary dynamic effects, but still maintaining the simplicity of casual capture. Using a single camera – instead of previous complex synchronized multi-camera setups – means that we have unsynchronized videos of the dynamic effect from multiple views, making it hard to blend them when synthesizing novel views. We present a solution that allows smooth free-viewpoint video-based rendering (VBR) of such scenes using temporal Laplacian pyramid decomposition video, enabling spatio-temporal blending. For effects such as fire and waterfalls, that are semi-transparent and occupy 3D space, we first estimate their spatial volume. This allows us to create per-video geometries and alpha-matte videos that we can blend using our frequency-dependent method. We also extend Laplacian blending to the temporal dimension to remove additional temporal seams. We show results on scenes containing fire, waterfalls or rippling waves at the seaside, bringing these scenes to life.
+  </div>
+
+  <input id="CGF21-item2" name="accordion1" type="checkbox" />
+  <label for="CGF21-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://www-sop.inria.fr/reves/Basilic/2021/TAAPDD21/ThonatVideoBasedRenderingUnsycnhronizedInputsCGF_EGSR21_AuthorsVersion.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CGF21paper.png" title="Paper" /></a></td>
+		<td><a href="http://www-sop.inria.fr/reves/Basilic/2021/TAAPDD21/ThonatVideoBasedRenderingSupplemental.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CGF21supp.png" title="Supplementary" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="CGF21-item3" name="accordion1" type="checkbox" />
+  <label for="CGF21-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@ARTICLE{Thonat2021,<br />
+	author={Thonat, Theo and Aksoy, Ya\u{g}{\i}z and Aittala, Miika and Paris, Sylvain and Durand, Fr\'edo and Drettakis, George},<br />
+	title={Video-Based Rendering of Dynamic Stationary Environments from Unsynchronized Inputs},<br />
+	journal={Computer Graphics Forum (Proc. EGSR)},<br />
+	year={2021},<br />
+	volume = {40},<br />
+	number = {4}<br />
+  }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+  <a href="../crowdroto" target="_blank"><img src="http://yaksoy.github.io/images/research/crowdroto2.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../crowdroto" target="_blank">Crowd-Guided Ensembles: How Can We Choreograph Crowd Workers for Video Segmentation? <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Alexandre Kaspar, Geneviève Patterson, Changil Kim, <b>Yağız Aksoy</b>, Wojciech Matusik and Mohamed Elgharib 
+</div>
+<div class="pub-venue">
+	ACM CHI Conference on Human Factors in Computing Systems, 2018
+</div>
+
+<div class="accordion">
+  <input id="CHI18-item1" name="accordion1" type="checkbox" />
+  <label for="CHI18-item1">Abstract</label>
+  <div class="pub-abstract">
+In this work, we propose two ensemble methods leveraging a crowd workforce to improve video annotation, with a focus on video object segmentation.
+Their shared principle is that while individual candidate results may likely be insufficient, they often complement each other so that they can be combined into something better than any of the individual results - the very spirit of collaborative working.
+For one, we extend a standard polygon-drawing interface to allow workers to annotate negative space, and combine the work of multiple workers instead of relying on a single best one as commonly done in crowdsourced image segmentation.
+For the other, we present a method to combine multiple automatic propagation algorithms with the help of the crowd.
+Such combination requires an understanding of where the algorithms fail, which we gather using a novel coarse scribble video annotation task.
+We evaluate our ensemble methods, discuss our design choices for them, and make our web-based crowdsourcing tools and results publicly available.
+  </div>
+
+  <input id="CHI18-item2" name="accordion1" type="checkbox" />
+  <label for="CHI18-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+    <td><a href="http://yaksoy.github.io/papers/CHI18-ensembles.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CHI18paper.png" title="Paper" /></a></td>
+    <td><a href="http://yaksoy.github.io/papers/CHI18-supp-additionalResults.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CHI18supp.png" title="Additional Figures" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="CHI18-item3" name="accordion1" type="checkbox" />
+  <label for="CHI18-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{crowdensembles,<br />
+	author={Alexandre Kaspar and Genevi\`eve Patterson and Changil Kim and Ya\u{g}{\i}z Aksoy and Wojciech Matusik and Mohamed Elgharib},<br />
+	title={Crowd-Guided Ensembles: How Can We Choreograph Crowd Workers for Video Segmentation?},<br />
+	booktitle={Proc. ACM CHI},<br />
+	year={2018},<br />
   }
   </div>
 </div>
