@@ -10,7 +10,6 @@
 
 
 
-
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="Computational Photography and Image Manipulation">
 
@@ -99,7 +98,7 @@
 
 <h5 id="part-1-texture-synthesis-70-pts">Part 1: Texture synthesis (70 pts)</h5>
 
-<p>The general idea of the presented texture synthesis method is to sample patches from the input texture and compose them in an overlapping way. By given an input texture image, firstly sample patches from the input texture and compose them in an overlapping way. </p>
+<p>The general idea of the presented texture synthesis method is to sample patches from the input texture and compose them in an overlapping way. By given an input texture image, firstly sample patches from the input texture and compose them in an overlapping way.</p>
 
 <p>The simplest solution would be to just randomly select a patch from the input texture each time. With this solution the overlapping regions are not likely to match and this will result in noticeable edges in the result. We will call this method ‘Method 1’.</p>
 
@@ -121,7 +120,7 @@ Computing the minimum error cut path in the overlapping region of a new block, w
 
 <p>For these methods, we will have the patch size parameter. The ideal patch size changes from texture to texture, and you should determine a good patch size for each of the textures you synthesize and report this value in your report. Method 2 and Method 3 also have the size of the overlapping region as a parameter, which you should determine with experimentation and report.</p>
 
-<p>In the data provided for the assignment, you will find 10 texture examples that you will extend. The final size of the generated textures should be 5 times larger than the input image in both width and height. You should show the results for each texture using the 3 methods defined above. For ‘grass’, ‘random3’ and ‘text’, show additional results using Method 3 using a smaller and larger patch size than the one you determined and comment on the results. </p>
+<p>In the data provided for the assignment, you will find 10 texture examples that you will extend. The final size of the generated textures should be 5 times larger than the input image in both width and height. You should show the results for each texture using the 3 methods defined above. For ‘grass’, ‘random3’ and ‘text’, show additional results using Method 3 using a smaller and larger patch size than the one you determined and comment on the results.</p>
 
 <h5 id="part-2-texture-transfer-30-pts">Part 2: Texture transfer (30 pts)</h5>
 
@@ -129,7 +128,7 @@ Computing the minimum error cut path in the overlapping region of a new block, w
 
 <p>We can augment the texture synthesis approach above to get a texture transfer algorithm. Like texture synthesis, each sample patch that we add to our synthesized image must now respect two different constraints: <br />
 (a) it should have some agreement with the already synthesized parts (this is the constraint we used in texture synthesis)<br />
-(b) it should have some correspondence with the image we want re-render. We will use a parameter <script type="math/tex">α</script> to determine the tradeoff between these to constraints.</p>
+(b) it should have some correspondence with the image we want re-render. We will use a parameter \(α\) to determine the tradeoff between these to constraints.</p>
 
 <p>To come up with a term for part (b) we need some measurement of how much a patch agrees with the underlying image. We can do this by calculating the SSD of a patch and the image on some corresponding quantity. One such quantity could be image intensity or the blurred image intensity. So the error term will end up being something like this:</p>
 
@@ -147,7 +146,7 @@ Computing the minimum error cut path in the overlapping region of a new block, w
     
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<span>&copy; 2021 Yagiz Aksoy</span>
+<span>&copy; 2022 Yagiz Aksoy</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 

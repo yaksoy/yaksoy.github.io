@@ -10,7 +10,6 @@
 
 
 
-
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="Computational Photography and Image Manipulation">
 
@@ -106,48 +105,41 @@
 
 <p>You will use the 2 images you used in Assignment 1 (the high-frequency and low-frequency ones you selected) to demonstrate your results. In your report, you should show and comment on:<br />
 (i) The results after the first horizontal filtering, after the following vertical filtering, and after the second iteration. (input image + 3 partially filtered results). <br />
-(ii) The filtering results after 5 iterations using <script type="math/tex">\lambda = 0.1</script>, <script type="math/tex">\lambda = 1</script>, and <script type="math/tex">\lambda = 10</script>.<br />
-(ii) The filtering results after 5 iterations using <script type="math/tex">W = 5</script>, <script type="math/tex">W = 10</script>, and <script type="math/tex">W = 20</script>.</p>
+(ii) The filtering results after 5 iterations using \(\lambda = 0.1\), \(\lambda = 1\), and \(\lambda = 10\).<br />
+(ii) The filtering results after 5 iterations using \(W = 5\), \(W = 10\), and \(W = 20\).</p>
 
 <p>See below for the meaning of these parameters.</p>
 
-<p>The spatial part of the filtering explained in the paper involves iterative application of the shift-variant spatial filter <script type="math/tex">h^s</script> to the image <script type="math/tex">J_p^{(k)}</script>, where <script type="math/tex">J_p^{(k)}</script> is the result at <script type="math/tex">k^{th}</script> iteration. The <script type="math/tex">(k + 1)^{th}</script> iteration result is computed as:</p>
+<p>The spatial part of the filtering explained in the paper involves iterative application of the shift-variant spatial filter \(h^s\) to the image \(J_p^{(k)}\), where \(J_p^{(k)}\) is the result at \(k^{th}\) iteration. The \((k + 1)^{th}\) iteration result is computed as:</p>
 
-<script type="math/tex; mode=display">
-J_p^{(k+1)} = \sum_{q \in \Omega_p} h_{pq} J_q^{(k)} + \lambda h_{pp} \left(  I_p - J_p^{(k)} \right)
-</script>
+\[J_p^{(k+1)} = \sum_{q \in \Omega_p} h_{pq} J_q^{(k)} + \lambda h_{pp} \left(  I_p - J_p^{(k)} \right)\]
 
-<p>where <script type="math/tex">\lambda</script> is a weighting factor that introduces a bias towards the original image. The default value is <script type="math/tex">\lambda = 1</script> and we will experiment with how this value changes the results. <script type="math/tex">I_p</script> is the input image at pixel position <script type="math/tex">p</script>,  <script type="math/tex">J_p^{(k)}</script> is the corresponding filtering result after <script type="math/tex">k</script> iterations with <script type="math/tex">J_p^{(0)} = I_p</script>, <script type="math/tex">h_{pq}</script> are the filter coefficients, i.e. the spatially-varying kernel, and the set <script type="math/tex">\Omega_p</script> represents the local neighborhood of <script type="math/tex">p</script> in one dimension.</p>
+<p>where \(\lambda\) is a weighting factor that introduces a bias towards the original image. The default value is \(\lambda = 1\) and we will experiment with how this value changes the results. \(I_p\) is the input image at pixel position \(p\),  \(J_p^{(k)}\) is the corresponding filtering result after \(k\) iterations with \(J_p^{(0)} = I_p\), \(h_{pq}\) are the filter coefficients, i.e. the spatially-varying kernel, and the set \(\Omega_p\) represents the local neighborhood of \(p\) in one dimension.</p>
 
-<p>Note that  <script type="math/tex">h_{pq}</script> changes between horizontal and vertical filtering operations. The kernels can be computed as follows:</p>
+<p>Note that  \(h_{pq}\) changes between horizontal and vertical filtering operations. The kernels can be computed as follows:</p>
 
-<p>For a pixel <script type="math/tex">p = (p_x,p_y)</script> and its right neighbor <script type="math/tex">p′ = (p_x + 1, p_y)</script>, the permeability is defined as:</p>
+<p>For a pixel \(p = (p_x,p_y)\) and its right neighbor \(p′ = (p_x + 1, p_y)\), the permeability is defined as:</p>
 
-<script type="math/tex; mode=display">
-\tilde{\pi}_p := \left( 1 + \left\|\frac{I_p - I_{p'}}{\sigma}\right\|^\alpha   \right) ^{-1}
-</script>
+\[\tilde{\pi}_p := \left( 1 + \left\|\frac{I_p - I_{p'}}{\sigma}\right\|^\alpha   \right) ^{-1}\]
 
-<p>You can set <script type="math/tex">\alpha = 2</script> and <script type="math/tex">\sigma = 0.5</script>. The permeability between <script type="math/tex">p</script> and its right neighbor pixel is close to 0 if the corresponding color difference is high, and it is 1 if the difference is low. For two arbitrary pixels <script type="math/tex">p</script> and <script type="math/tex">q</script> on the same row (or column, depending on your filtering direction):</p>
+<p>You can set \(\alpha = 2\) and \(\sigma = 0.5\). The permeability between \(p\) and its right neighbor pixel is close to 0 if the corresponding color difference is high, and it is 1 if the difference is low. For two arbitrary pixels \(p\) and \(q\) on the same row (or column, depending on your filtering direction):</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-
-\pi_{pq} =  
+\[\pi_{pq} =  
     \begin{cases}
-      1, & \text{if}\ p = q \\
-      \prod_{n=p}^q \tilde\pi_n, & \text{if} |p-q| <= W \\
-      0, & \text{otherwise}
-    \end{cases}
- %]]></script>
+      1, &amp; \text{if}\ p = q \\
+      \prod_{n=p}^q \tilde\pi_n, &amp; \text{if} |p-q| &lt;= W \\
+      0, &amp; \text{otherwise}
+    \end{cases}\]
 
-<p>Here, <script type="math/tex">W</script> is a user-defined parameter that determines the kernel width. For instance, if <script type="math/tex">W = 10</script>, we have a 21-pixel width kernel (10+10+1).  We will set the default value as <script type="math/tex">W = 10</script> and experiment with how this value changes the results.</p>
+<p>Here, \(W\) is a user-defined parameter that determines the kernel width. For instance, if \(W = 10\), we have a 21-pixel width kernel (10+10+1).  We will set the default value as \(W = 10\) and experiment with how this value changes the results.</p>
 
-<p>To finally compute the coefficients, normalize <script type="math/tex">h_{pq}</script> so that each per-pixel kernel sums up to <script type="math/tex">1</script>.</p>
+<p>To finally compute the coefficients, normalize \(h_{pq}\) so that each per-pixel kernel sums up to \(1\).</p>
 
-<p>In summary, you first need to compute the permeability <script type="math/tex">\tilde{\pi}_p</script> of each pixel, compute the per-pixel kernels by multiplying these permeabilities to extend the reach of the filter, and then normalize each kernel to sum up to 1. Repeat for both directions.</p>
+<p>In summary, you first need to compute the permeability \(\tilde{\pi}_p\) of each pixel, compute the per-pixel kernels by multiplying these permeabilities to extend the reach of the filter, and then normalize each kernel to sum up to 1. Repeat for both directions.</p>
 
 <h5 id="part-2-cross-filtering-40-pts">Part 2: Cross-filtering (40 pts)</h5>
 
-<p>The edge-aware filters can use the edges of one image to filter another, typically used in the literature for denoising. For this task, you will compute the kernels using one image and use them to filter another. The image you use to determine the kernels is usually referred to as the guide image. </p>
+<p>The edge-aware filters can use the edges of one image to filter another, typically used in the literature for denoising. For this task, you will compute the kernels using one image and use them to filter another. The image you use to determine the kernels is usually referred to as the guide image.</p>
 
 <p>We will use the iterative filtering approach to denoise no-flash photographs with their pairs taken with flash. This approach was first demonstrated using the bilateral filter by Petschnigg et al.:<br />
 Petschnigg et al., <a href="http://hhoppe.com/flash.pdf" target="_blank">Digital Photography with Flash and No-Flash Image Pairs</a>, ACM Trans. Graph. 2004</p>
@@ -156,7 +148,7 @@ Petschnigg et al., <a href="http://hhoppe.com/flash.pdf" target="_blank">Digital
 (i) The filtering result of the no-flash image where the flash image is the guide<br />
 (ii) The filtering result where you use the no-flash image to filter itself<br />
 (iii) The ‘our_result’ version from the link, which shows the cross-bilateral filtering result<br />
-and comment on the differences between these results. You should try to get better results by changing the default parameters we used above, and report the parameters you chose in your report. </p>
+and comment on the differences between these results. You should try to get better results by changing the default parameters we used above, and report the parameters you chose in your report.</p>
 
 <p>Finally, you should show the results for the following and comment:<br />
 (i) The cross-filtering result where you use the ‘high-frequency’ image from before as the guide to filter your ‘low-frequency’ image<br />
@@ -173,7 +165,7 @@ and comment on the differences between these results. You should try to get bett
     
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<span>&copy; 2021 Yagiz Aksoy</span>
+<span>&copy; 2022 Yagiz Aksoy</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 
