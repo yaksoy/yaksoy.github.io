@@ -49,11 +49,17 @@
   
 
   
+
+  
     ,{
       "title"			: "Group Members",
       "link"			: "http://yaksoy.github.io/group/",
       "excerpt"		: "Group Members"
     }
+  
+
+  
+
   
 
   
@@ -104,6 +110,8 @@
       "link"			: "http://yaksoy.github.io/teaching/",
       "excerpt"		: "Teaching"
     }
+  
+
   
 
   

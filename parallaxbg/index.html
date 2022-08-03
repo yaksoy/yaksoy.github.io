@@ -1,0 +1,300 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Parallax Background Texture Generation &#8211; Yağız Aksoy</title>
+<meta name="description" content="Parallax Background Texture Generation">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Parallax Background Texture Generation">
+<meta name="twitter:description" content="Parallax Background Texture Generation">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://yaksoy.github.io/images/parallaxTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Parallax Background Texture Generation">
+<meta property="og:description" content="Parallax Background Texture Generation">
+<meta property="og:url" content="http://yaksoy.github.io/parallaxbg/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="http://yaksoy.github.io/parallaxbg/">
+<link href="http://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Parallax Background Texture Generation</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <a href="https://www.linkedin.com/in/bokano/" target="_blank">Brigham Okano</a>, <a href="https://www.linkedin.com/in/ross-shen/" target="_blank">Shao Yu Shen</a>, <a href="https://sebastian-dille.github.io/" target="_blank">Sebastian Dille</a>, and <a href="http://yaksoy.github.io" target="_blank">Yağız Aksoy</a>
+      </div>
+      <div class="entry-titleVenue">
+        SIGGRAPH Posters, 2022
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="http://yaksoy.github.io/images/parallaxTeaser.jpg" class="entry-feature-image" alt="Parallax Background Texture Generation" style="margin-top:-40;"><p class="image-caption">We present a framework to turn a landscape photograph (left) into a layered game texture (right) with parallax effect.</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+	Art assets for games can be time intensive to produce. 
+	Whether it is a full 3D world, or simpler 2D background, creating good looking assets takes time and skills that are not always readily available. 
+	Time can be saved by using repeating assets, but visible repetition hurts immersion. 
+	Procedural generation techniques can help make repetition less uniform, but do not remove it entirely. 
+	Both approaches leave noticeable levels of repetition in the image, and require significant time and skill investments to produce. 
+	Video game developers in hobby, game jam, or early prototyping situations may not have access to the required time and skill. 
+	We propose a framework to produce layered 2D backgrounds without the need for significant artist time or skill. 
+	In our pipeline, the user provides segmented photographic input, instead of creating traditional art, and receives game-ready assets. 
+	By utilizing photographs as input, we can achieve both a high level of realism for the resulting background texture as well as a shift from manual work away towards computational run-time which frees up developers for other work.
+</p>
+<p>
+	This work was developed by Brigham and Shao Yu as an undergraduate class project for CMPT 461 - Computational Photography at SFU.
+</p>
+
+<p style="text-align:center;"><b>Implementation</b></p>
+
+<p style="text-align:center;"><a href="https://github.com/diceyecid/Parallax-Background-Generation" target="_blank">GitHub Repository for CMPT 461 - Computational Photography <i class="fa fa-external-link"></i></a></p>
+
+<p style="text-align:center;"><b>Paper</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="http://yaksoy.github.io/papers/SIG22c-ParallaxBG.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/parallaxPaper.jpg" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.io/papers/SIG22c-ParallaxBG.jpg" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/parallaxPosterSmall.jpg" title="Poster" /></a></td>
+	</tr></table>
+
+<p style="text-align:center;"><b>Video</b></p>
+
+<p style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_KWdFy3YipI" frameborder="0"> </iframe>
+</p>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@INPROCEEDINGS{parallaxBG,<br />
+	author={Brigham Okano and Shao Yu Shen and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
+	title={Parallax Background Texture Generation},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+  </p>
+
+<p style="text-align:center;"><b>Other Posters at SIGGRAPH 2022 from Our Group</b></p>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../interactiveDepth" target="_blank"><img src="http://yaksoy.github.io/images/research/interactiveDepth.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../interactiveDepth" target="_blank">Interactive Editing of Monocular Depth <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Obumneme Stanley Dukor</b>, <b>S. Mahdi H. Miangoleh</b>, <b>Mahesh Kumar Krishna Reddy</b>, Long Mai, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="accordion">
+  <input id="SIG22a-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item1">Abstract</label>
+  <div class="pub-abstract">
+	Recent advances in computer vision have made 3D structure-aware editing of still photographs a reality. 
+	Such computational photography applications use a depth map that is automatically generated by monocular depth estimation methods to represent the scene structure. 
+	In this work, we present a lightweight, web-based interactive depth editing and visualization tool that adapts low-level conventional image editing operations for geometric manipulation to enable artistic control in the 3D photography workflow. 
+	Our tool provides real-time feedback on the geometry through a 3D scene visualization to make the depth map editing process more intuitive for artists. 
+	Our web-based tool is open-source and platform-independent to support wider adoption of 3D photography techniques in everyday digital photography.
+  </div>
+
+  <input id="SIG22a-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.io/papers/SIG22a-interactiveDepth.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/interactiveDepthPaper.jpg" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.io/papers/SIG22a-interactiveDepth.jpg" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/interactiveDepthPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="" target="_blank"><img src="http://yaksoy.github.io/images/research/interactiveDepthVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22a-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{interactiveDepth,<br />
+	author={Obumneme Stanley Dukor and S. Mahdi H. Miangoleh and Mahesh Kumar Krishna Reddy and Long Mai and Ya\u{g}{\i}z Aksoy},<br />
+	title={Interactive Editing of Monocular Depth},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../dynapix" target="_blank"><img src="http://yaksoy.github.io/images/research/dynapix.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../dynapix" target="_blank">DynaPix: Normal Map Pixelization for Dynamic Lighting <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Gerardo Gandeaga, Denys Iliash, <b>Chris Careaga</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="accordion">
+  <input id="SIG22b-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item1">Abstract</label>
+  <div class="pub-abstract">
+	This work introduces DynaPix, a Krita extension that automatically generates pixelated images and surface normals from an input image. 
+	DynaPix is a tool that aids pixel artists and game developers more efficiently develop 8-bit style games and bring them to life with dynamic lighting through normal maps that can be used in modern game engines such as Unity. 
+	The extension offers artists a degree of flexibility as well as allows for further refinements to generated artwork. 
+	Powered by out of the box solutions, DynaPix is a tool that seamlessly integrates in the artistic workflow.
+  </div>
+
+  <input id="SIG22b-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="http://yaksoy.github.io/papers/SIG22b-DynaPix.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/dynapixPaper.jpg" title="Paper" /></a></td>
+		<td><a href="http://yaksoy.github.io/papers/SIG22b-DynaPix.jpg" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/dynapixPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/1mylyzw6i_U" target="_blank"><img src="http://yaksoy.github.io/images/research/dynapixVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22b-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{dynapix,<br />
+	author={Gerardo Gandeaga and Denys Iliash and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+	title={Dyna{P}ix: Normal Map Pixelization for Dynamic Lighting},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2022 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
