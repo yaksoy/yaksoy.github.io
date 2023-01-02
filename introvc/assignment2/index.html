@@ -2,238 +2,212 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
-
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <title>CMPT 361 - Introduction to Computer Graphics (and Vision) &#8211; Yağız Aksoy</title>
+<meta charset="utf-8">
+<title>CMPT 361 - Introduction to Computer Graphics (and Vision) &#8211; Yağız Aksoy</title>
 
 
 
 
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="CMPT 361 - Introduction to Computer Graphics (and Vision)">
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:title" content="CMPT 361 - Introduction to Computer Graphics (and Vision)">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
 
-    <meta name="twitter:site" content="@yagizaksoy">
-    <meta name="twitter:creator" content="@yagizaksoy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yaksoy.github.io/images/jordan.png">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="http://yaksoy.github.io/images/jordan.png">
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CMPT 361 - Introduction to Computer Graphics (and Vision)">
 
-    <!-- Open Graph -->
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="CMPT 361 - Introduction to Computer Graphics (and Vision)">
+<meta property="og:url" content="http://yaksoy.github.io/introvc/assignment2/">
+<meta property="og:site_name" content="Yağız Aksoy">
 
-    <meta property="og:url" content="http://yaksoy.github.io/introvc/assignment2/">
-    <meta property="og:site_name" content="Yağız Aksoy">
-
-    <!-- Webmaster Tools verfication -->
-    <meta name="google-site-verification" content="googleb0479c04a25255c3">
-
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
 
 
-    <link rel="canonical" href="http://yaksoy.github.io/introvc/assignment2/">
-    <link href="http://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
 
-    <!-- http://t.co/dKP3o1e -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="http://yaksoy.github.io/introvc/assignment2/">
+<link href="http://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
 
-    <!-- For all browsers -->
-    <link rel="stylesheet" href="http://yaksoy.github.io/assets/css/main.css">
-    <!-- Webfonts -->
-    <script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="cleartype" content="on">
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
 
-    <!-- HTML5 Shiv and Media Query Support -->
-    <!--[if lt IE 9]>
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
   <script src="http://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
   <script src="http://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
-    <!-- Modernizr -->
-    <script src="http://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<!-- Modernizr -->
+<script src="http://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
-    <!-- Icons -->
-    <!-- 16x16 -->
-    <link rel="shortcut icon" href="http://yaksoy.github.io/favicon.ico">
-    <!-- 32x32 -->
-    <link rel="shortcut icon" href="http://yaksoy.github.io/favicon.png">
-    <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-    <link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
-    <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
-    <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
-    <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 
 <body id="page">
 
-    <div id="main" role="main">
-        <article class="entry">
-            <div class="entry-wrapper">
-                <br><br>
-                <!-- <header class="entry-header">-->
-                <h1 class="entry-titleProject" style="margin-top:5px;">CMPT 361 - Introduction to Computer Graphics (and Vision)</h1>
-                <!-- </header>-->
-                <div class="entry-titleAuthors">
-                    Programming Assignment 2
-                </div>
-                <div class="entry-titleVenue">
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br><br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">CMPT 361 - Introduction to Computer Graphics (and Vision)</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        Programming Assignment 2
+      </div>
+      <div class="entry-titleVenue">
+        
+      </div>
+    </div><!-- /.entry-wrapper -->
+    
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p>In this assignment, you will implement the FAST interest point detector and use it to generate panoramas!</p>
 
-                </div>
-            </div>
-            <!-- /.entry-wrapper -->
+<p>You can do this assignment in any language. However, as we cover all these topics with Matlab demonstrations in lectures, it will be easier in Matlab. If you use another language, you need to submit your code with a readme file with detailed explanations on how to run your code (the libraries you used etc.).</p>
 
-            <div class="entry-wrapper">
-                <div class="entry-contentProject">
-                    <p>In this assignment, you will implement the FAST interest point detector and use it to generate panoramas!</p>
+<p>You need to submit your source code and your report through Coursys. Once run, your code should save each result image with the filenames defined below with a single click. Your report will be an html file together with your result images. The provided template uses these filenames to display your results.</p>
 
-                    <p>You can do this assignment in any language. However, as we cover all these topics with Matlab demonstrations in lectures, it will be easier in Matlab. If you use another language, you need to submit your code with a readme file with
-                        detailed explanations on how to run your code (the libraries you used etc.).</p>
+<p><a href="https://www.mathworks.com/help/vision/ug/feature-based-panoramic-image-stitching.html" target="_blank">The MATLAB Image Stitching tutorial</a> we mentioned in the RANSAC lecture will be a helpful resource, although they implement some stuff that is not included in this assignment, even if you are not implementing this assignment in MATLAB.</p>
 
-                    <p>You need to submit your source code (e.g. ".m") and your report (e.g. ".html") through Coursys. Once run, your code should save each result image with the filenames defined below with a single click. Your report will be an html file
-                        together with your result images. The provided template uses these filenames to display your results.</p>
+<p><b>Due date:</b> Sunday, November 1, 23:59</p>
 
-                    <p><a href="https://www.mathworks.com/help/vision/ug/feature-based-panoramic-image-stitching.html" target="_blank">The MATLAB Image Stitching tutorial</a> we mentioned in the RANSAC lecture will be a helpful resource, although they implement
-                        some stuff that is not included in this assignment, even if you are not implementing this assignment in MATLAB.</p>
+<h4 id="1-take-4-sets-of-2-photographs-to-be-stitched-together-to-create-a-panorama">1: Take 4 sets of 2 photographs to be stitched together to create a panorama</h4>
 
-                    <h4 id="take-4-sets-of-2-photographs-to-be-stitched-together-to-create-a-panorama">1: Take 4 sets of 2 photographs to be stitched together to create a panorama</h4>
+<p>You need to take photograph pairs to be stitched together, similar to the pair we talked about in our transformations lecture. Take each pair of images from different scenes. I would recommend taking many pairs of images and determining which ones to use after some experimentation with your implementation and results. Make sure to resize your images to get the longer dimension of the image (height or width) to be 750.</p>
 
-                    <p>You need to take photograph pairs to be stitched together, similar to the pair we talked about in our transformations lecture. Take each pair of images from different scenes. I would recommend taking many pairs of images and determining
-                        which ones to use after some experimentation with your implementation and results. Make sure to resize your images to get the longer dimension of the image (height or width) to be 750.</p>
+<p>If you’d like to implement Part 5 for bonus points, at least two of your 4 image sets should contain 4 images to be stitched together.</p>
 
-                    <p>If you’d like to implement Part 6 for bonus points, at least two of your 4 image sets should contain 4 images to be stitched together. </p>
+<p><b>Submit your image pairs named as S1-im1.png, S1-im2.png, and so on.</b></p>
 
-                    <p><b>Submit your resized image pairs named as S1-im1.png, S1-im2.png, and so on.</b></p>
+<h4 id="2-fast-feature-detector-3-pts">2: FAST feature detector (3 pts.)</h4>
 
-                    <h4 id="fast-feature-detector-3-pts">2: FAST feature detector (3 pts.)</h4>
+<p>Features from accelerated segment test, or FAST, is an efficient interest point detection method proposed by Rosten and Drummond. It works by comparing the brightness of a pixel with a ring surrounding it. You can find more detailed description in the links below:</p>
 
-                    <p>Features from accelerated segment test, or FAST, is an efficient interest point detection method proposed by Rosten and Drummond. It works by comparing the brightness of a pixel with a ring surrounding it. You can find more detailed
-                        description in the links below:</p>
+<p><a href="https://en.wikipedia.org/wiki/Features_from_accelerated_segment_test" target="_blank">FAST Wikipedia page</a></p>
 
-                    <p><a href="https://en.wikipedia.org/wiki/Features_from_accelerated_segment_test" target="_blank">FAST Wikipedia page</a></p>
+<p><a href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_fast/py_fast.html" target="_blank">OpenCV Tutorial</a></p>
 
-                    <p><a href="https://docs.opencv.org/3.4/df/d0c/tutorial_py_fast.html" target="_blank">OpenCV Tutorial</a></p>
+<p>You need to implement FAST including the high-speed test as a function named my_fast_detector. It’s on you to learn about how to define functions in MATLAB.</p>
 
-                    <p>You need to implement FAST including the high-speed test and non-maximal suppression as a function named my_fast_detector. It’s on you to learn about how to define functions in MATLAB.</p>
+<p>Hint: In MATLAB, using for loops is quite inefficient but using matrix operations are very efficient. You can do the pixel-wise comparisons by shifting the image for every pixel at once. For example, for the check if a pixel is brighter than their neighbor 3 pixels to the left, shift the image to the right by 3 pixels and compare against the original image in a single line!</p>
 
-                    <p><b>The FAST implementation should be your own original code, do not copy or reuse other open-source implementations (e.g. GitHub).</b></p>
+<p><b>Save the visualization of the detected points in the first images of your 2 image sets as S1-fast.png and S2-fast.png</b></p>
 
-                    <p>Hint: In MATLAB, using for loops is quite inefficient but using matrix operations are very efficient. You can do the pixel-wise comparisons by shifting the image for every pixel at once. For example, to check if a pixel is brighter
-                        than their neighbor 3 pixels to the left, shift the image to the right by 3 pixels and compare against the original image in a single line!</p>
+<h4 id="2-robust-fast-using-harris-cornerness-metric-1-pts">2: Robust FAST using Harris Cornerness metric (1 pts.)</h4>
 
-                    <p><b>Save the visualization of the detected points in the first images of your 2 image sets as S1-fast.png and S2-fast.png</b></p>
+<p>Compute the Harris cornerness measure for each detected FAST feature. Eliminate weak FAST points by defining a threshold for the Harris metric. This threshold must be fixed for every image you use. We will call these points FASTR points.</p>
 
-                    <h4 id="robust-fast-using-harris-cornerness-metric-1-pts">3: Robust FAST using Harris Cornerness metric (1 pts.)</h4>
+<p><b>Comment on which points were discarded after this thresholded by comparing your FAST and FASTR visualizations. Save the visualization of the detected points in the first images of your 2 image sets as S1-fastR.png and S2-fastR.png</b> Note down the average computation time of FAST and FASTR features (average of all the images you have) and comment on the difference.</p>
 
-                    <p>Compute the Harris cornerness measure for each detected FAST feature. Eliminate weak FAST points by defining a threshold for the Harris metric. This threshold must be the same for every image you use. We will call these points FASTR
-                        points.
-                    </p>
+<h4 id="3-point-description-and-matching-2-pts">3: Point description and matching (2 pts.)</h4>
 
-                    <p><b>Comment on which points were discarded after this thresholded by comparing your FAST and FASTR visualizations. Save the visualization of the detected points in the first images of your 2 image sets as S1-fastR.png and S2-fastR.png.</b>                        Note down the average computation time of FAST and FASTR features (average of all the images you have) and comment on the difference.</p>
+<p>Use an existing implementation of one of ORB, SURF, or FREAK feature decription methods to generate descriptors for your FAST and FASTR points. Note which decriptor you use in your report. Depending on the function you are using, you might need to put your keypoints in appropriate containers. Don’t forget to use MATLAB Help to get such definitions.</p>
 
-                    <h4 id="point-description-and-matching-2-pts">4: Point description and matching (2 pts.)</h4>
+<p>Match the features between the first two images in each photo set. <b>Save the visualization of the matched points between the two images of your first 2 image sets, using FAST and FASTR points, as S1-fastMatch.png, S1-fastRMatch.png, S2-fastMatch.png, and S2-fastRMatch.png</b> Comment on the performance differences if any.</p>
 
-                    <p>Use an existing implementation of one of ORB, SURF, or FREAK feature description methods to generate descriptors for your FAST and FASTR points. Note which descriptor you use in your report. Depending on the function you are using,
-                        you might need to put your keypoints in appropriate containers. Don’t forget to use MATLAB Help to get such definitions.</p>
+<h4 id="4-ransac-and-panoramas-4-pts">4: RANSAC and Panoramas (4 pts.)</h4>
 
-                    <p>Match the features between the first two images in each photo set using existing implementation such as "matchFeatures" in MATLAB. <b>Save the visualization of the matched points between the two images of your first 2 image sets, using FAST and FASTR points, as S1-fastMatch.png, S1-fastRMatch.png, S2-fastMatch.png, and S2-fastRMatch.png.</b>                        Comment on the performance differences if any.</p>
+<p>To compute the homography between each pair, you will use RANSAC. You can use an existing implementation such as matchFeatures function in MATLAB, but you need to be able experiment with the RANSAC parameters for the optimum result.</p>
 
-                    <h4 id="ransac-and-panoramas-4-pts">5: RANSAC and Panoramas (4 pts.)</h4>
+<p>Find the homography between two images in all your image sets and stitch them together.</p>
 
-                    <p>To compute the homography between each pair, you will use RANSAC. You can use an existing implementation such as "estimateGeometricTransform2D" function in MATLAB, but you need to be able experiment with the RANSAC parameters for the
-                        optimum result.</p>
+<p>Experiment with RANSAC parameters and find a setup where you use minimum number of trials while still getting a satisfactory result for all your image sets. You’ll find 2 different sets of RANSAC parameters, one for FAST and one for FASTR. The RANSAC parameters you decide should be the same for the 4 image sets.</p>
 
-                    <p>Find the homography between two images in all your image sets and stitch them together.</p>
+<p><b>Save the stitched images for all your image sets only using FASTR points, as S1-panorama.png, S2-panorama.png, S3-panorama.png, and S4-panorama.png</b> Comment on the difference between optimal RANSAC parameters for FAST and FASTR.</p>
 
-                    <p>Experiment with RANSAC parameters and find a setup where you use minimum number of trials while still getting a satisfactory result for all your image sets. You’ll find 2 different sets of RANSAC parameters, one for FAST and one for
-                        FASTR. The RANSAC parameters you decide should be the same for the 4 image sets.</p>
+<h4 id="5-bonus-stitch-4-images-instead-of-2-2-pts">5: Bonus: Stitch 4 images instead of 2. (2 pts.)</h4>
 
-                    <p><b>Save the stitched images for all your image sets only using FASTR points, as S1-panorama.png, S2-panorama.png, S3-panorama.png, and S4-panorama.png</b> Comment on the difference between optimal RANSAC parameters for FAST and FASTR.</p>
+<p>Have 4 images in at least two of your image sets and present panoramas that result in stitching all 4 images. These 4 image can be all horizontally placed (in the panorama it would be [im1 im2 im3 im4] side by side) or placed as a grid (like [im1 im2 ; im3 im4], the last two images being ‘downstairs neighbors’ of the first two).</p>
 
-                    <h4 id="bonus-stitch-4-images-instead-of-2-2-pts">6: Bonus: Stitch 4 images instead of 2 (2 pts.)</h4>
+<h4 id="6-report">6 Report</h4>
 
-                    <p>Have 4 images in at least two of your image sets and present panoramas that result in stitching all 4 images. These 4 images can be all horizontally placed (in the panorama it would be [im1 im2 im3 im4] side by side) or placed as a
-                        grid (like [im1 im2 ; im3 im4], the last two images being ‘downstairs neighbors’ of the first two).</p>
+<p>The report template is here: <a href="/introvc/assignment2/hw2template.html" target="_blank">HTML template</a></p>
 
-                    <h4 id="report">7 Report</h4>
+<p>All you need to do is to save the images in the current folder as your html file, and fill in the required information and comments in the html file. Don’t edit the template further than needed.</p>
 
-                    <p>The report template is here: <a href="/introvc/assignment2/hw2template.html" target="_blank">HTML template</a></p>
+<p>You’ll submit your report as an html file in a .zip container <b>together with all the results you have saved</b>. You need to add the necessary comments asked in the question definitions.</p>
 
-                    <p>All you need to do is to save the images in the current folder as your html file, and fill in the required information and comments in the html file. Don’t edit the template further than needed.</p>
+<p><b>You also have to add the following honor statement to the beginning of your report:</b></p>
 
-                    <p>You’ll submit your report as an html file in a .zip container <b>together with all the results you have saved</b> and the source code (e.g. ".m"). You need to add the necessary comments asked in the question definitions.</p>
-
-                    <p><b>You also have to add the following honor statement to the beginning of your report:</b></p>
-
-                    <p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Piazza, I know that’s totally fine and even encouraged. I also already know that this class is graded
-                        on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of
-                        all others. That’s horrible! I would never do it.</p>
+<p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Piazza, I know that’s totally fine and even encouraged. I also already know that this class is graded on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
 
 
-                </div>
-                <!-- /.entry-contentProject -->
-            </div>
-            <!-- /.entry-wrapper -->
-        </article>
-    </div>
-    <!-- /#main -->
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
 
-    <div class="footer-wrapper">
-        <footer role="contentinfo" class="entry-wrapper">
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2023 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
 
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <span>&copy; 2021 Yagiz Aksoy</span>
-        </footer>
-    </div>
-    <!-- /.footer-wrapper -->
+<script type="text/javascript">
+  var BASE_URL = 'http://yaksoy.github.io';
+</script>
 
-    <script type="text/javascript">
-        var BASE_URL = 'http://yaksoy.github.io';
-    </script>
-
-    <!-- Include Latex style math -->
-    <!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="http://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')
-    </script>
-    <script src="http://yaksoy.github.io/assets/js/scripts.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://yaksoy.github.io/assets/js/scripts.min.js"></script>
 
 
 
-    <!-- Start of StatCounter Code for Default Guide -->
-    <script type="text/javascript">
-        var sc_project = 11195487;
-        var sc_invisible = 1;
-        var sc_security = "112d9b46";
-        var scJsHost = (("https:" == document.location.protocol) ?
-            "https://secure." : "http://www.");
-        document.write("<sc" + "ript type='text/javascript' src='" +
-            scJsHost +
-            "statcounter.com/counter/counter.js'></" + "script>");
-    </script>
-    <noscript><div class="statcounter"><a title="shopify
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
 analytics" href="http://statcounter.com/shopify/"
 target="_blank"><img class="statcounter"
 src="//c.statcounter.com/11195487/0/112d9b46/1/"
 alt="shopify analytics"></a></div></noscript>
-    <!-- End of StatCounter Code for Default Guide -->
+<!-- End of StatCounter Code for Default Guide -->
 
 </body>
-
 </html>

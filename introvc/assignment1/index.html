@@ -10,7 +10,6 @@
 
 
 
-
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="CMPT 361 - Introduction to Computer Graphics (and Vision)">
 
@@ -100,9 +99,11 @@
 
 <p>When saving your resulting images (filtered image, frequency magnitude image, edge image etc.), you should use the imwrite function to save them as png. When saving visualizations (when we use surf, for example) save them using the saveas(gcf, ‘filename’) function in Matlab to save them again as png.</p>
 
-<h4 id="take-two-photographs">1: Take two photographs</h4>
+<p><b>Due date:</b> Sunday, October 11, 23:59</p>
 
-<p>You will use two images in your analysis, and the first part is finding these images! You can take your own photographs (encouraged) or find images from the internet. One photograph should have a lot of high-frequency components (many edges all around) and the other should have mostly low-frequency components. You have seen such a pair in the Signals &amp; Images and Sampling &amp; Aliasing lectures. </p>
+<h4 id="1-take-two-photographs">1: Take two photographs</h4>
+
+<p>You will use two images in your analysis, and the first part is finding these images! You can take your own photographs (encouraged) or find images from the internet. One photograph should have a lot of high-frequency components (many edges all around) and the other should have mostly low-frequency components. You have seen such a pair in the Signals &amp; Images and Sampling &amp; Aliasing lectures.</p>
 
 <p>Resize and crop your photographs and convert to grayscale to get a pair of 500x500 grayscale images. We will refer to these 500x500 images as HP (high-pass) and LP (low-pass) in the rest of this assignment.</p>
 
@@ -110,29 +111,29 @@
 
 <p>You might want to have several options for both. If you are not able to observe aliasing in HP or if you observe heavy aliasing in LP in the corresponding questions below, you need to change your images.</p>
 
-<h4 id="compute-frequency-representations-1-pt">2: Compute frequency representations (1 pt)</h4>
+<h4 id="2-compute-frequency-representations-1-pt">2: Compute frequency representations (1 pt)</h4>
 
 <p>Compute the Fourier transforms of HP and LP and visualize their magnitude. As we did in the lecture, you may need to use a multiplier to display the frequency response properly. Don’t forget to fftshift.</p>
 
 <p><b>Save the frequency response magnitude as images with adjusted brightness for better viewing as HP-freq.png and LP-freq.png</b></p>
 
-<h4 id="visualize-kernels-2-pts">3: Visualize kernels (2 pts)</h4>
+<h4 id="3-visualize-kernels-2-pts">3: Visualize kernels (2 pts)</h4>
 
 <p>Define a sobel kernel, a Gaussian kernel, and a derivative-of-Gaussian (DoG) kernel. The derivative kernels should only be in a single direction. The Gaussian kernels should have the standard deviation of 2.5. Determine the kernel size of your Gaussian kernel by examining it with surf function. It shouldn’t be too large or too small. Compute your DoG kernel using the first two kernels you defined. <b> Save the surf visualizations of the Gaussian and DoG kernels as gaus-surf.png and dog-surf.png.</b></p>
 
-<p>Apply the Gaussian filter to HP and LP. Compute the frequency domain representation of the filtered images. <b>Save the filtered images and freq. domain versions as HP-filt.png, HP-filt-freq.png, LP-filt.png, and LP-filt-freq.png.</b> </p>
+<p>Apply the Gaussian filter to HP and LP. Compute the frequency domain representation of the filtered images. <b>Save the filtered images and freq. domain versions as HP-filt.png, HP-filt-freq.png, LP-filt.png, and LP-filt-freq.png.</b></p>
 
-<p>Compute the Fourier transform of the DoG kernels using the transform size of 500x500. Apply this filter to both images in the frequency domain and convert them back to spatial domain. <b>Save the filtered images and freq. domain versions as HP-dogfilt.png, HP-dogfilt-freq.png, LP-dogfilt.png, and LP-dogfilt-freq.png.</b> </p>
+<p>Compute the Fourier transform of the DoG kernels using the transform size of 500x500. Apply this filter to both images in the frequency domain and convert them back to spatial domain. <b>Save the filtered images and freq. domain versions as HP-dogfilt.png, HP-dogfilt-freq.png, LP-dogfilt.png, and LP-dogfilt-freq.png.</b></p>
 
-<h4 id="anti-aliasing-4-pts">4: Anti-aliasing (4 pts)</h4>
+<h4 id="4-anti-aliasing-4-pts">4: Anti-aliasing (4 pts)</h4>
 
-<p>Subsample the two images (using 1:2:end) to half the size in both dimensions. You should observe aliasing in HP and no aliasing in LP. <b>Save the subsampled images and freq. domain versions as HP-sub2.png, HP-sub2-freq.png, LP-sub2.png, and LP-sub2-freq.png.</b> In your report, comment on where the aliasing happens in both spatial and frequency domains. </p>
+<p>Subsample the two images (using 1:2:end) to half the size in both dimensions. You should observe aliasing in HP and no aliasing in LP. <b>Save the subsampled images and freq. domain versions as HP-sub2.png, HP-sub2-freq.png, LP-sub2.png, and LP-sub2-freq.png.</b> In your report, comment on where the aliasing happens in both spatial and frequency domains.</p>
 
 <p>Subsample the two images (using 1:4:end) to quarter the size in both dimensions. <b>Save the subsampled images and freq. domain versions as HP-sub4.png, HP-sub4-freq.png, LP-sub4.png, and LP-sub4-freq.png.</b> In your report, comment on where the aliasing happens in both spatial and frequency domains.</p>
 
 <p>Apply anti-aliasing to HP for half and quarter options. You need to determine the size and standard deviation of the Gaussian kernels you use for anti-aliasing. They should not smooth the images more than necessary to make aliasing disappear. Hence, you need to find two different Gaussian kernels for half and quarter versions.  <b>Save the anti-aliased subsampled images and freq. domain versions as HP-sub2-aa.png, HP-sub2-aa-freq.png, HP-sub4-aa.png, and HP-sub4-aa-freq.png.</b> Note the size and standard deviations of the two Gaussian filters you used in your report. Comment on the frequency content of subsampled images and compare them to the versions without anti-aliasing.</p>
 
-<h4 id="canny-edge-detection-thresholding-3-pts">5: Canny edge detection thresholding (3 pts)</h4>
+<h4 id="5-canny-edge-detection-thresholding-3-pts">5: Canny edge detection thresholding (3 pts)</h4>
 
 <p>As we saw in lecture, canny edge detection has a low and a high threshold for determining edges. You will determine the best values for these two numbers for HP and LP separately that, in your view, give the optimum edge representation for a particular image.</p>
 
@@ -142,7 +143,7 @@
 
 <p>Repeat the same thing for LP. Save all 5 versions as LP-canny-/fillintheblanks/.png</p>
 
-<h4 id="report">6 Report</h4>
+<h4 id="6-report">6 Report</h4>
 
 <p>The report template is here: <a href="/introvc/assignment1/hw1template.html" target="_blank">HTML template</a></p>
 
@@ -165,7 +166,7 @@
     
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<span>&copy; 2021 Yagiz Aksoy</span>
+<span>&copy; 2023 Yagiz Aksoy</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 
