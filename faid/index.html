@@ -10,7 +10,6 @@
 
 
 
-
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="Flash and Ambient Illuminations Dataset">
 <meta name="twitter:description" content="Flash-Ambient Illumination Pairs">
@@ -78,12 +77,16 @@
 <div id="main" role="main">
   <article class="entry">
     <div class="entry-wrapper">
-      <br><br>
+      <br>
+      <div class="entry-titleLogos">
+        
+      </div>
+      <br>
       <!-- <header class="entry-header">-->
         <h1 class="entry-titleProject" style="margin-top:5px;">Flash and Ambient Illuminations Dataset</h1>
       <!-- </header>-->
       <div class="entry-titleAuthors">
-        <a href="../" target="_blank">Yagiz Aksoy</a>, <a href="http://people.csail.mit.edu/changil/" target="_blank">Changil Kim</a>, <a href="http://people.csail.mit.edu/pkellnho/" target="_blank">Petr Kellnhofer</a>, <a href="http://people.csail.mit.edu/sparis/" target="_blank">Sylvain Paris</a>, <a href="http://people.mpi-inf.mpg.de/~elgharib/" target="_blank">Mohamed Elgharib</a>, <a href="https://www.inf.ethz.ch/personal/marc.pollefeys/" target="_blank">Marc Pollefeys</a> and <a href="http://people.csail.mit.edu/wojciech/" target="_blank">Wojciech Matusik</a>
+        <a href="../" target="_blank">Yağız Aksoy</a>, <a href="http://people.csail.mit.edu/changil/" target="_blank">Changil Kim</a>, <a href="http://people.csail.mit.edu/pkellnho/" target="_blank">Petr Kellnhofer</a>, <a href="http://people.csail.mit.edu/sparis/" target="_blank">Sylvain Paris</a>, <a href="http://people.mpi-inf.mpg.de/~elgharib/" target="_blank">Mohamed Elgharib</a>, <a href="https://www.inf.ethz.ch/personal/marc.pollefeys/" target="_blank">Marc Pollefeys</a> and <a href="http://people.csail.mit.edu/wojciech/" target="_blank">Wojciech Matusik</a>
       </div>
       <div class="entry-titleVenue">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
@@ -159,6 +162,43 @@ If you use this dataset, please cite our paper:
   </div>
   </p>
 
+<p style="text-align:center;"><b>Included in our extended dataset</b></p>
+
+<p>–</p>
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../efaid" target="_blank"><img src="http://yaksoy.github.io/images/research/efai.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../efaid" target="_blank">Extended Flash and Ambient Illuminations Dataset <i class="fa fa-external-link"></i></a>
+</div>
+
+<div class="accordion">
+  <input id="EFAID-item1" name="accordion1" type="checkbox" />
+  <label for="EFAID-item1">Brief Description</label>
+  <div class="pub-abstract">
+	We combine and extend existing flash/no-flash datasets to create a diverse set of real-world flash/ambient pairs suitable for training deep networks. Our dataset is constructed from three existing datasets: The Multi-Illumination Dataset (MID), The Flash and Ambient Illuminations Dataset (FAID), and the Deep Flash Portrait Dataset (DPD). We propose a pipeline for compositing portraits from DPD onto backgrounds from FAID, and discuss multiple considerations for normalizing and augmenting flash/no-flash data.
+	This dataset accompanies our <a href="../intrinsicFlash/" target="_blank">CVPR 2023 paper</a>.
+  </div>
+
+  <input id="EFAID-item3" name="accordion1" type="checkbox" />
+  <label for="EFAID-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{Maralan2023Flash,<br />
+		author={Sepideh Sarajian Maralan and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Computational Flash Photography through Intrinsics},<br />
+		journal={Proc. CVPR},<br />
+		year={2023},<br />
+		} 
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
 <hr />
 
 <p style="text-align:center;"><b>Files</b></p>
@@ -194,10 +234,10 @@ If you use this dataset, please cite our paper:
   <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Toys_Illuminations.zip" target="_blank">Toys (5.3GB)</a></td>
   <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Toys_Photos.zip" target="_blank">Toys (1.7GB)</a></td>
 </tr>
-
+<tr>
   <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Rooms_Illuminations.zip" target="_blank">Rooms (10.3GB)</a></td>
   <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Rooms_Photos.zip" target="_blank">Rooms (3.0GB)</a></td>
-
+</tr>
 <tr>
   <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Objects_Illuminations.zip" target="_blank">Objects (7.5GB)</a></td>
   <td class="homepage" style="width:200px;vertical-align:middle;text-align:center"><a href="https://cvg.ethz.ch/research/flash-ambient/Objects_Photos.zip" target="_blank">Objects (2.3GB)</a></td>
@@ -284,7 +324,7 @@ We present a brief examination of illumination decomposition, a challenging and 
     
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<span>&copy; 2021 Yagiz Aksoy</span>
+<span>&copy; 2023 Yagiz Aksoy</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 

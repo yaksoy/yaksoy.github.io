@@ -10,7 +10,6 @@
 
 
 
-
 <!-- Twitter Cards -->
 <meta name="twitter:title" content="A Dataset of Flash and Ambient Illumination Pairs from the Crowd">
 <meta name="twitter:description" content="Flash-Ambient Illumination Pairs">
@@ -78,7 +77,11 @@
 <div id="main" role="main">
   <article class="entry">
     <div class="entry-wrapper">
-      <br><br>
+      <br>
+      <div class="entry-titleLogos">
+        
+      </div>
+      <br>
       <!-- <header class="entry-header">-->
         <h1 class="entry-titleProject" style="margin-top:5px;">A Dataset of Flash and Ambient Illumination Pairs from the Crowd</h1>
       <!-- </header>-->
@@ -97,7 +100,7 @@
 <p>
 Illumination is a critical element of photography and is essential for many computer vision tasks. 
 Flash light is unique in the sense that it is a widely available tool for easily manipulating the scene illumination. 
-We present a dataset of thousands of ambient and flash illumination pairs to enable studying flash photography and other applications that can benefit from having separate illuminations. 
+We present a dataset of thousands of ambient and flash illumination pairs to enable studying flash photography and other applications that can benefit from having separate illuminations. 
 Different than the typical use of crowdsourcing in generating computer vision datasets, we make use of the crowd to directly take the photographs that make up our dataset. 
 As a result, our dataset covers a wide variety of scenes captured by many casual photographers. 
 We detail the advantages and challenges of our approach to crowdsourcing as well as the computational effort to generate completely separate flash illuminations from the ambient light in an uncontrolled setup. 
@@ -166,6 +169,117 @@ We present a brief examination of illumination decomposition, a challenging and 
 <hr />
 
 <table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../intrinsicFlash" target="_blank"><img src="http://yaksoy.github.io/images/research/intrinsicFlash.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../intrinsicFlash" target="_blank">Computational Flash Photography through Intrinsics <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Sepideh Sarajian Maralan</b>, <b>Chris Careaga</b>, and <b>Yağız Aksoy</b> 
+	</div>
+	<div class="pub-venue">
+		CVPR, 2023
+	</div>
+	
+	<div class="accordion">
+	  <input id="CVPR23b-item1" name="accordion1" type="checkbox" />
+	  <label for="CVPR23b-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Flash is an essential tool as it often serves as the sole controllable light source in everyday photography. 
+		However, the use of flash is a binary decision at the time a photograph is captured with limited control over its characteristics such as strength or color. 
+		In this work, we study the computational control of the flash light in photographs taken with or without flash. 
+		We present a physically motivated intrinsic formulation for flash photograph formation and develop flash decomposition and generation methods for flash and no-flash photographs, respectively. 
+		We demonstrate that our intrinsic formulation outperforms alternatives in the literature and allows us to computationally control flash in in-the-wild images.
+	</div>
+	
+	  <input id="CVPR23b-item2" name="accordion1" type="checkbox" />
+	  <label for="CVPR23b-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="http://yaksoy.github.io/papers/CVPR23-IntrinsicFlash.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CVPR23bPaper.jpg" title="Paper" /></a></td>
+			<td><a href="http://yaksoy.github.io/papers/CVPR23-IntrinsicFlash-Dataset.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CVPR23bSupp1.jpg" title="Dataset" /></a></td>
+			<td><a href="http://yaksoy.github.io/papers/CVPR23-IntrinsicFlash-SuppResults.pdf" target="_blank"><img width="200" src="http://yaksoy.github.io/images/research/CVPR23bSupp2.jpg" title="Supplementary" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="CVPR23b-item3" name="accordion1" type="checkbox" />
+	  <label for="CVPR23b-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+	@INPROCEEDINGS{Maralan2023Flash,<br />
+		author={Sepideh Sarajian Maralan and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Computational Flash Photography through Intrinsics},<br />
+		journal={Proc. CVPR},<br />
+		year={2023},<br />
+		} 
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="http://yaksoy.github.io/cfp-msc/" target="_blank"><img src="http://yaksoy.github.io/images/research/sepidehmsc.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="http://yaksoy.github.io/cfp-msc/" target="_blank">Computational Flash Photography <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Sepideh Sarajian Maralan</b>
+</div>
+<div class="pub-venue">
+	MSc Thesis, Simon Fraser University, 2022
+</div>
+
+<div class="accordion">
+	<input id="SFU22b-item1" name="accordion1" type="checkbox" />
+	<label for="SFU22b-item1">Abstract</label>
+	<div class="pub-abstract">
+		The majority of common cameras have an integrated flash that improves lighting in a variety of situations, particularly in low-light environments. 
+		Before capturing an image, the photographer must make a decision regarding the usage of flash. 
+		However, flash strength cannot be adjusted once it has been utilised in an image.
+		In this work, we target two application scenarios in computational flash photography: decomposition of a flash photograph into its illumination components and generating the flash illumination from a given single no-flash photograph. 
+		Two distinct approaches based on image-to-image transfer and intrinsic decomposition with the use of convolutional neural networks are employed to address these tasks. 
+		An additional network boosts and upscales the estimated results to generate the final illuminations. 
+		Key advantages of our approach include the preparation of a large flash/no-flash dataset and presenting models based on state-of-the-art methods to address subtasks specific to our problem.
+  </div>
+  
+  <input id="SFU22b-item2" name="accordion1" type="checkbox" />
+  <label for="SFU22b-item2">Thesis and Presentation</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://www.dropbox.com/s/lksa3a2m4w1lllp/MaralanSFU22MSc.pdf?dl=0" target="_blank"><img src="http://yaksoy.github.io/images/research/SFU22SepidehPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://youtu.be/0dy-kzUwsKo" target="_blank"><img src="http://yaksoy.github.io/images/research/SFU22SepidehVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+  
+  <input id="SFU22b-item3" name="accordion1" type="checkbox" />
+  <label for="SFU22b-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@MASTERSTHESIS{cfp-msc,<br />
+	author={Sepideh Sarajian Maralan},<br />
+	title={Computational Flash Photography},<br />
+	year={2022},<br />
+	school={Simon Fraser University},<br />
+  }
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
 <tr>
 <td class="pub-photocol">
   <a href="../crowdroto" target="_blank"><img src="http://yaksoy.github.io/images/research/crowdroto2.jpg" class="pub-photo" /></a>
@@ -230,7 +344,7 @@ We evaluate our ensemble methods, discuss our design choices for them, and make 
     
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<span>&copy; 2021 Yagiz Aksoy</span>
+<span>&copy; 2023 Yagiz Aksoy</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 
