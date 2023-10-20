@@ -19,7 +19,7 @@
   
     ,{
       "title"			: "Code & Data",
-      "link"			: "http://yaksoy.github.io/code/",
+      "link"			: "https://yaksoy.github.io/code/",
       "excerpt"		: "Public Implementations"
     }
   
@@ -65,9 +65,27 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     ,{
       "title"			: "Group Members",
-      "link"			: "http://yaksoy.github.io/group/",
+      "link"			: "https://yaksoy.github.io/group/",
       "excerpt"		: "Group Members"
     }
   
@@ -103,9 +121,13 @@
   
 
   
+
+  
+
+  
     ,{
       "title"			: "Publications",
-      "link"			: "http://yaksoy.github.io/research/",
+      "link"			: "https://yaksoy.github.io/research/",
       "excerpt"		: "Publications"
     }
   
@@ -113,7 +135,7 @@
   
     ,{
       "title"			: "Résumé",
-      "link"			: "http://yaksoy.github.io/resume/",
+      "link"			: "https://yaksoy.github.io/resume/",
       "excerpt"		: "Résumé"
     }
   
@@ -129,7 +151,7 @@
   
     ,{
       "title"			: "Teaching",
-      "link"			: "http://yaksoy.github.io/teaching/",
+      "link"			: "https://yaksoy.github.io/teaching/",
       "excerpt"		: "Teaching"
     }
   
