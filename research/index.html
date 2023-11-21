@@ -130,20 +130,45 @@
 <table>
 	<tr>
 	<td class="pub-photocol">
-	<img src="https://yaksoy.github.io/images/research/intrinsic.jpg" class="pub-photo" />
+	<a href="../intrinsic" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsic.jpg" class="pub-photo" /></a>
 	</td>
 	<td>
 	<div class="pub-title">
-		Intrinsic Image Decomposition via Ordinal Shading
+		<a href="../intrinsic" target="_blank">Intrinsic Image Decomposition via Ordinal Shading <i class="fa fa-external-link"></i></a>
 	</div>
 	<div class="pub-authors">
 		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
 	</div>
 	<div class="pub-venue">
-		ACM Transactions on Graphics, 2023 <i>(Coming soon...)</i>
+		ACM Transactions on Graphics, 2023
 	</div>
 	
-	<div class="accordion">
+	<div class="pub-accordion">
+	  <input id="TOG23-item1" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Intrinsic decomposition is a fundamental mid-level vision problem that plays a crucial role in various inverse rendering and computational photography pipelines. 
+		Generating highly accurate intrinsic decompositions is an inherently under-constrained task that requires precisely estimating continuous-valued shading and albedo. 
+		In this work, we achieve high-resolution intrinsic decomposition by breaking the problem into two parts. 
+		First, we present a dense ordinal shading formulation using a shift- and scale-invariant loss in order to estimate ordinal shading cues without restricting the predictions to obey the intrinsic model. 
+		We then combine low- and high-resolution ordinal estimations using a second network to generate a shading estimate with both global coherency and local details. 
+		We encourage the model to learn an accurate decomposition by computing losses on the estimated shading as well as the albedo implied by the intrinsic model. 
+		We develop a straightforward method for generating dense pseudo ground truth using our models predictions and multi-illumination data, enabling generalization to in-the-wild imagery. 
+		We present exhaustive qualitative and quantitative analysis of our predicted intrinsic components against state-of-the-art methods. 
+		Finally, we demonstrate the real-world applicability of our estimations by performing otherwise difficult editing tasks such as recoloring and relighting.
+	  </div>
+	
+	  <input id="TOG23-item2" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Video.jpg" title="Video" /></a></td>
+		</tr></table>
+		</div>
+	
 	  <input id="TOG23-item3" name="accordion1" type="checkbox" />
 	  <label for="TOG23-item3">BibTeX</label>
 	  <div class="pub-bibtex">
@@ -177,7 +202,7 @@
 		SIGGRAPH Asia, 2023 <i>(Coming soon...)</i>
 	</div>
 	
-	<div class="accordion">
+	<div class="pub-accordion">
 	  <input id="SigAsia23-item3" name="accordion1" type="checkbox" />
 	  <label for="SigAsia23-item3">BibTeX</label>
 	  <div class="pub-bibtex">
@@ -211,7 +236,7 @@
 	CVPR, 2023
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="CVPR23a-item1" name="accordion1" type="checkbox" />
   <label for="CVPR23a-item1">Abstract</label>
   <div class="pub-abstract">
@@ -266,7 +291,7 @@
 		CVPR, 2023
 	</div>
 	
-	<div class="accordion">
+	<div class="pub-accordion">
 	  <input id="CVPR23b-item1" name="accordion1" type="checkbox" />
 	  <label for="CVPR23b-item1">Abstract</label>
 	  <div class="pub-abstract">
@@ -322,7 +347,7 @@
 	CVPR, 2021
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="CVPR21-item1" name="accordion1" type="checkbox" />
   <label for="CVPR21-item1">Abstract</label>
   <div class="pub-abstract">
@@ -379,7 +404,7 @@
 	Computer Graphics Forum (Proc. EGSR), 2021
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="CGF21-item1" name="accordion1" type="checkbox" />
   <label for="CGF21-item1">Abstract</label>
   <div class="pub-abstract">
@@ -431,7 +456,7 @@
 	CVPR, 2019
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="CVPR19-item1" name="accordion1" type="checkbox" />
   <label for="CVPR19-item1">Abstract</label>
   <div class="pub-abstract">
@@ -487,7 +512,7 @@ We hence classify our method as a hybrid sampling- and learning-based approach t
 	ACM Transactions on Graphics (Proc. SIGGRAPH), 2018
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="TOG18-item1" name="accordion1" type="checkbox" />
   <label for="TOG18-item1">Abstract</label>
   <div class="pub-abstract">
@@ -546,13 +571,13 @@ We hence classify our method as a hybrid sampling- and learning-based approach t
 	ECCV, 2018
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="ECCV18-item1" name="accordion1" type="checkbox" />
   <label for="ECCV18-item1">Abstract</label>
   <div class="pub-abstract">
 Illumination is a critical element of photography and is essential for many computer vision tasks. 
 Flash light is unique in the sense that it is a widely available tool for easily manipulating the scene illumination. 
-We present a dataset of thousands of ambient and flash illumination pairs to enable studying flash photography and other applications that can benefit from having separate illuminations. 
+We present a dataset of thousands of ambient and flash illumination pairs to enable studying flash photography and other applications that can benefit from having separate illuminations. 
 Different than the typical use of crowdsourcing in generating computer vision datasets, we make use of the crowd to directly take the photographs that make up our dataset. 
 As a result, our dataset covers a wide variety of scenes captured by many casual photographers. 
 We detail the advantages and challenges of our approach to crowdsourcing as well as the computational effort to generate completely separate flash illuminations from the ambient light in an uncontrolled setup. 
@@ -602,7 +627,7 @@ We present a brief examination of illumination decomposition, a challenging and 
 	ACM CHI Conference on Human Factors in Computing Systems, 2018
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="CHI18-item1" name="accordion1" type="checkbox" />
   <label for="CHI18-item1">Abstract</label>
   <div class="pub-abstract">
@@ -657,7 +682,7 @@ We evaluate our ensemble methods, discuss our design choices for them, and make 
 	CVPR, 2017 (<i>spotlight</i>)
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="CVPR17-item1" name="accordion1" type="checkbox" />
   <label for="CVPR17-item1">Abstract</label>
   <div class="pub-abstract">
@@ -713,7 +738,7 @@ Our evaluation using the public alpha matting benchmark suggests a significant p
 	ACM Transactions on Graphics, 2017
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="TOG17-item1" name="accordion1" type="checkbox" />
   <label for="TOG17-item1">Abstract</label>
   <div class="pub-abstract">
@@ -773,7 +798,7 @@ We demonstrate that our soft color segments can easily be exported to familiar i
 	ACM Transactions on Graphics, 2016
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="TOG16-item1" name="accordion1" type="checkbox" />
   <label for="TOG16-item1">Abstract</label>
   <div class="pub-abstract">
@@ -838,7 +863,7 @@ that a professional compositing artist requires to process the same content havi
 	MSc Thesis, Simon Fraser University, 2022
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
 	<input id="SFU22b-item1" name="accordion1" type="checkbox" />
 	<label for="SFU22b-item1">Abstract</label>
 	<div class="pub-abstract">
@@ -894,7 +919,7 @@ that a professional compositing artist requires to process the same content havi
 	MSc Thesis, Simon Fraser University, 2022
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
 	<input id="SFU22a-item1" name="accordion1" type="checkbox" />
 	<label for="SFU22a-item1">Abstract</label>
 	<div class="pub-abstract">
@@ -949,7 +974,7 @@ that a professional compositing artist requires to process the same content havi
 	PhD Thesis, ETH Zurich, 2019
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="ETH19-item2" name="accordion1" type="checkbox" />
   <label for="ETH19-item2">Dissertation</label>
   <div class="pub-photolink">
@@ -992,7 +1017,7 @@ that a professional compositing artist requires to process the same content havi
 	Master's Thesis, Middle East Technical University, 2013
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="METU13-item1" name="accordion1" type="checkbox" />
   <label for="METU13-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1045,7 +1070,7 @@ that a professional compositing artist requires to process the same content havi
 	SIGGRAPH Asia Posters, 2023
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="SIGa23p-item1" name="accordion1" type="checkbox" />
   <label for="SIGa23p-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1100,7 +1125,7 @@ that a professional compositing artist requires to process the same content havi
 	SIGGRAPH Posters, 2022
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="SIG22a-item1" name="accordion1" type="checkbox" />
   <label for="SIG22a-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1155,7 +1180,7 @@ that a professional compositing artist requires to process the same content havi
 	SIGGRAPH Posters, 2022
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="SIG22b-item1" name="accordion1" type="checkbox" />
   <label for="SIG22b-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1209,7 +1234,7 @@ that a professional compositing artist requires to process the same content havi
 	SIGGRAPH Posters, 2022
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="SIG22c-item1" name="accordion1" type="checkbox" />
   <label for="SIG22c-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1268,7 +1293,7 @@ that a professional compositing artist requires to process the same content havi
 	International Conference on Game and Entertainment Technologies, 2017
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="GET17-item1" name="accordion1" type="checkbox" />
   <label for="GET17-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1324,7 +1349,7 @@ that a professional compositing artist requires to process the same content havi
 	IEEE ICIP, 2014
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="ICIP14b-item1" name="accordion1" type="checkbox" />
   <label for="ICIP14b-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1372,7 +1397,7 @@ that a professional compositing artist requires to process the same content havi
 	IEEE ICIP, 2014
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="ICIP14a-item1" name="accordion1" type="checkbox" />
   <label for="ICIP14a-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1423,7 +1448,7 @@ that a professional compositing artist requires to process the same content havi
 	The Kaohsiung Journal of Medical Sciences, 2014
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="KJMC14-item1" name="accordion1" type="checkbox" />
   <label for="KJMC14-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1464,7 +1489,7 @@ year = "2014",}
 	ECCV Workshops, 2012
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="ECCVW12-item1" name="accordion1" type="checkbox" />
   <label for="ECCVW12-item1">Abstract</label>
   <div class="pub-abstract">
@@ -1512,7 +1537,7 @@ year = "2014",}
 	IEEE ICIP, 2012
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="ICIP12-item1" name="accordion1" type="checkbox" />
   <label for="ICIP12-item1">Abstract</label>
   <div class="pub-abstract">

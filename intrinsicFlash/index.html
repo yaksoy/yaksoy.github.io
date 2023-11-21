@@ -127,7 +127,7 @@ We demonstrate that our intrinsic formulation outperforms alternatives in the li
 	<a href="../efaid" target="_blank">Extended Flash and Ambient Illuminations Dataset <i class="fa fa-external-link"></i></a>
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
   <input id="EFAID-item1" name="accordion1" type="checkbox" />
   <label for="EFAID-item1">Brief Description</label>
   <div class="pub-abstract">
@@ -179,6 +179,121 @@ year={2023},<br />
 <hr />
 
 <table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../intrinsic" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsic.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../intrinsic" target="_blank">Intrinsic Image Decomposition via Ordinal Shading <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ACM Transactions on Graphics, 2023
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="TOG23-item1" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Intrinsic decomposition is a fundamental mid-level vision problem that plays a crucial role in various inverse rendering and computational photography pipelines. 
+		Generating highly accurate intrinsic decompositions is an inherently under-constrained task that requires precisely estimating continuous-valued shading and albedo. 
+		In this work, we achieve high-resolution intrinsic decomposition by breaking the problem into two parts. 
+		First, we present a dense ordinal shading formulation using a shift- and scale-invariant loss in order to estimate ordinal shading cues without restricting the predictions to obey the intrinsic model. 
+		We then combine low- and high-resolution ordinal estimations using a second network to generate a shading estimate with both global coherency and local details. 
+		We encourage the model to learn an accurate decomposition by computing losses on the estimated shading as well as the albedo implied by the intrinsic model. 
+		We develop a straightforward method for generating dense pseudo ground truth using our models predictions and multi-illumination data, enabling generalization to in-the-wild imagery. 
+		We present exhaustive qualitative and quantitative analysis of our predicted intrinsic components against state-of-the-art methods. 
+		Finally, we demonstrate the real-world applicability of our estimations by performing otherwise difficult editing tasks such as recoloring and relighting.
+	  </div>
+	
+	  <input id="TOG23-item2" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Video.jpg" title="Video" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="TOG23-item3" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@ARTICLE{careagaIntrinsic,<br />
+		author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Intrinsic Image Decomposition via Ordinal Shading},<br />
+		journal={ACM Trans. Graph.},<br />
+		year={2023},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../flashambient" target="_blank"><img src="https://yaksoy.github.io/images/research/fai.png" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../flashambient" target="_blank">A Dataset of Flash and Ambient Illumination Pairs from the Crowd <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Yağız Aksoy</b>, Changil Kim, Petr Kellnhofer, Sylvain Paris, Mohamed Elgharib, Marc Pollefeys and Wojciech Matusik 
+</div>
+<div class="pub-venue">
+	ECCV, 2018
+</div>
+
+<div class="pub-accordion">
+  <input id="ECCV18-item1" name="accordion1" type="checkbox" />
+  <label for="ECCV18-item1">Abstract</label>
+  <div class="pub-abstract">
+Illumination is a critical element of photography and is essential for many computer vision tasks. 
+Flash light is unique in the sense that it is a widely available tool for easily manipulating the scene illumination. 
+We present a dataset of thousands of ambient and flash illumination pairs to enable studying flash photography and other applications that can benefit from having separate illuminations. 
+Different than the typical use of crowdsourcing in generating computer vision datasets, we make use of the crowd to directly take the photographs that make up our dataset. 
+As a result, our dataset covers a wide variety of scenes captured by many casual photographers. 
+We detail the advantages and challenges of our approach to crowdsourcing as well as the computational effort to generate completely separate flash illuminations from the ambient light in an uncontrolled setup. 
+We present a brief examination of illumination decomposition, a challenging and underconstrained problem in flash photography, to demonstrate the use of our dataset in a data-driven approach.
+  </div>
+
+  <input id="ECCV18-item2" name="accordion1" type="checkbox" />
+  <label for="ECCV18-item2">Manuscript</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/ECCV18-flashambient.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV18paper.png" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/ECCV18-flashambient-supp.zip" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV18supp.png" title="Paper" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="ECCV18-item3" name="accordion1" type="checkbox" />
+  <label for="ECCV18-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{flashambient,<br />
+	author={Ya\u{g}{\i}z Aksoy and Changil Kim and Petr Kellnhofer and Sylvain Paris and Mohamed Elgharib and Marc Pollefeys and Wojciech Matusik}, <br />
+	booktitle={Proc. ECCV}, <br />
+	title={A Dataset of Flash and Ambient Illumination Pairs from the Crowd}, <br />
+	year={2018}, <br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
 <tr>
 <td class="pub-photocol">
 <a href="https://yaksoy.github.io/cfp-msc/" target="_blank"><img src="https://yaksoy.github.io/images/research/sepidehmsc.jpg" class="pub-photo" /></a>
@@ -194,7 +309,7 @@ year={2023},<br />
 	MSc Thesis, Simon Fraser University, 2022
 </div>
 
-<div class="accordion">
+<div class="pub-accordion">
 	<input id="SFU22b-item1" name="accordion1" type="checkbox" />
 	<label for="SFU22b-item1">Abstract</label>
 	<div class="pub-abstract">
@@ -226,62 +341,6 @@ year={2023},<br />
 	year={2022},<br />
 	school={Simon Fraser University},<br />
   }
-  </div>
-</div>
-</td>
-</tr>
-</table>
-
-<hr />
-
-<table>
-<tr>
-<td class="pub-photocol">
-<a href="../flashambient" target="_blank"><img src="https://yaksoy.github.io/images/research/fai.png" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../flashambient" target="_blank">A Dataset of Flash and Ambient Illumination Pairs from the Crowd <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	<b>Yağız Aksoy</b>, Changil Kim, Petr Kellnhofer, Sylvain Paris, Mohamed Elgharib, Marc Pollefeys and Wojciech Matusik 
-</div>
-<div class="pub-venue">
-	ECCV, 2018
-</div>
-
-<div class="accordion">
-  <input id="ECCV18-item1" name="accordion1" type="checkbox" />
-  <label for="ECCV18-item1">Abstract</label>
-  <div class="pub-abstract">
-Illumination is a critical element of photography and is essential for many computer vision tasks. 
-Flash light is unique in the sense that it is a widely available tool for easily manipulating the scene illumination. 
-We present a dataset of thousands of ambient and flash illumination pairs to enable studying flash photography and other applications that can benefit from having separate illuminations. 
-Different than the typical use of crowdsourcing in generating computer vision datasets, we make use of the crowd to directly take the photographs that make up our dataset. 
-As a result, our dataset covers a wide variety of scenes captured by many casual photographers. 
-We detail the advantages and challenges of our approach to crowdsourcing as well as the computational effort to generate completely separate flash illuminations from the ambient light in an uncontrolled setup. 
-We present a brief examination of illumination decomposition, a challenging and underconstrained problem in flash photography, to demonstrate the use of our dataset in a data-driven approach.
-  </div>
-
-  <input id="ECCV18-item2" name="accordion1" type="checkbox" />
-  <label for="ECCV18-item2">Manuscript</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/ECCV18-flashambient.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV18paper.png" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/ECCV18-flashambient-supp.zip" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV18supp.png" title="Paper" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="ECCV18-item3" name="accordion1" type="checkbox" />
-  <label for="ECCV18-item3">BibTeX</label>
-  <div class="pub-bibtex">
-	@INPROCEEDINGS{flashambient,<br />
-	author={Ya\u{g}{\i}z Aksoy and Changil Kim and Petr Kellnhofer and Sylvain Paris and Mohamed Elgharib and Marc Pollefeys and Wojciech Matusik}, <br />
-	booktitle={Proc. ECCV}, <br />
-	title={A Dataset of Flash and Ambient Illumination Pairs from the Crowd}, <br />
-	year={2018}, <br />
-	}
   </div>
 </div>
 </td>

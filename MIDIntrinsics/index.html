@@ -1,0 +1,274 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>MID Intrinsics &#8211; Yağız Aksoy</title>
+<meta name="description" content="MID Intrinsics">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="MID Intrinsics">
+<meta name="twitter:description" content="MID Intrinsics">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/MIDIntrinsicsTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MID Intrinsics">
+<meta property="og:description" content="MID Intrinsics">
+<meta property="og:url" content="https://yaksoy.github.io/MIDIntrinsics/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="https://yaksoy.github.io/MIDIntrinsics/">
+<link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br>
+      <div class="entry-titleLogos">
+        <table><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><tr><td style="text-align:left"><a href="https://www.sfu.ca/computing.html" target="_blank"><img src="../images/sfu.png" class="proj-logo" title="SFU"></a></td><td style="text-align:right"><a href="../group/" target="_blank"><img src="../images/cplab-full.png" class="proj-logo" title="CPLab" style="float:right;"></a></td></tr></table>
+      </div>
+      <br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">MID Intrinsics</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <table style="text-align:center;"><colgroup><col style="width:50%" /><col style="width:50%" /><td><a href="https://ccareaga.github.io" target="_blank"><img src="../group/chris.jpg" class="proj-photo" title="Chris"></a></td><td><a href="../" target="_blank"><img src="../images/yagizsq2.jpg" class="proj-photo" title="Yagiz"></a></td></tr><tr><td><a href="https://ccareaga.github.io" target="_blank">Chris Careaga</a></td><td> <a href="../" target="_blank">Yağız Aksoy</a></td></tr></table>
+      </div>
+      <div class="entry-titleVenue">
+        ACM Transactions on Graphics, 2023 <br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="https://yaksoy.github.io/images/MIDIntrinsicsTeaser.jpg" class="entry-feature-image" alt="MID Intrinsics" style="margin-top:-40;"><p class="image-caption">We generate dense pseudo-ground truth albedo and shading maps for the scenes presented in the Multi-Illumination Dataset by Murmann et al.</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p>
+We present the first dense, real-world, and large-scale dataset for intrinsic image decomposition. Our dataset was derived from the Multi-Illumination Dataset by Murmann et al. and consists of 1000 scenes under 25 different illuminations each, with 1000 unique albedo maps and 25.000 image - RGB shading pairs.   
+</p>
+
+<p style="text-align:center;"><b>Paper</b></p>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../intrinsic" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsic.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../intrinsic" target="_blank">Intrinsic Image Decomposition via Ordinal Shading <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ACM Transactions on Graphics, 2023
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="TOG23-item1" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Intrinsic decomposition is a fundamental mid-level vision problem that plays a crucial role in various inverse rendering and computational photography pipelines. 
+		Generating highly accurate intrinsic decompositions is an inherently under-constrained task that requires precisely estimating continuous-valued shading and albedo. 
+		In this work, we achieve high-resolution intrinsic decomposition by breaking the problem into two parts. 
+		First, we present a dense ordinal shading formulation using a shift- and scale-invariant loss in order to estimate ordinal shading cues without restricting the predictions to obey the intrinsic model. 
+		We then combine low- and high-resolution ordinal estimations using a second network to generate a shading estimate with both global coherency and local details. 
+		We encourage the model to learn an accurate decomposition by computing losses on the estimated shading as well as the albedo implied by the intrinsic model. 
+		We develop a straightforward method for generating dense pseudo ground truth using our models predictions and multi-illumination data, enabling generalization to in-the-wild imagery. 
+		We present exhaustive qualitative and quantitative analysis of our predicted intrinsic components against state-of-the-art methods. 
+		Finally, we demonstrate the real-world applicability of our estimations by performing otherwise difficult editing tasks such as recoloring and relighting.
+	  </div>
+	
+	  <input id="TOG23-item2" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Video.jpg" title="Video" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="TOG23-item3" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@ARTICLE{careagaIntrinsic,<br />
+		author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Intrinsic Image Decomposition via Ordinal Shading},<br />
+		journal={ACM Trans. Graph.},<br />
+		year={2023},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<p style="text-align:center;"><b>The Dataset</b></p>
+
+<p style="text-align:center;"><a href="https://github.com/compphoto/MIDIntrinsics" target="_blank">GitHub Repository <i class="fa fa-external-link"></i></a></p>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+
+<p>If you use our dataset in your scientific work, please cite our paper and the publication behind the Multi-Illumination Dataset.</p>
+
+<p>
+<div class="pub-bibtex">
+ @ARTICLE{careagaIntrinsic,<br />
+author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+title={Intrinsic Image Decomposition via Ordinal Shading},<br />
+journal={ACM Trans. Graph.},<br />
+year={2023},<br />
+} 
+</div>
+</p>
+
+<p>
+<div class="pub-bibtex">
+ @INPROCEEDINGS{murmann19,<br />
+author={Lukas Murmann and Michael Gharbi and Miika Aittala and Fredo Durand},<br />
+title={A Multi-Illumination Dataset of Indoor Object Appearance},<br />
+booktitle={Proc. ICCV},<br />
+year={2019},<br />
+} 
+</div>
+</p>
+
+<p style="text-align:center;"><b>License</b></p>
+
+<p>This dataset is shared under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> for research purposes only. You can freely use it for scientific publications and include them in figures.</p>
+
+<p>The methodology employed to generate this dataset is safeguarded under intellectual property protection. For inquiries regarding licensing opportunities, kindly reach out to SFU Technology Licensing Office &#60;tlo_dir <i>ατ</i> sfu <i>δøτ</i> ca&#62; and Yağız Aksoy &#60;yagiz <i>ατ</i> sfu <i>δøτ</i> ca&#62;.</p>
+
+<hr />
+
+<table>
+  <tr>
+  <td class="pub-photocol">
+  <img src="https://yaksoy.github.io/images/cpdots.jpg" class="pub-photo" />
+  </td>
+  <td>
+  <div class="pub-title">
+    Intrinsic Image Decomposition via Ordinal Shading
+  </div>
+  <div class="pub-authors">
+    Inventors: <b>Yağız Aksoy</b>, <b>Chris Careaga</b>
+    <br />
+    Assignee: Simon Fraser University
+  </div>
+  <div class="pub-venue">
+    Provisional Patent Application, 2023
+  </div>
+  </td>
+  </tr>
+  </table>
+
+<hr />
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2023 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
