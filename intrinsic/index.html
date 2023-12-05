@@ -125,11 +125,11 @@ Finally, we demonstrate the real-world applicability of our estimations by perfo
 		<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Supp.jpg" title="Supplementary" /></a></td>
 	</tr></table>
 
-<table style="text-align:center;"><tr>
+<p><!-- <table style="text-align:center;"><tr>
 		<td><a href="" target="_blank"><i class=" fa-file-archive-o-5x"></i></a></td>
         </tr><tr>
 		<td><a href="" target="_blank">Supplementary Results</a></td>
-	</tr></table>
+	</tr></table> --></p>
 
 <p style="text-align:center;"><b>Dataset</b></p>
 
@@ -217,20 +217,43 @@ year={2023},<br />
 <table>
 	<tr>
 	<td class="pub-photocol">
-	<img src="https://yaksoy.github.io/images/research/intrinsicCompositing.jpg" class="pub-photo" />
+	<a href="../intrinsicCompositing" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsicCompositing.jpg" class="pub-photo" /></a>
 	</td>
 	<td>
 	<div class="pub-title">
-		Intrinsic Harmonization for Illumination-Aware Compositing
+		<a href="../intrinsicCompositing" target="_blank">Intrinsic Harmonization for Illumination-Aware Compositing <i class="fa fa-external-link"></i></a>
 	</div>
 	<div class="pub-authors">
 		<b>Chris Careaga</b>, <b>S. Mahdi H. Miangoleh</b>, and <b>Yağız Aksoy</b>
 	</div>
 	<div class="pub-venue">
-		SIGGRAPH Asia, 2023 <i>(Coming soon...)</i>
+		SIGGRAPH Asia, 2023
 	</div>
 	
 	<div class="pub-accordion">
+	  <input id="SigAsia23-item1" name="accordion1" type="checkbox" />
+	  <label for="SigAsia23-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Despite significant advancements in network-based image harmonization techniques, there still exists a domain disparity between typical training pairs and real-world composites encountered during inference. 
+		Most existing methods are trained to reverse global edits made on segmented image regions, which fail to accurately capture the lighting inconsistencies between the foreground and background found in composited images. 
+		In this work, we introduce a self-supervised illumination harmonization approach formulated in the intrinsic image domain. 
+		First, we estimate a simple global lighting model from mid-level vision representations to generate a rough shading for the foreground region. 
+		A network then refines this inferred shading to generate a harmonious re-shading that aligns with the background scene. 
+		In order to match the color appearance of the foreground and background, we utilize ideas from prior harmonization approaches to perform parameterized image edits in the albedo domain. 
+		To validate the effectiveness of our approach, we present results from challenging real-world composites and conduct a user study to objectively measure the enhanced realism achieved compared to state-of-the-art harmonization methods. 
+	  </div>
+	
+	  <input id="SigAsia23-item2" name="accordion1" type="checkbox" />
+	  <label for="SigAsia23-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia23-IntrinsicCompositing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia23-IntrinsicCompositing-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/M9hCUTp8bo4" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Video.jpg" title="Video" /></a></td>
+		</tr></table>
+		</div>
+	
 	  <input id="SigAsia23-item3" name="accordion1" type="checkbox" />
 	  <label for="SigAsia23-item3">BibTeX</label>
 	  <div class="pub-bibtex">
