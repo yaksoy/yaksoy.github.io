@@ -1,0 +1,211 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>CMPT 361 - Introduction to Visual Computing &#8211; Yağız Aksoy</title>
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="CMPT 361 - Introduction to Visual Computing">
+
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/jordan.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CMPT 361 - Introduction to Visual Computing">
+
+<meta property="og:url" content="https://yaksoy.github.io/introvc/2023Fall/assignment1/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="https://yaksoy.github.io/introvc/2023Fall/assignment1/">
+<link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br>
+      <div class="entry-titleLogos">
+        
+      </div>
+      <br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">CMPT 361 - Introduction to Visual Computing</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        Programming Assignment 1
+      </div>
+      <div class="entry-titleVenue">
+        
+      </div>
+    </div><!-- /.entry-wrapper -->
+    
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p>In this assignment, you will filter images and analyze them both in the spatial and requency domain. You will also play with Canny edge detection parameters to find the best option for your images.</p>
+
+<p>You can do this assignment in any language. However, as we cover all these topics with Matlab demonstrations in lectures, it will be easier in Matlab. If you use another language, you need to submit your code with a readme file with detailed explanations on how to run your code (the libraries you used etc.).</p>
+
+<p>You need to submit your source code and your report through Coursys. Once run, your code should save each result image with the filenames defined below with a single click. Your report will be an html file together with your result images. The provided template uses these filenames to display your results.</p>
+
+<p>When saving your resulting images (filtered image, frequency magnitude image, edge image etc.), you should use the imwrite function to save them as png. When saving visualizations (when we use surf, for example) save them using the saveas(gcf, ‘filename’) function in Matlab to save them again as png.</p>
+
+<p><b>You need to submit the report together with the Matlab script files (.m) and your 500x500 png input images.</b></p>
+
+<h4 id="1-take-two-photographs">1: Take two photographs</h4>
+
+<p>You will use two images in your analysis, and the first part is finding these images! You can take your own photographs (encouraged) or find images from the internet. One photograph should have a lot of high-frequency components (many edges all around) and the other should have mostly low-frequency components. You have seen such a pair in the Signals &amp; Images and Sampling &amp; Aliasing lectures.</p>
+
+<p>Resize and crop your photographs and convert to grayscale to get a pair of 500x500 grayscale images. We will refer to these 500x500 images as HP (high-pass) and LP (low-pass) in the rest of this assignment.</p>
+
+<p><b>Save these 500x500 grayscale images as HP.png and LP.png</b></p>
+
+<p>You might want to have several options for both. If you are not able to observe aliasing in HP or if you observe heavy aliasing in LP in the corresponding questions below, you need to change your images.</p>
+
+<h4 id="2-compute-frequency-representations-1-pt">2: Compute frequency representations (1 pt)</h4>
+
+<p>Compute the Fourier transforms of HP and LP and visualize their magnitude. As we did in the lecture, you may need to use a multiplier to display the frequency response properly. Don’t forget to fftshift.</p>
+
+<p><b>Save the frequency response magnitude as images with adjusted brightness for better viewing as HP-freq.png and LP-freq.png</b></p>
+
+<h4 id="3-visualize-kernels-2-pts">3: Visualize kernels (2 pts)</h4>
+
+<p>Define a sobel kernel, a Gaussian kernel, and a derivative-of-Gaussian (DoG) kernel. The derivative kernels should only be in a single direction. The Gaussian kernels should have the standard deviation of 2.5. Determine the kernel size of your Gaussian kernel by examining it with surf function. It shouldn’t be too large or too small. Compute your DoG kernel using the first two kernels you defined. <b> Save the surf visualizations of the Gaussian and DoG kernels as gaus-surf.png and dog-surf.png.</b></p>
+
+<p>Apply the Gaussian filter to HP and LP. Compute the frequency domain representation of the filtered images. <b>Save the filtered images and freq. domain versions as HP-filt.png, HP-filt-freq.png, LP-filt.png, and LP-filt-freq.png.</b></p>
+
+<p>Compute the Fourier transform of the DoG kernels using the transform size of 500x500. Apply this filter to both images in the frequency domain and convert them back to spatial domain. <b>Save the filtered images and freq. domain versions as HP-dogfilt.png, HP-dogfilt-freq.png, LP-dogfilt.png, and LP-dogfilt-freq.png.</b></p>
+
+<h4 id="4-anti-aliasing-4-pts">4: Anti-aliasing (4 pts)</h4>
+
+<p>Subsample the two images (using 1:2:end) to half the size in both dimensions. You should observe aliasing in HP and no aliasing in LP. <b>Save the subsampled images and freq. domain versions as HP-sub2.png, HP-sub2-freq.png, LP-sub2.png, and LP-sub2-freq.png.</b> In your report, comment on where the aliasing happens in both spatial and frequency domains.</p>
+
+<p>Subsample the two images (using 1:4:end) to quarter the size in both dimensions. <b>Save the subsampled images and freq. domain versions as HP-sub4.png, HP-sub4-freq.png, LP-sub4.png, and LP-sub4-freq.png.</b> In your report, comment on where the aliasing happens in both spatial and frequency domains.</p>
+
+<p>Apply anti-aliasing to HP for half and quarter options. You need to determine the size and standard deviation of the Gaussian kernels you use for anti-aliasing. They should not smooth the images more than necessary to make aliasing disappear. Hence, you need to find two different Gaussian kernels for half and quarter versions.  <b>Save the anti-aliased subsampled images and freq. domain versions as HP-sub2-aa.png, HP-sub2-aa-freq.png, HP-sub4-aa.png, and HP-sub4-aa-freq.png.</b> Note the size and standard deviations of the two Gaussian filters you used in your report. Comment on the frequency content of subsampled images and compare them to the versions without anti-aliasing.</p>
+
+<h4 id="5-canny-edge-detection-thresholding-3-pts">5: Canny edge detection thresholding (3 pts)</h4>
+
+<p>As we saw in lecture, canny edge detection has a low and a high threshold for determining edges. You will determine the best values for these two numbers for HP and LP separately that, in your view, give the optimum edge representation for a particular image.</p>
+
+<p>Apply Canny edge detection and get the default parameters computed by Matlab (or the library you’re using for other languages). You will calibrate these two parameters until you are satisfied with the result. One hint: You can sweep these parameters and save every result as png files with thresholds noted in the name of the file. Then you can use your favourite image viewer to select the best ones.</p>
+
+<p>Compute 5 edge representations for HP. One with optimal thresholds, one with a lower low threshold, one with a higher low threshold, one with a lower high threshold, and one with a higher high threshold. <b>Save them as HP-canny-optimal.png, HP-canny-lowlow.png, HP-canny-highlow.png, HP-canny-lowhigh.png, and HP-canny-highhigh.png.</b> Comment on why you chose the optimal parameters by comparing it the optimal edges to other versions (here that edge appears, here this esge disappears etc.). If your optimal edges are still not perfect, comment on which edges should have been included / excluded by a better edge detection method.</p>
+
+<p>Repeat the same thing for LP. Save all 5 versions as LP-canny-/fillintheblanks/.png</p>
+
+<h4 id="6-report">6 Report</h4>
+
+<p>The report template is here: <a href="/introvc/assignment1/hw1template.html" target="_blank">HTML template</a></p>
+
+<p>All you need to do is to save the images in the current folder as your html file, and fill in the required information and comments in the html file. Don’t edit the template further than needed.</p>
+
+<p>You’ll submit your report as an html file in a .zip container <b>together with all the results you have saved</b>. You need to add the necessary comments asked in the question definitions.</p>
+
+<p><b>You also have to add the following honor statement to the beginning of your report:</b></p>
+
+<p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Piazza, I know that’s totally fine and even encouraged. I also already know that this class is graded on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
+
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2024 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
