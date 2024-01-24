@@ -95,21 +95,25 @@
     
     <div class="entry-wrapper">
       <div class="entry-contentProject">
-        <p>In this assignment, you will filter images and analyze them both in the spatial and requency domain. You will also play with Canny edge detection parameters to find the best option for your images.</p>
 
-<p>You can do this assignment in any language. However, as we cover all these topics with Matlab demonstrations in lectures, it will be easier in Matlab. If you use another language, you need to submit your code with a readme file with detailed explanations on how to run your code (the libraries you used etc.).</p>
 
-<p>You need to submit your source code and your report through Coursys. Once run, your code should save each result image with the filenames defined below with a single click. Your report will be an html file together with your result images. The provided template uses these filenames to display your results.</p>
+<p>In this assignment, you will filter images and analyze them both in the spatial and frequency domain. You will also play with Canny edge detection parameters to find the best option for your images.</p>
 
-<p>When saving your resulting images (filtered image, frequency magnitude image, edge image etc.), you should use the imwrite function to save them as png. When saving visualizations (when we use surf, for example) save them using the saveas(gcf, ‘filename’) function in Matlab to save them again as png.</p>
+<p>You can do this assignment in any programming language. However, as we cover all these topics with Matlab demonstrations in lectures, it will be easier in Matlab. If you use another language, you need to submit your code with a readme file with detailed explanations on how to run your code (the libraries you used, etc.).</p>
+
+<p>You need to submit your source code and your report through Coursys. Your report will be an html file together with your result images. A template is provided in the report section. The provided template uses these filenames to display your results. Hence, your code must save each result image with the filenames defined below and with a single click. </p>
+
+<p>When saving your resulting images (filtered image, frequency magnitude image, edge image etc.), you should use the imwrite function to save them as png. When saving visualizations (when we use surf, for example) save them using the saveas(gcf, ‘filename’) function in Matlab to save them again as png. Use the names indicated by each assignment to save your file as the report html file relies on those names. </p>
+
+<p>Throughout this assignment, we evaluate both your coding skills and your knowledge of the concepts explained in the course. Your code is evaluated based on the correctness of its logic and the final results it generates, and your knowledge of the concepts is evaluated based on the explanations and comments you provide on your results as requested by each section.  </p>
 
 <p><b>You need to submit the report together with the Matlab script files (.m) and your 500x500 png input images.</b></p>
 
 <h4 id="1-take-two-photographs">1: Take two photographs</h4>
 
-<p>You will use two images in your analysis, and the first part is finding these images! You can take your own photographs (encouraged) or find images from the internet. One photograph should have a lot of high-frequency components (many edges all around) and the other should have mostly low-frequency components. You have seen such a pair in the Signals &amp; Images and Sampling &amp; Aliasing lectures.</p>
+<p>You will use two images in your analysis, and the first part is finding these images! You can take your own photographs (encouraged) or find images from the internet. One photograph should have a lot of high-frequency components (many edges all around) and the other should have mostly low-frequency components. You have seen such a pair in the Signals & Images and Sampling & Aliasing lectures. </p>
 
-<p>Resize and crop your photographs and convert to grayscale to get a pair of 500x500 grayscale images. We will refer to these 500x500 images as HP (high-pass) and LP (low-pass) in the rest of this assignment.</p>
+<p>Resize and crop your photographs and convert them to grayscale to get a pair of 500x500 grayscale images. We will refer to these 500x500 images as HP (high-pass) and LP (low-pass) in the rest of this assignment.</p>
 
 <p><b>Save these 500x500 grayscale images as HP.png and LP.png</b></p>
 
@@ -117,35 +121,39 @@
 
 <h4 id="2-compute-frequency-representations-1-pt">2: Compute frequency representations (1 pt)</h4>
 
-<p>Compute the Fourier transforms of HP and LP and visualize their magnitude. As we did in the lecture, you may need to use a multiplier to display the frequency response properly. Don’t forget to fftshift.</p>
+<p>Compute the Fourier transforms of HP and LP and visualize their magnitude. As we did in the lecture, you may need to use a multiplier to display the frequency response properly use the same multiplier for HP and LP frequency responses to keep them comparable. Don’t forget to fftshift. You need to make sure your frequency responses for LP and HP match your expectations of a low-frequency and high-frequency image. 
+</p>
 
 <p><b>Save the frequency response magnitude as images with adjusted brightness for better viewing as HP-freq.png and LP-freq.png</b></p>
 
 <h4 id="3-visualize-kernels-2-pts">3: Visualize kernels (2 pts)</h4>
 
-<p>Define a sobel kernel, a Gaussian kernel, and a derivative-of-Gaussian (DoG) kernel. The derivative kernels should only be in a single direction. The Gaussian kernels should have the standard deviation of 2.5. Determine the kernel size of your Gaussian kernel by examining it with surf function. It shouldn’t be too large or too small. Compute your DoG kernel using the first two kernels you defined. <b> Save the surf visualizations of the Gaussian and DoG kernels as gaus-surf.png and dog-surf.png.</b></p>
+<p>Define a Sobel kernel, a Gaussian kernel, and a derivative-of-Gaussian (DoG) kernel. The derivative kernels (Sobel and DoG) should only be in a single direction. The Gaussian kernel should have a standard deviation of 2.5. Determine the kernel size of your Gaussian kernel by examining it with the “surf” function. It shouldn’t be too large or too small. Compute your DoG kernel using the first two kernels you defined. <b> Save the surf visualizations of the Gaussian and DoG kernels as gaus-surf.png and dog-surf.png.</b></p>
 
-<p>Apply the Gaussian filter to HP and LP. Compute the frequency domain representation of the filtered images. <b>Save the filtered images and freq. domain versions as HP-filt.png, HP-filt-freq.png, LP-filt.png, and LP-filt-freq.png.</b></p>
+<p>Next, we are going to filter the images using our previously defined Gaussian and DoG kernels and analyze their effect. Filtering can be done in the spatial domain or frequency domain. </p>
 
-<p>Compute the Fourier transform of the DoG kernels using the transform size of 500x500. Apply this filter to both images in the frequency domain and convert them back to spatial domain. <b>Save the filtered images and freq. domain versions as HP-dogfilt.png, HP-dogfilt-freq.png, LP-dogfilt.png, and LP-dogfilt-freq.png.</b></p>
+<p>I - Apply the Gaussian filter to HP and LP in the spatial domain. Then compute the frequency domain representation of the filtered images. Save the filtered images and freq. domain versions as HP-filt.png, HP-filt-freq.png, LP-filt.png, and LP-filt-freq.png.</p>
+
+<p>II - Compute the Fourier transform of the DoG kernels using the transform size of 500x500. Apply this filter to both images in the frequency domain and convert them back to the spatial domain. <b>Save the filtered images and freq. domain versions as HP-dogfilt.png, HP-dogfilt-freq.png, LP-dogfilt.png, and LP-dogfilt-freq.png. Adjust the brightness of the frequency domains before saving.</b></p>
 
 <h4 id="4-anti-aliasing-4-pts">4: Anti-aliasing (4 pts)</h4>
 
-<p>Subsample the two images (using 1:2:end) to half the size in both dimensions. You should observe aliasing in HP and no aliasing in LP. <b>Save the subsampled images and freq. domain versions as HP-sub2.png, HP-sub2-freq.png, LP-sub2.png, and LP-sub2-freq.png.</b> In your report, comment on where the aliasing happens in both spatial and frequency domains.</p>
+<p>Subsample the two images (using 1:2:end) to half the size in both dimensions. You should observe aliasing in HP and no aliasing in LP. <b>Save the subsampled images and freq. domain versions as HP-sub2.png, HP-sub2-freq.png, LP-sub2.png, and LP-sub2-freq.png. </b> In your report, comment on where the aliasing happens in both spatial and frequency domains.</p>
 
 <p>Subsample the two images (using 1:4:end) to quarter the size in both dimensions. <b>Save the subsampled images and freq. domain versions as HP-sub4.png, HP-sub4-freq.png, LP-sub4.png, and LP-sub4-freq.png.</b> In your report, comment on where the aliasing happens in both spatial and frequency domains.</p>
 
-<p>Apply anti-aliasing to HP for half and quarter options. You need to determine the size and standard deviation of the Gaussian kernels you use for anti-aliasing. They should not smooth the images more than necessary to make aliasing disappear. Hence, you need to find two different Gaussian kernels for half and quarter versions.  <b>Save the anti-aliased subsampled images and freq. domain versions as HP-sub2-aa.png, HP-sub2-aa-freq.png, HP-sub4-aa.png, and HP-sub4-aa-freq.png.</b> Note the size and standard deviations of the two Gaussian filters you used in your report. Comment on the frequency content of subsampled images and compare them to the versions without anti-aliasing.</p>
+<p>Apply anti-aliasing to HP for half and quarter options. You need to determine the size and standard deviation of the Gaussian kernels you use for anti-aliasing. They should not smooth the images more than necessary to make aliasing disappear. Hence, you need to find two different Gaussian kernels for half and quarter versions. <b>Save the anti-aliased subsampled images and freq. domain versions as HP-sub2-aa.png, HP-sub2-aa-freq.png, HP-sub4-aa.png, and HP-sub4-aa-freq.png.</b> Note the size and standard deviations of the two Gaussian filters you used in your report. Comment on the frequency content of subsampled images and compare them to the versions without anti-aliasing.</p>
 
 <h4 id="5-canny-edge-detection-thresholding-3-pts">5: Canny edge detection thresholding (3 pts)</h4>
 
-<p>As we saw in lecture, canny edge detection has a low and a high threshold for determining edges. You will determine the best values for these two numbers for HP and LP separately that, in your view, give the optimum edge representation for a particular image.</p>
+<p>As we saw in the lecture, canny edge detection has a low and a high threshold for determining edges. You will determine the best values for these two numbers for HP and LP separately that, in your view, give the optimum edge representation for a particular image.</p>
 
 <p>Apply Canny edge detection and get the default parameters computed by Matlab (or the library you’re using for other languages). You will calibrate these two parameters until you are satisfied with the result. One hint: You can sweep these parameters and save every result as png files with thresholds noted in the name of the file. Then you can use your favourite image viewer to select the best ones.</p>
 
-<p>Compute 5 edge representations for HP. One with optimal thresholds, one with a lower low threshold, one with a higher low threshold, one with a lower high threshold, and one with a higher high threshold. <b>Save them as HP-canny-optimal.png, HP-canny-lowlow.png, HP-canny-highlow.png, HP-canny-lowhigh.png, and HP-canny-highhigh.png.</b> Comment on why you chose the optimal parameters by comparing it the optimal edges to other versions (here that edge appears, here this esge disappears etc.). If your optimal edges are still not perfect, comment on which edges should have been included / excluded by a better edge detection method.</p>
+<p>Compute 5 edge representations for HP. One with optimal thresholds, one with a lower low threshold, one with a higher low threshold, one with a lower high threshold, and one with a higher high threshold. <b>Save them as HP-canny-optimal.png, HP-canny-lowlow.png, HP-canny-highlow.png, HP-canny-lowhigh.png, and HP-canny-highhigh.png.</b> Comment on why you chose the optimal parameters by comparing the optimal edges to other versions (here that edge appears, here this esge disappears etc.). If your optimal edges are still not perfect, comment on which edges should have been included/excluded by a better edge detection method.</p>
 
 <p>Repeat the same thing for LP. Save all 5 versions as LP-canny-/fillintheblanks/.png</p>
+
 
 <h4 id="6-report">6 Report</h4>
 
@@ -153,11 +161,13 @@
 
 <p>All you need to do is to save the images in the current folder as your html file, and fill in the required information and comments in the html file. Don’t edit the template further than needed.</p>
 
-<p>You’ll submit your report as an html file in a .zip container <b>together with all the results you have saved</b>. You need to add the necessary comments asked in the question definitions.</p>
+<p>You will submit your report as an html file in a .zip container <b>together with all the results you have saved.</b> You need to add the necessary comments asked in the question definitions.</p>
+
+<p>There will be a separate placeholder for the code submission on Coursys. Your code submission should <b>run with a single click without any modification and generate the same images as the report.</b> Include any original input images your code needs to run as well as your Matlab scripts in your code submission. If you are using languages other than Matlab include a clear instruction to run your code.</p>
 
 <p><b>You also have to add the following honor statement to the beginning of your report:</b></p>
 
-<p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Piazza, I know that’s totally fine and even encouraged. I also already know that this class is graded on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
+<p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Coursys, I know that’s totally fine and even encouraged. I also already know that this class is graded on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
 
 
       </div><!-- /.entry-contentProject -->
