@@ -1,0 +1,235 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Metric Monocular Reconstruction through Ordinal Depth &#8211; Yağız Aksoy</title>
+<meta name="description" content="Metric Monocular Reconstruction through Ordinal Depth">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Metric Monocular Reconstruction through Ordinal Depth">
+<meta name="twitter:description" content="Metric Monocular Reconstruction through Ordinal Depth">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/maheshMScTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Metric Monocular Reconstruction through Ordinal Depth">
+<meta property="og:description" content="Metric Monocular Reconstruction through Ordinal Depth">
+<meta property="og:url" content="https://yaksoy.github.io/mmd-msc/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="https://yaksoy.github.io/mmd-msc/">
+<link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br>
+      <div class="entry-titleLogos">
+        <table><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><tr><td style="text-align:left"><a href="https://www.sfu.ca/computing.html" target="_blank"><img src="../images/sfu.png" class="proj-logo" title="SFU"></a></td><td style="text-align:right"><a href="../group/" target="_blank"><img src="../images/cplab-full.png" class="proj-logo" title="CPLab" style="float:right;"></a></td></tr></table>
+      </div>
+      <br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Metric Monocular Reconstruction through Ordinal Depth</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <table style="text-align:center;"><tr><td><a href="https://maheshkkumar.github.io" target="_blank"><img src="../group/mahesh.jpg" class="proj-photo" title="Mahesh"></a></td></tr><tr><td><a href="https://maheshkkumar.github.io" target="_blank">Mahesh Kumar Krishna Reddy</a></td></tr></table>
+      </div>
+      <div class="entry-titleVenue">
+        MSc Thesis<br> Simon Fraser University, 2022
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="https://yaksoy.github.io/images/maheshMScTeaser.jpg" class="entry-feature-image" alt="Metric Monocular Reconstruction through Ordinal Depth" style="margin-top:-40;">
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+Training a single network for high resolution and geometrically consistent monocular depth estimation is challenging due to varying scene complexities in the real world. 
+To address this, we present a dual depth estimation setup to decompose the estimations into ordinal and metric depth. 
+The goal of ordinal depth estimation is to leverage novel ordinal losses with relaxed geometric constraints to model local and global ordinal relations for capturing better
+high-frequency depth details and scene structure. 
+However, ordinal depth inherently lacks geometric structure, and to resolve this, we introduce a metric depth estimation method to enforce geometric constraints on the prior ordinal depth estimations. 
+The estimated scaleinvariant metric depth achieves high resolution and is geometrically consistent in generating meaningful 3D point cloud representation for scene reconstruction. 
+We demonstrate the effectiveness of our ordinal and metric networks by performing zero-shot and in-the-wild depth evaluations with state-of-the-art depth estimation networks.
+</p>
+
+<p style="text-align:center;"><b>Dissertation</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="https://summit.sfu.ca/item/35814" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SFU22MaheshPaper.jpg" title="Thesis" /></a></td>
+	</tr></table>
+
+<p style="text-align:center;"><b>Video Presentation</b></p>
+
+<p style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DxLGDQbjOQw" frameborder="0"> </iframe>
+</p>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@MASTERSTHESIS{mmd-msc,<br />
+	author={Mahesh Kumar Krishna Reddy},<br />
+	title={Metric Monocular Reconstruction through Ordinal Depth},<br />
+	year={2022},<br />
+	school={Simon Fraser University},<br />
+  }
+  </div>
+  </p>
+
+<p style="text-align:center;"><b>Publications in the context of this thesis</b></p>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../sidepth" target="_blank"><img src="https://yaksoy.github.io/images/research/sidepth.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../sidepth" target="_blank">Scale-Invariant Monocular Depth Estimation via SSI Depth <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>S. Mahdi H. Miangoleh</b>, <b>Mahesh Reddy</b>, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		SIGGRAPH, 2024
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="Sig24-item1" name="accordion1" type="checkbox" />
+	  <label for="Sig24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Existing methods for scale-invariant monocular depth estimation (SI MDE) often struggle due to the complexity of the task, and limited and non-diverse datasets, hindering generalizability in real-world scenarios. This is while shift-and-scale-invariant (SSI) depth estimation, simplifying the task and enabling training with abundant stereo datasets achieves high performance. We present a novel approach that leverages SSI inputs to enhance SI depth estimation, streamlining the network's role and facilitating in-the-wild generalization for SI depth estimation while only using a synthetic dataset for training. Emphasizing the generation of high-resolution details, we introduce a novel sparse ordinal loss that substantially improves detail generation in SSI MDE, addressing critical limitations in existing approaches. Through in-the-wild qualitative examples and zero-shot evaluation we substantiate the practical utility of our approach in computational photography applications, showcasing its ability to generate highly detailed SI depth maps and achieve generalization in diverse scenarios.
+	  </div>
+	
+	  <input id="Sig24-item2" name="accordion1" type="checkbox" />
+	  <label for="Sig24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SIG24-SI-Depth.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SIG24-SI-Depth-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig24Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/R_vW6TjYiEM" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig24Video.jpg" title="Video" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="Sig24-item3" name="accordion1" type="checkbox" />
+	  <label for="Sig24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{miangolehSIDepth,<br />
+		author={S. Mahdi H. Miangoleh and Mahesh Reddy and Ya\u{g}{\i}z Aksoy},<br />
+		title={Scale-Invariant Monocular Depth Estimation via SSI Depth},<br />
+		booktitle={Proc. SIGGRAPH},<br />
+		year={2024},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2024 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Interactive RGB+NIR Photo Editing &#8211; Yağız Aksoy</title>
+<meta name="description" content="Interactive RGB+NIR Photo Editing">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Interactive RGB+NIR Photo Editing">
+<meta name="twitter:description" content="Interactive RGB+NIR Photo Editing">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/NIREditingTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interactive RGB+NIR Photo Editing">
+<meta property="og:description" content="Interactive RGB+NIR Photo Editing">
+<meta property="og:url" content="https://yaksoy.github.io/NIREditing/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="https://yaksoy.github.io/NIREditing/">
+<link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br>
+      <div class="entry-titleLogos">
+        <table><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><tr><td style="text-align:left"><a href="https://www.sfu.ca/computing.html" target="_blank"><img src="../images/sfu.png" class="proj-logo" title="SFU"></a></td><td style="text-align:right"><a href="../group/" target="_blank"><img src="../images/cplab-full.png" class="proj-logo" title="CPLab" style="float:right;"></a></td></tr></table>
+      </div>
+      <br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Interactive RGB+NIR Photo Editing</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <table style="text-align:center;"><colgroup><col style="width:20%" /><col style="width:20%" /><col style="width:20%" /><col style="width:20%" /><col style="width:20%" /></colgroup><tr><td><img src="samuel.jpg" class="proj-photo" title="Samuel"></td><td><img src="shahrzad.jpg" class="proj-photo" title="Shahrzad"></td><td><img src="mariam.jpg" class="proj-photo" title="Mariam"></td><td><a href="https://sebastian-dille.github.io/" target="_blank"><img src="../group/sebastian.jpg" class="proj-photo" title="Sebastian"></td><td><a href="../" target="_blank"><img src="../images/yagizsq2.jpg" class="proj-photo" title="Yagiz"></td></tr><tr><td>Samuel Antunes Miranda*</td><td>Shahrzad Mirzaei*</td><td>Mariam Bebawy*</td><td><a href="https://sebastian-dille.github.io/" target="_blank">Sebastian Dille</a></td><td><a href="http://yaksoy.github.io" target="_blank">Yağız Aksoy</a></td></tr></table>
+      </div>
+      <div class="entry-titleVenue">
+        SIGGRAPH Posters, 2024
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="https://yaksoy.github.io/images/NIREditingTeaser.jpg" class="entry-feature-image" alt="Interactive RGB+NIR Photo Editing" style="margin-top:-40;"><p class="image-caption">We introduce a simple and intuitive photo editing tool that combines RGB and NIR properties, offering functions tailored specifically for the RGB+NIR combination, and granting the user the ability to edit and refine images more creatively.</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+	Near-infrared imagery offers great possibilities for creative image editing. Lying outside the visual spectrum, the NIR information can effectively serve as a fourth color channel to common RGB. 
+	Compared to the latter, it shows interesting and complementary behavior: its intensity strongly varies with the surface materials in the scene and is less affected by atmospheric perturbations.
+	For these reasons, NIR imaging has been a long-standing topic of interest in research and its integration has been proven successful for applications like false coloring, contrast enhancement, image dehazing, and purification of low-light images. 
+	Recent developments in smartphone technology have simplified the capturing process, making NIR data readily available for broader use outside the research community. 
+	At the same time, existing tools for NIR processing and manipulation are rare and still limited in functionality. 
+	With many solutions lacking specialized features, the editing process is inefficient and cumbersome, making them prone to generate suboptimal results. 
+	To tackle this issue, we introduce a simple and intuitive photo editing tool that combines RGB and NIR properties, offering functions tailored specifically for the RGB+NIR combination, and granting the user the ability to edit and refine images more creatively.
+</p>
+<p>
+	This work was developed by Samuel, Shahrzad, and Mariam as a class project for <a href="https://yaksoy.github.io/cpim" target="_blank">CMPT 461/769 - Computational Photography</a> at SFU.
+</p>
+
+<p style="text-align:center;"><b>Implementation</b></p>
+
+<p style="text-align:center;"><a href="https://github.com/samuel-antunes/RGB-NiR-Webapp" target="_blank">GitHub Repository for CMPT 461/769 - Computational Photography <i class="fa fa-external-link"></i></a></p>
+
+<p style="text-align:center;"><b>Paper</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPosterSmall.jpg" title="Poster" /></a></td>
+	</tr></table>
+
+<p style="text-align:center;"><b>Video</b></p>
+
+<p style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tNsUQYI7vw8" frameborder="0"> </iframe>
+</p>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@INPROCEEDINGS{NIREditing,<br />
+	author={Samuel Antunes Miranda and Shahrzad Mirzaei and Mariam Bebawy and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
+	title={Interactive RGB+NIR Photo Editing},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2024},<br />
+	}
+  </div>
+  </p>
+
+<p style="text-align:center;"><b>More posters from <a href="https://yaksoy.github.io/cpim" target="_blank">CMPT 461/769: Computational Photography <i class="fa fa-external-link"></i></a></b></p>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../datamosh" target="_blank"><img src="https://yaksoy.github.io/images/research/datamosh.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../datamosh" target="_blank">Datamoshing with Optical Flow <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Chris Careaga</b>, <b>Mahesh Kumar Krishna Reddy</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Asia Posters, 2023
+</div>
+
+<div class="pub-accordion">
+  <input id="SIGa23p-item1" name="accordion1" type="checkbox" />
+  <label for="SIGa23p-item1">Abstract</label>
+  <div class="pub-abstract">
+	We propose a simple method for emulating the effect of data moshing, without relying on the corruption of encoded video, and explore its use in different application scenarios. 
+	Like traditional data moshing, we apply motion information to mismatched visual data.
+	Our approach uses off-the-shelf optical flow estimation to generate motion vectors for each pixel. 
+	Our core algorithm can be implemented in a handful of lines but unlocks multiple video editing effects. 
+	The use of accurate optical flow rather than compression data also creates a more natural transition without block artifacts. 
+	We hope our method provides artists and content creators with more creative freedom over the process of data moshing.
+  </div>
+
+  <input id="SIGa23p-item2" name="accordion1" type="checkbox" />
+  <label for="SIGa23p-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIGa23p-Datamosh.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/datamoshPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIGa23p-Datamosh.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/datamoshPosterSmall.jpg" title="Poster" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIGa23p-item3" name="accordion1" type="checkbox" />
+  <label for="SIGa23p-item3">BibTeX</label>
+  <div class="pub-bibtex">
+@INPROCEEDINGS{datamosh,<br />
+	author={Chris Careaga and Mahesh Kumar Krishna Reddy and Ya\u{g}{\i}z Aksoy},<br />
+	title={Datamoshing with Optical Flow},<br />
+	booktitle={SIGGRAPH Asia Posters},<br />
+	year={2023},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../parallaxbg" target="_blank"><img src="https://yaksoy.github.io/images/research/parallax.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../parallaxbg" target="_blank">Parallax Background Texture Generation <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Brigham Okano, Shao Yu Shen, <b>Sebastian Dille</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="pub-accordion">
+  <input id="SIG22c-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item1">Abstract</label>
+  <div class="pub-abstract">
+	Art assets for games can be time intensive to produce. 
+	Whether it is a full 3D world, or simpler 2D background, creating good looking assets takes time and skills that are not always readily available. 
+	Time can be saved by using repeating assets, but visible repetition hurts immersion. 
+	Procedural generation techniques can help make repetition less uniform, but do not remove it entirely. 
+	Both approaches leave noticeable levels of repetition in the image, and require significant time and skill investments to produce. 
+	Video game developers in hobby, game jam, or early prototyping situations may not have access to the required time and skill. 
+	We propose a framework to produce layered 2D backgrounds without the need for significant artist time or skill. 
+	In our pipeline, the user provides segmented photographic input, instead of creating traditional art, and receives game-ready assets. 
+	By utilizing photographs as input, we can achieve both a high level of realism for the resulting background texture as well as a shift from manual work away towards computational run-time which frees up developers for other work.
+  </div>
+
+  <input id="SIG22c-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG22c-ParallaxBG.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/parallaxPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG22c-ParallaxBG.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/parallaxPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/_KWdFy3YipI" target="_blank"><img src="https://yaksoy.github.io/images/research/parallaxVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22c-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{parallaxBG,<br />
+	author={Brigham Okano and Shao Yu Shen and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
+	title={Parallax Background Texture Generation},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../dynapix" target="_blank"><img src="https://yaksoy.github.io/images/research/dynapix.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../dynapix" target="_blank">DynaPix: Normal Map Pixelization for Dynamic Lighting <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Gerardo Gandeaga, Denys Iliash, <b>Chris Careaga</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="pub-accordion">
+  <input id="SIG22b-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item1">Abstract</label>
+  <div class="pub-abstract">
+	This work introduces DynaPix, a Krita extension that automatically generates pixelated images and surface normals from an input image. 
+	DynaPix is a tool that aids pixel artists and game developers more efficiently develop 8-bit style games and bring them to life with dynamic lighting through normal maps that can be used in modern game engines such as Unity. 
+	The extension offers artists a degree of flexibility as well as allows for further refinements to generated artwork. 
+	Powered by out of the box solutions, DynaPix is a tool that seamlessly integrates in the artistic workflow.
+  </div>
+
+  <input id="SIG22b-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG22b-DynaPix.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/dynapixPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG22b-DynaPix.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/dynapixPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/1mylyzw6i_U" target="_blank"><img src="https://yaksoy.github.io/images/research/dynapixVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22b-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{dynapix,<br />
+	author={Gerardo Gandeaga and Denys Iliash and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+	title={Dyna{P}ix: Normal Map Pixelization for Dynamic Lighting},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2024 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
