@@ -126,7 +126,7 @@
 
 <p><b>Save the frequency response magnitude as images with adjusted brightness for better viewing as HP-freq.png and LP-freq.png</b></p>
 
-<h4 id="3-visualize-kernels-2-pts">3: Visualize kernels (2 pts)</h4>
+<h4 id="3-visualize-kernels-2-pts">3: Visualize kernels (1 pts)</h4>
 
 <p>Define a Sobel kernel, a Gaussian kernel, and a derivative-of-Gaussian (DoG) kernel. The derivative kernels (Sobel and DoG) should only be in a single direction. The Gaussian kernel should have a standard deviation of 2.5. Determine the kernel size of your Gaussian kernel by examining it with the “surf” function. It shouldn’t be too large or too small. Compute your DoG kernel using the first two kernels you defined. <b> Save the surf visualizations of the Gaussian and DoG kernels as gaus-surf.png and dog-surf.png.</b></p>
 
@@ -136,7 +136,7 @@
 
 <p>II - Compute the Fourier transform of the DoG kernels using the transform size of 500x500. Apply this filter to both images in the frequency domain and convert them back to the spatial domain. <b>Save the filtered images and freq. domain versions as HP-dogfilt.png, HP-dogfilt-freq.png, LP-dogfilt.png, and LP-dogfilt-freq.png. Adjust the brightness of the frequency domains before saving.</b></p>
 
-<h4 id="4-anti-aliasing-4-pts">4: Anti-aliasing (4 pts)</h4>
+<h4 id="4-anti-aliasing-4-pts">4: Anti-aliasing (3 pts)</h4>
 
 <p>Subsample the two images (using 1:2:end) to half the size in both dimensions. You should observe aliasing in HP and no aliasing in LP. <b>Save the subsampled images and freq. domain versions as HP-sub2.png, HP-sub2-freq.png, LP-sub2.png, and LP-sub2-freq.png. </b> In your report, comment on where the aliasing happens in both spatial and frequency domains.</p>
 
