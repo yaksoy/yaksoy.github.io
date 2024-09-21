@@ -79,16 +79,16 @@
 	    <ul>
       
 		    
-		    <li><a href="https://yaksoy.github.io/" >Home</a></li>
+		    <li><a href="https://yaksoy.github.io/" >Yağız</a></li>
 		  
 		    
-		    <li><a href="https://yaksoy.github.io/group/" >Group</a></li>
+		    <li><a href="https://yaksoy.github.io/group/" >CPLab</a></li>
+		  
+		    
+		    <li><a href="https://yaksoy.github.io/media/" >Media</a></li>
 		  
 		    
 		    <li><a href="https://yaksoy.github.io/research/" >Publications</a></li>
-		  
-		    
-		    <li><a href="https://yaksoy.github.io/code/" >Code & Data</a></li>
 		  
 		    
 		    <li><a href="https://yaksoy.github.io/teaching/" >Teaching</a></li>
@@ -104,13 +104,23 @@
 
 <header class="masthead">
 	<div class="wrap">
-      
-  		<a href="https://yaksoy.github.io/" class="site-logo" rel="home" title="Yağız Aksoy"><img src="https://yaksoy.github.io/images/jordan.png" width="200" height="200" alt="Yağız Aksoy logo" class="animated fadeInDown"></a>
-      
+  		<img src="title.jpg" width="700" alt="Yağız Aksoy logo" class="animated fadeInDown" style="border-radius:5px;">
       <h1 class="site-title animated fadeIn"><a href="https://yaksoy.github.io/">Yağız Aksoy</a></h1>
 		<h2 class="site-description animated fadeIn" itemprop="description">Computational Photography Lab @ SFU</h2>
 	</div>
 </header><!-- /.masthead -->
+
+<!-- <header class="masthead">
+	<div class="wrap">
+      
+  		<a href="https://yaksoy.github.io/" class="site-logo" rel="home" title="Yağız Aksoy"><img src="https://yaksoy.github.io/images/cplab.jpg" width="200" height="200" alt="Yağız Aksoy logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="https://yaksoy.github.io/">Yağız Aksoy</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">Computational Photography Lab @ SFU</h2>
+	</div>
+</header> -->
+<!-- /.masthead -->
+<!--  -->
 
 <div class="js-menu-screen menu-screen"></div>
 
@@ -123,7 +133,67 @@
         <h1 class="entry-title" style="margin-top:-5px;">Publications</h1>
       </header>
       <div class="entry-content">
-        <h3 id="major-venues">Major venues</h3>
+        <h3 id="major-works">Major works</h3>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../ColorfulShading" target="_blank"><img src="https://yaksoy.github.io/images/research/ColorfulShading.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../ColorfulShading" target="_blank">Colorful Diffuse Intrinsic Image Decomposition in the Wild <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ACM Transactions on Graphics (Proc. SIGGRAPH Asia), 2024
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="TOG24-item1" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Intrinsic image decomposition aims to separate the surface reflectance and the effects from the illumination given a single photograph. 
+		Due to the complexity of the problem, most prior works assume a single-color illumination and a Lambertian world, which limits their use in illumination-aware image editing applications. 
+		In this work, we separate an input image into its diffuse albedo, colorful diffuse shading, and specular residual components. 
+		We arrive at our result by gradually removing first the single-color illumination and then the Lambertian-world assumptions. 
+		We show that by dividing the problem into easier sub-problems, in-the-wild colorful diffuse shading estimation can be achieved despite the limited ground-truth datasets. 
+		Our extended intrinsic model enables illumination-aware analysis of photographs and can be used for image editing applications such as specularity removal and per-pixel white balancing.
+	  </div>
+	
+	  <input id="TOG24-item2" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/TOG24-ColorfulShading.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/TOG24-ColorfulShading-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Supp.jpg" title="Supplementary" /></a></td>
+			<!-- <td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Video.jpg" title="Video"></a></td> -->
+		</tr></table>
+		</div>
+	
+	  <input id="TOG24-item3" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@ARTICLE{careagaColorful,<br />
+		author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Colorful Diffuse Intrinsic Image Decomposition in the Wild},<br />
+		journal={ACM Trans. Graph.},<br />
+		year={2024},<br />
+		volume = {43},<br />
+		number = {6},<br />
+		articleno = {178},<br />
+		numpages = {12},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
 
 <hr />
 
@@ -134,7 +204,7 @@
 	</td>
 	<td>
 	<div class="pub-title">
-		<a href="../intrinsicHDR" target="_blank">Intrinsic Single-Image HDR Reconstruction (Coming soon) <i class="fa fa-external-link"></i></a>
+		<a href="../intrinsicHDR" target="_blank">Intrinsic Single-Image HDR Reconstruction <i class="fa fa-external-link"></i></a>
 	</div>
 	<div class="pub-authors">
 		<b>Sebastian Dille*</b>, <b>Chris Careaga*</b>, and <b>Yağız Aksoy</b>
@@ -144,22 +214,29 @@
 	</div>
 	
 	<div class="pub-accordion">
-	 <!--  <input id="ECCV24-item1" name="accordion1" type="checkbox">
+	  <input id="ECCV24-item1" name="accordion1" type="checkbox" />
 	  <label for="ECCV24-item1">Abstract</label>
 	  <div class="pub-abstract">
-
+		The low dynamic range (LDR) of common cameras fails to capture the rich contrast in natural scenes, resulting in loss of color and details in saturated pixels. 
+		Reconstructing the high dynamic range (HDR) of luminance present in the scene from single LDR photographs is an important task with many applications in computational photography and realistic display of images.
+		The HDR reconstruction task aims to infer the lost details using the context present in the scene, requiring neural networks to understand high-level geometric and illumination cues. 
+		This makes it challenging for data-driven algorithms to generate accurate and high-resolution results.
+		In this work, we introduce a physically-inspired remodeling of the HDR reconstruction problem in the intrinsic domain. 
+		The intrinsic model allows us to train separate networks to extend the dynamic range in the shading domain and to recover lost color details in the albedo domain. 
+		We show that dividing the problem into two simpler sub-tasks improves performance in a wide variety of photographs.
 	  </div>
 	
-	  <input id="ECCV24-item2" name="accordion1" type="checkbox">
+	  <input id="ECCV24-item2" name="accordion1" type="checkbox" />
 	  <label for="ECCV24-item2">Manuscript &amp; more</label>
 	  <div class="pub-photolink">
 	  
 		<table><tr>
-			<td><a href="https://yaksoy.github.io/papers/ECCV24-intrinsicHDR.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Paper.jpg" title="Paper"></a></td>
-			<td><a href="https://yaksoy.github.io/papers/ECCV24-intrinsicHDR-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Supp.jpg" title="Supplementary"></a></td>
-			<td><a href="https://youtu.be/M9hCUTp8bo4" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Video.jpg" title="Video"></a></td>
+			<td><a href="https://yaksoy.github.io/papers/ECCV24-IntrinsicHDR.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/ECCV24-IntrinsicHDR-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/EiyH52BcKkw" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Video.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsicHDR/IntrinsicHDRPoster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Poster.jpg" title="Poster" /></a></td>
 		</tr></table>
-		</div> -->
+		</div>
 	
 	  <input id="ECCV24-item3" name="accordion1" type="checkbox" />
 	  <label for="ECCV24-item3">BibTeX</label>
@@ -168,6 +245,64 @@
 		author={Sebastian Dille and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
 		title={Intrinsic Single-Image HDR Reconstruction},<br />
 		booktitle={Proc. ECCV},<br />
+		year={2024},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../bottomup" target="_blank"><img src="https://yaksoy.github.io/images/research/bottomup.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../bottomup" target="_blank">A Bottom-Up Approach to Class-Agnostic Image Segmentation <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Sebastian Dille</b>, <b>Ari Blondal</b>, Sylvain Paris, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ECCV Workshops, 2024
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="ECCVW24-item1" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Class-agnostic image segmentation is a crucial component in automating image editing workflows, especially in contexts where object selection traditionally involves interactive tools. 
+        Existing methods in the literature often adhere to top-down formulations, following the paradigm of class-based approaches, where object detection precedes per-object segmentation.
+        In this work, we present a novel bottom-up formulation for addressing the class-agnostic segmentation problem. 
+        We supervise our network directly on the projective sphere of its feature space, employing losses inspired by metric learning literature as well as losses defined in a novel segmentation-space representation.
+        The segmentation results are obtained through a straightforward mean-shift clustering of the estimated features.
+        Our bottom-up formulation exhibits exceptional generalization capability, even when trained on datasets designed for class-based segmentation. We further showcase the effectiveness of our generic approach by addressing the challenging task of cell and nucleus segmentation.
+        We believe that our bottom-up formulation will offer valuable insights into diverse segmentation challenges in the literature.
+	  </div>
+	
+	  <input id="ECCVW24-item2" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/ECCVW24-BottomUp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/ECCVW24-BottomUp-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Supp.jpg" title="Supplementary" /></a></td>
+			<!-- <td><a href="https://youtu.be/EiyH52BcKkw" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Video.jpg" title="Video"></a></td> -->
+			<td><a href="https://yaksoy.github.io/bottomup/BottomUpPoster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Poster.jpg" title="Poster" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="ECCVW24-item3" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{dilleBottomup,<br />
+		author={Sebastian Dille and Ari Blondal and Sylvain Paris and Ya\u{g}{\i}z Aksoy},<br />
+		title={A Bottom-Up Approach to Class-Agnostic Image Segmentation},<br />
+		booktitle={Proc. ECCV Workshop},<br />
 		year={2024},<br />
 	  }
 	  </div>
@@ -209,6 +344,7 @@
 			<td><a href="https://yaksoy.github.io/papers/SIG24-SI-Depth.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig24Paper.jpg" title="Paper" /></a></td>
 			<td><a href="https://yaksoy.github.io/papers/SIG24-SI-Depth-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig24Supp.jpg" title="Supplementary" /></a></td>
 			<td><a href="https://youtu.be/R_vW6TjYiEM" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig24Video.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/sidepth/SIDepth_Poster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SIG24Poster.jpg" title="Poster" /></a></td>
 		</tr></table>
 		</div>
 	
@@ -268,6 +404,7 @@
 			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Paper.jpg" title="Paper" /></a></td>
 			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Supp.jpg" title="Supplementary" /></a></td>
 			<td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Video.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsic/Intrinsic_Poster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Poster.jpg" title="Poster" /></a></td>
 		</tr></table>
 		</div>
 	
@@ -279,6 +416,10 @@
 		title={Intrinsic Image Decomposition via Ordinal Shading},<br />
 		journal={ACM Trans. Graph.},<br />
 		year={2023},<br />
+		volume = {43},<br />
+		number = {1},<br />
+		articleno = {12},<br />
+		numpages = {24},<br />
 	  }
 	  </div>
 	</div>
@@ -380,6 +521,7 @@
 		<td><a href="https://yaksoy.github.io/papers/CVPR23-RealisticEditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aPaper.jpg" title="Paper" /></a></td>
 		<td><a href="https://yaksoy.github.io/papers/CVPR23-RealisticEditing-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aSupp.jpg" title="Paper" /></a></td>
 		<td><a href="https://youtu.be/5dKUDMnnjuo" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR23aVideo.jpg" title="Video" /></a></td>
+		<td><a href="https://yaksoy.github.io/realisticEditing/CVPR23aPosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aPoster.jpg" title="Poster" /></a></td>
 	</tr></table>
 	</div>
 
@@ -436,6 +578,7 @@
 			<td><a href="https://yaksoy.github.io/papers/CVPR23-IntrinsicFlash-Dataset.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bSupp1.jpg" title="Dataset" /></a></td>
 			<td><a href="https://yaksoy.github.io/papers/CVPR23-IntrinsicFlash-SuppResults.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bSupp2.jpg" title="Supplementary" /></a></td>
 			<td><a href="https://youtu.be/Zs23PKgJCO8" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR23bVideo.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsicFlash/CVPR23bPosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bPoster.jpg" title="Poster" /></a></td>
 		</tr></table>
 		</div>
 	
@@ -492,6 +635,7 @@
 		<td><a href="https://yaksoy.github.io/papers/CVPR21-HighResDepth.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR21Paper.jpg" title="Paper" /></a></td>
 		<td><a href="https://yaksoy.github.io/papers/CVPR21-HighResDepth-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR21Supp.jpg" title="Paper" /></a></td>
 		<td><a href="https://youtu.be/lDeI17pHlqo" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR21Video.jpg" title="Video" /></a></td>
+		<td><a href="https://yaksoy.github.io/highresdepth/CVPR21PosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR21Poster.jpg" title="Poster" /></a></td>
 	</tr></table>
 	</div>
 
@@ -1231,7 +1375,7 @@ that a professional compositing artist requires to process the same content havi
 
 <hr />
 
-<h4>Other conferences and workshops</h4>
+<h4>Published CMPT 461 / 769 projects</h4>
 
 <hr />
 
@@ -1350,61 +1494,6 @@ that a professional compositing artist requires to process the same content havi
 <table>
 <tr>
 <td class="pub-photocol">
-<a href="../interactiveDepth" target="_blank"><img src="https://yaksoy.github.io/images/research/interactiveDepth.jpg" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../interactiveDepth" target="_blank">Interactive Editing of Monocular Depth <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	<b>Obumneme Stanley Dukor</b>, <b>S. Mahdi H. Miangoleh</b>, <b>Mahesh Kumar Krishna Reddy</b>, Long Mai, and <b>Yağız Aksoy</b> 
-</div>
-<div class="pub-venue">
-	SIGGRAPH Posters, 2022
-</div>
-
-<div class="pub-accordion">
-  <input id="SIG22a-item1" name="accordion1" type="checkbox" />
-  <label for="SIG22a-item1">Abstract</label>
-  <div class="pub-abstract">
-	Recent advances in computer vision have made 3D structure-aware editing of still photographs a reality. 
-	Such computational photography applications use a depth map that is automatically generated by monocular depth estimation methods to represent the scene structure. 
-	In this work, we present a lightweight, web-based interactive depth editing and visualization tool that adapts low-level conventional image editing operations for geometric manipulation to enable artistic control in the 3D photography workflow. 
-	Our tool provides real-time feedback on the geometry through a 3D scene visualization to make the depth map editing process more intuitive for artists. 
-	Our web-based tool is open-source and platform-independent to support wider adoption of 3D photography techniques in everyday digital photography.
-  </div>
-
-  <input id="SIG22a-item2" name="accordion1" type="checkbox" />
-  <label for="SIG22a-item2">Manuscript &amp; more</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/SIG22a-interactiveDepth.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthPaper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/SIG22a-interactiveDepth.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthPosterSmall.jpg" title="Poster" /></a></td>
-		<td><a href="" target="_blank"><img src="https://yaksoy.github.io/images/research/" title="Video" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="SIG22a-item3" name="accordion1" type="checkbox" />
-  <label for="SIG22a-item3">BibTeX</label>
-  <div class="pub-bibtex">
-	@INPROCEEDINGS{interactiveDepth,<br />
-	author={Obumneme Stanley Dukor and S. Mahdi H. Miangoleh and Mahesh Kumar Krishna Reddy and Long Mai and Ya\u{g}{\i}z Aksoy},<br />
-	title={Interactive Editing of Monocular Depth},<br />
-	booktitle={SIGGRAPH Posters},<br />
-	year={2022},<br />
-	}
-  </div>
-</div>
-</td>
-</tr>
-</table>
-
-<hr />
-
-<table>
-<tr>
-<td class="pub-photocol">
 <a href="../dynapix" target="_blank"><img src="https://yaksoy.github.io/images/research/dynapix.jpg" class="pub-photo" /></a>
 </td>
 <td>
@@ -1504,6 +1593,64 @@ that a professional compositing artist requires to process the same content havi
 	@INPROCEEDINGS{parallaxBG,<br />
 	author={Brigham Okano and Shao Yu Shen and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
 	title={Parallax Background Texture Generation},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<h4>Other conferences and workshops</h4>
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../interactiveDepth" target="_blank"><img src="https://yaksoy.github.io/images/research/interactiveDepth.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../interactiveDepth" target="_blank">Interactive Editing of Monocular Depth <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Obumneme Stanley Dukor</b>, <b>S. Mahdi H. Miangoleh</b>, <b>Mahesh Kumar Krishna Reddy</b>, Long Mai, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="pub-accordion">
+  <input id="SIG22a-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item1">Abstract</label>
+  <div class="pub-abstract">
+	Recent advances in computer vision have made 3D structure-aware editing of still photographs a reality. 
+	Such computational photography applications use a depth map that is automatically generated by monocular depth estimation methods to represent the scene structure. 
+	In this work, we present a lightweight, web-based interactive depth editing and visualization tool that adapts low-level conventional image editing operations for geometric manipulation to enable artistic control in the 3D photography workflow. 
+	Our tool provides real-time feedback on the geometry through a 3D scene visualization to make the depth map editing process more intuitive for artists. 
+	Our web-based tool is open-source and platform-independent to support wider adoption of 3D photography techniques in everyday digital photography.
+  </div>
+
+  <input id="SIG22a-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG22a-interactiveDepth.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG22a-interactiveDepth.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="" target="_blank"><img src="https://yaksoy.github.io/images/research/" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22a-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{interactiveDepth,<br />
+	author={Obumneme Stanley Dukor and S. Mahdi H. Miangoleh and Mahesh Kumar Krishna Reddy and Long Mai and Ya\u{g}{\i}z Aksoy},<br />
+	title={Interactive Editing of Monocular Depth},<br />
 	booktitle={SIGGRAPH Posters},<br />
 	year={2022},<br />
 	}
@@ -1650,7 +1797,7 @@ that a professional compositing artist requires to process the same content havi
 		<td><a href="https://yaksoy.github.io/papers/ICIP14-odometry.pdf" target="_blank"><img src="https://yaksoy.github.io/images/research/ICIP14aPaper.png" title="Paper" /></a></td>
 		<td><a href="https://yaksoy.github.io/papers/ICIP14-supp-velocity.pdf" target="_blank"><img src="https://yaksoy.github.io/images/research/ICIP14aVelocity.png" title="Supplementary material 1" /></a></td>
 		<td><a href="https://yaksoy.github.io/papers/ICIP14-supp-noise.pdf" target="_blank"><img src="https://yaksoy.github.io/images/research/ICIP14aNoise.png" title="Supplementary material 2" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/ICIP14-PosterSmall.jpg" target="_blank"><img src="https://yaksoy.github.io/images/research/ICIP14aPoster.jpg" title="Poster" /></a></td>
+		<!-- <td><a href="https://yaksoy.github.io/papers/ICIP14-PosterSmall.jpg" target="_blank"><img src="https://yaksoy.github.io/images/research/ICIP14aPoster.jpg" title="Poster"></a></td> -->
 	</tr></table>
 	</div>
   
@@ -1788,7 +1935,7 @@ year = "2014",}
   
 	<table><tr>
 		<td><a href="https://yaksoy.github.io/papers/ICIP12-2d3dConv.pdf" target="_blank"><img src="https://yaksoy.github.io/images/research/ICIP12Paper.png" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/ICIP12-PosterSmall.png" target="_blank"><img src="https://yaksoy.github.io/images/research/ICIP12Poster.png" title="Poster" /></a></td>
+		<!-- <td><a href="https://yaksoy.github.io/papers/ICIP12-PosterSmall.png" target="_blank"><img src="https://yaksoy.github.io/images/research/ICIP12Poster.png" title="Poster"></a></td> -->
 	</tr></table>
 	</div>
   

@@ -169,14 +169,23 @@ Finally, we demonstrate the real-world applicability of our estimations by perfo
 
 <hr />
 
+<p style="text-align:center;"><b>Poster</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="Intrinsic_Poster.jpg" target="_blank"><img width="500" src="Intrinsic_Poster.jpg" title="Poster" /></a></td>
+	</tr></table>
+
 <p style="text-align:center;"><b>BibTeX</b></p>
 <p>
 <div class="pub-bibtex">
- @ARTICLE{careagaIntrinsic,<br />
+@ARTICLE{careagaIntrinsic,<br />
 author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
 title={Intrinsic Image Decomposition via Ordinal Shading},<br />
 journal={ACM Trans. Graph.},<br />
 year={2023},<br />
+volume = {43},<br />
+number = {1},<br />
+articleno = {12},<br />
+numpages = {24},<br />
 } 
 </div>
 </p>
@@ -211,6 +220,124 @@ year={2023},<br />
 --- -->
 
 <p style="text-align:center;"><b>Related Publications</b></p>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../ColorfulShading" target="_blank"><img src="https://yaksoy.github.io/images/research/ColorfulShading.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../ColorfulShading" target="_blank">Colorful Diffuse Intrinsic Image Decomposition in the Wild <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ACM Transactions on Graphics (Proc. SIGGRAPH Asia), 2024
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="TOG24-item1" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Intrinsic image decomposition aims to separate the surface reflectance and the effects from the illumination given a single photograph. 
+		Due to the complexity of the problem, most prior works assume a single-color illumination and a Lambertian world, which limits their use in illumination-aware image editing applications. 
+		In this work, we separate an input image into its diffuse albedo, colorful diffuse shading, and specular residual components. 
+		We arrive at our result by gradually removing first the single-color illumination and then the Lambertian-world assumptions. 
+		We show that by dividing the problem into easier sub-problems, in-the-wild colorful diffuse shading estimation can be achieved despite the limited ground-truth datasets. 
+		Our extended intrinsic model enables illumination-aware analysis of photographs and can be used for image editing applications such as specularity removal and per-pixel white balancing.
+	  </div>
+	
+	  <input id="TOG24-item2" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/TOG24-ColorfulShading.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/TOG24-ColorfulShading-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Supp.jpg" title="Supplementary" /></a></td>
+			<!-- <td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Video.jpg" title="Video"></a></td> -->
+		</tr></table>
+		</div>
+	
+	  <input id="TOG24-item3" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@ARTICLE{careagaColorful,<br />
+		author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Colorful Diffuse Intrinsic Image Decomposition in the Wild},<br />
+		journal={ACM Trans. Graph.},<br />
+		year={2024},<br />
+		volume = {43},<br />
+		number = {6},<br />
+		articleno = {178},<br />
+		numpages = {12},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../intrinsicHDR" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsicHDR.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../intrinsicHDR" target="_blank">Intrinsic Single-Image HDR Reconstruction <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Sebastian Dille*</b>, <b>Chris Careaga*</b>, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ECCV, 2024
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="ECCV24-item1" name="accordion1" type="checkbox" />
+	  <label for="ECCV24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		The low dynamic range (LDR) of common cameras fails to capture the rich contrast in natural scenes, resulting in loss of color and details in saturated pixels. 
+		Reconstructing the high dynamic range (HDR) of luminance present in the scene from single LDR photographs is an important task with many applications in computational photography and realistic display of images.
+		The HDR reconstruction task aims to infer the lost details using the context present in the scene, requiring neural networks to understand high-level geometric and illumination cues. 
+		This makes it challenging for data-driven algorithms to generate accurate and high-resolution results.
+		In this work, we introduce a physically-inspired remodeling of the HDR reconstruction problem in the intrinsic domain. 
+		The intrinsic model allows us to train separate networks to extend the dynamic range in the shading domain and to recover lost color details in the albedo domain. 
+		We show that dividing the problem into two simpler sub-tasks improves performance in a wide variety of photographs.
+	  </div>
+	
+	  <input id="ECCV24-item2" name="accordion1" type="checkbox" />
+	  <label for="ECCV24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/ECCV24-IntrinsicHDR.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/ECCV24-IntrinsicHDR-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/EiyH52BcKkw" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Video.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsicHDR/IntrinsicHDRPoster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Poster.jpg" title="Poster" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="ECCV24-item3" name="accordion1" type="checkbox" />
+	  <label for="ECCV24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{dilleIntrinsicHDR,<br />
+		author={Sebastian Dille and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Intrinsic Single-Image HDR Reconstruction},<br />
+		booktitle={Proc. ECCV},<br />
+		year={2024},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
 
 <hr />
 
@@ -307,6 +434,7 @@ year={2023},<br />
 			<td><a href="https://yaksoy.github.io/papers/CVPR23-IntrinsicFlash-Dataset.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bSupp1.jpg" title="Dataset" /></a></td>
 			<td><a href="https://yaksoy.github.io/papers/CVPR23-IntrinsicFlash-SuppResults.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bSupp2.jpg" title="Supplementary" /></a></td>
 			<td><a href="https://youtu.be/Zs23PKgJCO8" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR23bVideo.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsicFlash/CVPR23bPosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bPoster.jpg" title="Poster" /></a></td>
 		</tr></table>
 		</div>
 	
@@ -337,7 +465,7 @@ year={2023},<br />
     
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<span>&copy; 2023 Yagiz Aksoy</span>
+<span>&copy; 2024 Yagiz Aksoy</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 
