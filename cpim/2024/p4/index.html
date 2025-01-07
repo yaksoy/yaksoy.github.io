@@ -1,0 +1,365 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Computational Photography and Image Manipulation &#8211; Yağız Aksoy</title>
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Computational Photography and Image Manipulation">
+
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/jordan.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computational Photography and Image Manipulation">
+
+<meta property="og:url" content="https://yaksoy.github.io/cpim/2024/p4/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="https://yaksoy.github.io/cpim/2024/p4/">
+<link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br>
+      <div class="entry-titleLogos">
+        
+      </div>
+      <br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Computational Photography and Image Manipulation</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        Programming Assignment 2
+      </div>
+      <div class="entry-titleVenue">
+        
+      </div>
+    </div><!-- /.entry-wrapper -->
+    
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p>In this assignment, we will implement the Poisson image blending method we covered in class: <a href="https://www.cs.virginia.edu/~connelly/class/2014/comp_photo/proj2/poisson.pdf" target="_blank">Perez et al., Poisson Image Editing, ACM Transactions on Graphics, 2003</a>.</p>
+
+<p><b>Assignment data:</b> <a href="./p4data.zip" target="_blank">Data - zip file</a><br />
+<b>Starter code:</b> <a href="./p4code.zip" target="_blank">Source - zip file</a> (includes some tips on implementation)<br /></p>
+
+<p>
+Gradient-domain image processing is a simple technique applicable to blending, tone-mapping, and 
+non-photorealistic rendering. In this assignment, we will use gradient-domain blending for seamless image compositing; so-called <em>Poisson blending</em> because in the process of compositing we will solve a kind of second-order partial differential equation commonly known as <a href="https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson">Poisson's equation (after Siméon Denis Poisson)</a>.
+</p>
+<p>
+The simplest method of compositing would be to replace pixels in a target image with pixels from a source image. Unfortunately, this will create noticeable seams even if the backgrounds are similar. How can we get rid of these intensity difference seams?
+</p>
+<p>
+The insight is that humans are perceptually sensitive to gradients rather than absolute image intensities. Thus, we set up the problem as one of finding values for the output pixels that maximally preserve the gradients in the source region without changing any of the target pixels. <em>Note</em> that we 
+are making a deliberate decision here to ignore the overall intensity of the source region&mdash;we reintegrate (modified) source gradients and forget the absolute source intensity.
+</p>
+
+<h5 id="deliverables">Deliverables</h5>
+<p>
+A starter code for the assignment is provided above. In your report, you should discuss the specific challenges and their solutions you came across during implementing this algorithm. In your report, you need to provide the blending results of all the examples provided in the data zip file linked above. If your results have some issues, discuss what may be the caouse of these issues in your implementation. You also need to generate 3 blending examples by finding photographs yourself. In a separate zip file, you need to submit all the blending results and the examples you found (including the source, the target and the mask).
+</p>
+
+<!--
+<h3>Key paper</h3>
+
+<ul>
+<p>-
+<a href="resources/PoissonImageEditing.pdf">P&eacute;rez et al., Poisson Image Editing, 2003</a>.
+</p>
+</ul>
+-->
+
+<h5 id="simple-1d-examples">Simple 1D Examples</h5>
+
+<p>
+Let's start with a simple case where instead of copying in new gradients we only want to fill in a missing region of an image and keep the gradients as smooth (close to zero) as possible. To simplify things further, let's start with a one dimensional signal instead of a two dimensional image. The example below is contained in the <code>walkthough.m</code> script with the starter code.
+</p>
+
+<p>
+Here is our signal \(t\) and a mask \(M\) specifying which "pixels" are missing.
+</p>
+
+<p><code class="language-matlab">t = [5 4 0 0 0 0 2 4];<br />
+M = [0 0 1 1 1 1 0 0];<br />
+M = logical(M);
+</code></p>
+
+<p><img width="300" class="center" src="./images/1_labeled.png" /></p>
+
+<p>
+We can formulate our objective as a least squares problem. Given the intensity values of \(t\), we want to solve for new intensity values \(v\) under the mask \(M\) such that: 
+$$v=\underset{v}{\mathrm{argmin}} \sum_{i\in M} \sum_{j\in N_i \cap M} (v_i-v_j)^2 + \sum_{i\in M} \sum_{j\in N_i \cap \sim M} (v_i-t_j)^2$$
+</p>
+<!--
+<img src="images/eqn_1.png" width=447 height=77>
+-->
+<p>
+Here \(i\) is a coordinate (1D or 2D) for each pixel under mask \(M\). Each \(j\) is a neighbor of \(i\). Each summation guides the gradient (the local pixel differences) in all directions to be close to 0. In the first summation, the gradient is between two unknown pixels, and the second summation handles the border situation where one pixel is unknown and one pixel is known (outside the mask \(M\)). Minimizing this equation could be called a <em>Poisson fill</em>.
+</p>
+
+<p>
+For this example, let's define `neighborhood' to be the pixel to your left. In principle, we could define neighborhood to be all surrounding pixels; in 2D, we would at least need to consider vertical and horizontal neighbors. The least squares solution to the following system of equations satisfies the formula above.
+</p>
+
+<p><code class="language-matlab">v(1) - t(2) = 0; %left border<br />
+v(2) - v(1) = 0;<br />
+v(3) - v(2) = 0;<br />
+v(4) - v(3) = 0;<br />
+t(7) - v(4) = 0; %right border
+</code></p>
+
+<p>
+Note that the coordinates don't directly correspond between \(v\) and \(t\)&mdash;the first unknown pixel \(v(1)\) sits on top of \(t(3)\). We could formulate it differently if we chose. Plugging in known values of \(t\) we receive:
+</p>
+
+<p><code class="language-matlab">v(1) -    4 = 0;<br />
+v(2) - v(1) = 0;<br />
+v(3) - v(2) = 0;<br />
+v(4) - v(3) = 0;<br />
+   2 - v(4) = 0;
+</code></p>
+
+<p>
+Now let's convert this to matrix form and have MATLAB solve it:
+</p>
+
+<p><code class="language-matlab">A = [ 1  0  0  0; ...<br />
+     -1  1  0  0; ...<br />
+      0 -1  1  0; ...<br />
+      0  0 -1  1; ...<br />
+      0  0  0 -1];<br />
+  <br />
+b = [4; 0; 0; 0; -2];<br />
+  <br />
+v = A\b; % 'help mldivide' describes the backslash operator.<br />
+<br />
+t_smoothed = zeros(size(t));<br />
+t_smoothed(~M) = t(~M);<br />
+t_smoothed( M) = v;
+</code></p>
+
+<p><img width="300" class="center" src="./images/2_labeled.png" /></p>
+
+<p>
+As it turns out, in the 1D case, the Poisson fill is simply a linear interpolation between the boundary values. But, in 2D, the Poisson fill exhibits more complexity. Now instead of just filling, let's try to seamlessly blend content from one 1D signal into another. We'll fill the missing values in \(t\) using the correspondig values in \(s\):
+</p>
+
+<p><code class="language-matlab">s = [5 6 7 2 4 5 7 3];
+</code></p>
+
+<p>
+Now our objective changes&mdash;instead of trying to minimize the gradients, we want the gradients to match another set of gradients (those in \(s\)). We can write this as follows:
+$$v=\underset{v}{\mathrm{argmin}} \sum_{i\in M} \sum_{j\in N_i \cap M} ((v_i-v_j)-(s_i-s_j))^2 + \sum_{i\in M} \sum_{j\in N_i \cap \sim M} ((v_i-t_j)-(s_i-s_j))^2$$
+</p>
+
+<p><img width="300" class="center" src="./images/3_labeled.png" /></p>
+
+<p>
+We minimize this by finding the least squares solution to this system of equations:
+</p>
+
+<p><code class="language-matlab">v(1) - t(2) = s(3) - s(2);<br />
+v(2) - v(1) = s(4) - s(3);<br />
+v(3) - v(2) = s(5) - s(4);<br />
+v(4) - v(3) = s(6) - s(5);<br />
+t(7) - v(4) = s(7) - s(6);
+</code></p>
+
+<p>
+After plugging in known values from \(t\) and \(s\), this becomes:
+</p>
+
+<p><code class="language-matlab">v(1) -    4 =  1;<br />
+v(2) - v(1) = -5;<br />
+v(3) - v(2) =  2;<br />
+v(4) - v(3) =  1;<br />
+   2 - v(4) =  2;
+</code></p>
+
+<p>
+Finally, in matrix form for MATLAB:
+</p>
+
+<p><code class="language-matlab">A = [ 1  0  0  0; ...  <br />
+     -1  1  0  0; ...<br />
+      0 -1  1  0; ...<br />
+      0  0 -1  1; ...<br />
+      0  0  0 -1];<br />
+  <br />
+b = [5; -5; 2; 1; 0];<br />
+<br />  
+v = A\b;<br />
+t_and_s_blended = zeros(size(t));<br />
+t_and_s_blended(~M) = t(~M);<br />
+t_and_s_blended( M) = v;
+</code></p>
+
+<p><img width="300" class="center" src="./images/4_labeled.png" /></p>
+
+<p>
+Notice that in our quest to preserve gradients without regard for intensity we might have gone too far&mdash;our signal now has negative values. The same thing can happen in the image domain, so you'll want to watch for that and at the very least clamp values back to the valid range.
+When working with images, the basic idea is the same as above, except that each pixel has at least two neighbors (left and top) and possibly four neighbors. Either formulation will work. 
+</p>
+
+<p>
+For example, in a 2D image using a 4-connected neighborhood, our equations above imply that for a single pixel in \(v\), at coordinate \((i,j)\) which is fully under the mask you would have the following equations:
+</p>
+
+<p><code class="language-matlab">v(i,j) - v(i-1, j) = s(i,j) - s(i-1, j)<br />
+v(i,j) - v(i+1, j) = s(i,j) - s(i+1, j)<br />
+v(i,j) - v(i, j-1) = s(i,j) - s(i, j-1)<br />
+v(i,j) - v(i, j+1) = s(i,j) - s(i, j+1)
+</code></p>
+
+<p>
+In this case we have many equations for each unknown. It may be simpler to combine these equations such that there is one equation for each pixel, as this can make the mapping between rows in your matrix \(A\) and pixels in your images easier. Adding the four equations above we get:
+</p>
+
+<p><code class="language-matlab">
+4*v(i,j) - v(i-1, j) - v(i+1, j) - v(i, j-1) - v(i, j+1) = ...<br />
+4*s(i,j) - s(i-1, j) - s(i+1, j) - s(i, j-1) - s(i, j+1)
+</code></p>
+
+<p>
+Where everything on the right hand side is known. This formulation is similar to Equation 8 in the original paper linked above. You can read more of that paper for guidance, especially the section on the "Discrete Poisson Solver". 
+</p>
+
+<p>
+Note that these formulations are not equivalent. The more verbose formulation is a constraint on first derivatives, while combining the equations effectively gives you a constraint on the <a href="http://en.wikipedia.org/wiki/Discrete_Laplace_operator">discrete Laplacian</a>. You are free to implement either approach. The discrete Laplacian method which uses one equation per pixel leads to a simply implemention because the A matrix will be more easily indexed.
+</p>
+
+<h5 id="tips">Tips</h5>
+
+<p>- For color images, process each color channel independently (<em>hint:</em> matrix \(A\) won't change, so don't go through the computational expense of rebuilding it for each color channel).</p>
+
+<p>- The linear system of equations (and thus the matrix \(A\)) becomes enormous. But \(A\) is also very sparse because each equation only relates a pixel to some number of its immediate neighbors. Use MATLAB's support for sparse matrices!</p>
+
+<p>- \(A\) needs at least as many rows and columns as there are pixels in the masked region (or more, depending on how you've set up your system of equations. You may have several equations for each pixel, or you may have equations for already known pixels just for implementation convenience). If 
+the mask covers 100,000 pixels, this implies a matrix with at least 100,000,000,000 entries. Don't try that. Instead, use the <code>sparse()</code> command in Matlab to build sparse matrices for which all undefined elements are assumed to be \(0\). A naive implementation will run slowly because indexing into a sparse matrix requires traversing a linked list. If you're building the sparse \(A\) matrix in a for loop, it will take 5 to 30 seconds. Test your algorithm on smaller images first. 
+</p>
+
+<p>- You'll need to keep track of the relationship between coordinates in matrix \(A\) and image coordinates. <code>sub2ind</code> and <code>ind2sub</code> might be helpful (although they are slow, so you might want to do the transformation yourself). You might need a dedicated data structure to keep track of the mapping between rows and columns of \(A\) and pixels in \(s\) and 
+\(t\).</p>
+
+<p>- Not every pixel has left, right, top, and bottom neighbors. Handling these boundary conditions might get slightly messy. You can start by assuming that all masked pixels have 4 neighbors (this is intentionally true of the first 5 test cases), but the 6th test case will break this assumption.</p>
+
+<p>- Your algorithm can be made significantly faster by finding all the \(A\) matrix values and coordinates ahead of time and then constructing the sparse matrix in one operation. See <code>sparse(i,j,s,m,n,nzmax)</code>. This should speed up blending from minutes to seconds. 
+</p>
+
+<p>- By avoiding for loops entirely you can get the run time down to about one second, but don't worry about this unless everything else is 
+working.
+</p>
+
+<p>- <code>imblend.m</code> in the starter code contains some more suggestions.</p>
+
+<h5 id="acknowledgements">Acknowledgements</h5>
+
+<p> This assignment makes use of material by James Tompkin with the excellent 1-D demo for the concept. The project was derived by James Hays. Original project specification by Pat Doran. Previous revisions used material from Derek Hoiem and Ronit Slyper.</p>
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2025 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Computational Photography and Image Manipulation &#8211; Yağız Aksoy</title>
+
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Computational Photography and Image Manipulation">
+
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/jordan.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computational Photography and Image Manipulation">
+
+<meta property="og:url" content="https://yaksoy.github.io/cpim/2024/p2/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="https://yaksoy.github.io/cpim/2024/p2/">
+<link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br>
+      <div class="entry-titleLogos">
+        
+      </div>
+      <br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Computational Photography and Image Manipulation</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        Programming Assignment 3
+      </div>
+      <div class="entry-titleVenue">
+        
+      </div>
+    </div><!-- /.entry-wrapper -->
+    
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p>In this assignment, we will implement the spatial filter proposed by <a href="http://zurich.disneyresearch.com/~taydin/_resources/publication/vtm.pdf" target="_blank">Aydin et al. [2014]</a>. The most relevant parts of this paper for this assignment are Sections 4.1 and 4.2.</p>
+
+<p>At a high-level, you will be implementing an iterative edge-aware filter that follows similar principles to the bilateral filter as we discussed in the lecture. As you should recall, the filtering kernel for the bilateral filter changes from pixel to pixel depending on local texture. We also discussed that it can not be directly implemented as a separable filter like a Gaussian kernel. This paper presents a formulation that uses two separate 1-D edge-aware kernels, one horizontal and one vertical, that can achieve edge-aware smoothing when used iteratively.</p>
+
+<h5 id="part-1-iterative-edge-aware-filtering-60-pts">Part 1: Iterative edge-aware filtering (60 pts)</h5>
+
+<p>You will first compute the per-pixel edge-aware kernels separately for horizontal and vertical directions. Then you will apply these kernels iteratively to get the final result. For each iteration, you will first filter the image horizontally, and then vertically (i.e. for 5 iterations, you will perform 10 filtering operations).</p>
+
+<p>You will use the 2 images you used in Assignment 1 (the high-frequency and low-frequency ones you selected) to demonstrate your results. In your report, you should show and comment on:<br />
+(i) The results after the first horizontal filtering, after the following vertical filtering, and after the second iteration. (input image + 3 partially filtered results). <br />
+(ii) The filtering results after 5 iterations using \(\lambda = 0.1\), \(\lambda = 1\), and \(\lambda = 10\).<br />
+(ii) The filtering results after 5 iterations using \(W = 5\), \(W = 10\), and \(W = 20\).</p>
+
+<p>See below for the meaning of these parameters.</p>
+
+<p>The spatial part of the filtering explained in the paper involves iterative application of the shift-variant spatial filter \(h^s\) to the image \(J_p^{(k)}\), where \(J_p^{(k)}\) is the result at \(k^{th}\) iteration. The \((k + 1)^{th}\) iteration result is computed as:</p>
+
+\[J_p^{(k+1)} = \sum_{q \in \Omega_p} h_{pq} J_q^{(k)} + \lambda h_{pp} \left(  I_p - J_p^{(k)} \right)\]
+
+<p>where \(\lambda\) is a weighting factor that introduces a bias towards the original image. The default value is \(\lambda = 1\) and we will experiment with how this value changes the results. \(I_p\) is the input image at pixel position \(p\),  \(J_p^{(k)}\) is the corresponding filtering result after \(k\) iterations with \(J_p^{(0)} = I_p\), \(h_{pq}\) are the filter coefficients, i.e. the spatially-varying kernel, and the set \(\Omega_p\) represents the local neighborhood of \(p\) in one dimension.</p>
+
+<p>Note that  \(h_{pq}\) changes between horizontal and vertical filtering operations. The kernels can be computed as follows:</p>
+
+<p>For a pixel \(p = (p_x,p_y)\) and its right neighbor \(p′ = (p_x + 1, p_y)\), the permeability is defined as:</p>
+
+\[\tilde{\pi}_p := \left( 1 + \left\|\frac{I_p - I_{p'}}{\sigma}\right\|^\alpha   \right) ^{-1}\]
+
+<p>You can set \(\alpha = 2\) and \(\sigma = 0.5\). The permeability between \(p\) and its right neighbor pixel is close to 0 if the corresponding color difference is high, and it is 1 if the difference is low. For two arbitrary pixels \(p\) and \(q\) on the same row (or column, depending on your filtering direction):</p>
+
+\[\pi_{pq} =  
+    \begin{cases}
+      1, &amp; \text{if}\ p = q \\
+      \prod_{n=p}^q \tilde\pi_n, &amp; \text{if} |p-q| &lt;= W \\
+      0, &amp; \text{otherwise}
+    \end{cases}\]
+
+<p>Here, \(W\) is a user-defined parameter that determines the kernel width. For instance, if \(W = 10\), we have a 21-pixel width kernel (10+10+1).  We will set the default value as \(W = 10\) and experiment with how this value changes the results.</p>
+
+<p>To finally compute the coefficients, normalize \(h_{pq}\) so that each per-pixel kernel sums up to \(1\).</p>
+
+<p>In summary, you first need to compute the permeability \(\tilde{\pi}_p\) of each pixel, compute the per-pixel kernels by multiplying these permeabilities to extend the reach of the filter, and then normalize each kernel to sum up to 1. Repeat for both directions.</p>
+
+<h5 id="part-2-cross-filtering-40-pts">Part 2: Cross-filtering (40 pts)</h5>
+
+<p>The edge-aware filters can use the edges of one image to filter another, typically used in the literature for denoising. For this task, you will compute the kernels using one image and use them to filter another. The image you use to determine the kernels is usually referred to as the guide image.</p>
+
+<p>We will use the iterative filtering approach to denoise no-flash photographs with their pairs taken with flash. This approach was first demonstrated using the bilateral filter by Petschnigg et al.:<br />
+Petschnigg et al., <a href="http://hhoppe.com/flash.pdf" target="_blank">Digital Photography with Flash and No-Flash Image Pairs</a>, ACM Trans. Graph. 2004</p>
+
+<p>We will use the flash / no-flash pairs used by Petschnigg et al. [2004] <a href="http://hhoppe.com/proj/flash/Applications/jbf/index.html" target="_blank">that you can download here</a>. You will use the flash images as the guide to compute the kernels, and filter the no-flash images to get a denoising result. For each image pair in this dataset, you should show:<br />
+(i) The filtering result of the no-flash image where the flash image is the guide<br />
+(ii) The filtering result where you use the no-flash image to filter itself<br />
+(iii) The ‘our_result’ version from the link, which shows the cross-bilateral filtering result<br />
+and comment on the differences between these results. You should try to get better results by changing the default parameters we used above, and report the parameters you chose in your report.</p>
+
+<p>Finally, you should show the results for the following and comment:<br />
+(i) The cross-filtering result where you use the ‘high-frequency’ image from before as the guide to filter your ‘low-frequency’ image<br />
+(ii) The cross-filtering result where you use the ‘low-frequency’ image from before as the guide to filter your ‘high-frequency’ image<br /></p>
+
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2025 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
