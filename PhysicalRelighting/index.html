@@ -1,0 +1,378 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Physically Controllable Relighting of Photographs &#8211; Yağız Aksoy</title>
+<meta name="description" content="Physically Controllable Relighting of Photographs">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Physically Controllable Relighting of Photographs">
+<meta name="twitter:description" content="Physically Controllable Relighting of Photographs">
+<meta name="twitter:site" content="@yagizaksoy">
+<meta name="twitter:creator" content="@yagizaksoy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/PhysicalRelightingTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Physically Controllable Relighting of Photographs">
+<meta property="og:description" content="Physically Controllable Relighting of Photographs">
+<meta property="og:url" content="https://yaksoy.github.io/PhysicalRelighting/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="https://yaksoy.github.io/PhysicalRelighting/">
+<link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br>
+      <div class="entry-titleLogos">
+        <table><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><tr><td style="text-align:left"><a href="https://www.sfu.ca/computing.html" target="_blank"><img src="../images/sfu.png" class="proj-logo" title="SFU"></a></td><td style="text-align:right"><a href="../group/" target="_blank"><img src="../images/cplab-full.png" class="proj-logo" title="CPLab" style="float:right;"></a></td></tr></table>
+      </div>
+      <br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Physically Controllable Relighting of Photographs</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <table style="text-align:center;"><colgroup><col style="width:50%" /><col style="width:50%" /><td><a href="https://ccareaga.github.io" target="_blank"><img src="../group/chris.jpg" class="proj-photo" title="Chris"></a></td><td><a href="../" target="_blank"><img src="../images/yagizsq2.jpg" class="proj-photo" title="Yagiz"></a></td></tr><tr><td><a href="https://ccareaga.github.io" target="_blank">Chris Careaga</a></td><td> <a href="../" target="_blank">Yağız Aksoy</a></td></tr></table>
+      </div>
+      <div class="entry-titleVenue">
+        Proc. SIGGRAPH, 2025<br>Patent pending
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="https://yaksoy.github.io/images/PhysicalRelightingTeaser.jpg" class="entry-feature-image" alt="Physically Controllable Relighting of Photographs" style="margin-top:-40;"><p class="image-caption">We present a photograph relighting method that enables explicit control over light sources akin to CG pipelines. Users can insert different types of light sources, such as spot lights, point lights, or environmental illumination into the scene. We achieve this in a pipeline involving mid-level computer vision, physically-based rendering, and neural rendering. We introduce a self-supervised training methodology using differentiable rendering to train our neural renderer with real-world photograph collections for in-the-wild generalization.</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+We present a self-supervised approach to in-the-wild image relighting that enables fully controllable, physically based illumination editing.
+We achieve this by combining the physical accuracy of traditional rendering with the photorealistic appearance made possible by neural rendering.
+Our pipeline works by inferring a colored mesh representation of a given scene using monocular estimates of geometry and intrinsic components.
+This representation allows users to define their desired illumination configuration in 3D. The scene under the new lighting can then be rendered using a path-tracing engine.
+We send this approximate rendering of the scene through a feed-forward neural renderer to predict the final photorealistic relighting result.
+We develop a differentiable rendering process to reconstruct in-the-wild scene illumination, enabling self-supervised training of our neural renderer on raw image collections.
+Our method represents a significant step in bringing the explicit physical control over lights available in typical 3D computer graphics tools, such as Blender, to in-the-wild relighting.
+</p>
+
+<!-- 
+<p style="text-align:center;"><b>Implementation</b></p>
+
+<p style="text-align:center;"><a href="https://github.com/compphoto/Intrinsic" target="_blank">GitHub Repository <i class="fa fa-external-link"></i></a></p> -->
+
+<!-- <p style="text-align:center;"><b>Video</b></p>
+
+<p style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pWtJd3hqL3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>  -->
+
+<p style="text-align:center;"><b>Paper</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG25-PhysicalRelighting.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Paper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG25-PhysicalRelighting-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Supp.jpg" title="Supplementary" /></a></td>
+	</tr></table>
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@INPROCEEDINGS{careagaRelighting,<br />
+	author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+	title={Physically Controllable Relighting of Photographs},<br />
+	booktitle={Proc. SIGGRAPH},<br />
+	year={2025},<br />
+} 
+</div>
+</p>
+
+<p style="text-align:center;"><b>License</b></p>
+
+<p>The methodology presented in this work is safeguarded under intellectual property protection. For inquiries regarding licensing opportunities, kindly reach out to SFU Technology Licensing Office &#60;tlo_dir <i>ατ</i> sfu <i>δøτ</i> ca&#62; and Dr. Yağız Aksoy &#60;yagiz <i>ατ</i> sfu <i>δøτ</i> ca&#62;.</p>
+
+<p style="text-align:center;"><b>Related Publications</b></p>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../ColorfulShading" target="_blank"><img src="https://yaksoy.github.io/images/research/ColorfulShading.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../ColorfulShading" target="_blank">Colorful Diffuse Intrinsic Image Decomposition in the Wild <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ACM Transactions on Graphics (Proc. SIGGRAPH Asia), 2024
+		<br />
+		<b><i>Best Paper Award Honorable Mention</i></b>
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="TOG24-item1" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Intrinsic image decomposition aims to separate the surface reflectance and the effects from the illumination given a single photograph. 
+		Due to the complexity of the problem, most prior works assume a single-color illumination and a Lambertian world, which limits their use in illumination-aware image editing applications. 
+		In this work, we separate an input image into its diffuse albedo, colorful diffuse shading, and specular residual components. 
+		We arrive at our result by gradually removing first the single-color illumination and then the Lambertian-world assumptions. 
+		We show that by dividing the problem into easier sub-problems, in-the-wild colorful diffuse shading estimation can be achieved despite the limited ground-truth datasets. 
+		Our extended intrinsic model enables illumination-aware analysis of photographs and can be used for image editing applications such as specularity removal and per-pixel white balancing.
+	  </div>
+	
+	  <input id="TOG24-item2" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/TOG24-ColorfulShading.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/TOG24-ColorfulShading-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Supp.jpg" title="Supplementary" /></a></td>
+			<!-- <td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG24Video.jpg" title="Video"></a></td> -->
+		</tr></table>
+		</div>
+	
+	  <input id="TOG24-item3" name="accordion1" type="checkbox" />
+	  <label for="TOG24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@ARTICLE{careagaColorful,<br />
+		author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Colorful Diffuse Intrinsic Image Decomposition in the Wild},<br />
+		journal={ACM Trans. Graph.},<br />
+		year={2024},<br />
+		volume = {43},<br />
+		number = {6},<br />
+		articleno = {178},<br />
+		numpages = {12},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../intrinsic" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsic.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../intrinsic" target="_blank">Intrinsic Image Decomposition via Ordinal Shading <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ACM Transactions on Graphics, 2023
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="TOG23-item1" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Intrinsic decomposition is a fundamental mid-level vision problem that plays a crucial role in various inverse rendering and computational photography pipelines. 
+		Generating highly accurate intrinsic decompositions is an inherently under-constrained task that requires precisely estimating continuous-valued shading and albedo. 
+		In this work, we achieve high-resolution intrinsic decomposition by breaking the problem into two parts. 
+		First, we present a dense ordinal shading formulation using a shift- and scale-invariant loss in order to estimate ordinal shading cues without restricting the predictions to obey the intrinsic model. 
+		We then combine low- and high-resolution ordinal estimations using a second network to generate a shading estimate with both global coherency and local details. 
+		We encourage the model to learn an accurate decomposition by computing losses on the estimated shading as well as the albedo implied by the intrinsic model. 
+		We develop a straightforward method for generating dense pseudo ground truth using our models predictions and multi-illumination data, enabling generalization to in-the-wild imagery. 
+		We present exhaustive qualitative and quantitative analysis of our predicted intrinsic components against state-of-the-art methods. 
+		Finally, we demonstrate the real-world applicability of our estimations by performing otherwise difficult editing tasks such as recoloring and relighting.
+	  </div>
+	
+	  <input id="TOG23-item2" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Video.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsic/Intrinsic_Poster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Poster.jpg" title="Poster" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="TOG23-item3" name="accordion1" type="checkbox" />
+	  <label for="TOG23-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@ARTICLE{careagaIntrinsic,<br />
+		author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Intrinsic Image Decomposition via Ordinal Shading},<br />
+		journal={ACM Trans. Graph.},<br />
+		year={2023},<br />
+		volume = {43},<br />
+		number = {1},<br />
+		articleno = {12},<br />
+		numpages = {24},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../intrinsicCompositing" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsicCompositing.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../intrinsicCompositing" target="_blank">Intrinsic Harmonization for Illumination-Aware Compositing <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b>, <b>S. Mahdi H. Miangoleh</b>, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		SIGGRAPH Asia, 2023
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="SigAsia23-item1" name="accordion1" type="checkbox" />
+	  <label for="SigAsia23-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Despite significant advancements in network-based image harmonization techniques, there still exists a domain disparity between typical training pairs and real-world composites encountered during inference. 
+		Most existing methods are trained to reverse global edits made on segmented image regions, which fail to accurately capture the lighting inconsistencies between the foreground and background found in composited images. 
+		In this work, we introduce a self-supervised illumination harmonization approach formulated in the intrinsic image domain. 
+		First, we estimate a simple global lighting model from mid-level vision representations to generate a rough shading for the foreground region. 
+		A network then refines this inferred shading to generate a harmonious re-shading that aligns with the background scene. 
+		In order to match the color appearance of the foreground and background, we utilize ideas from prior harmonization approaches to perform parameterized image edits in the albedo domain. 
+		To validate the effectiveness of our approach, we present results from challenging real-world composites and conduct a user study to objectively measure the enhanced realism achieved compared to state-of-the-art harmonization methods. 
+	  </div>
+	
+	  <input id="SigAsia23-item2" name="accordion1" type="checkbox" />
+	  <label for="SigAsia23-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia23-IntrinsicCompositing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia23-IntrinsicCompositing-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/M9hCUTp8bo4" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Video.jpg" title="Video" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="SigAsia23-item3" name="accordion1" type="checkbox" />
+	  <label for="SigAsia23-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{careagaCompositing,<br />
+		author={Chris Careaga and S. Mahdi H. Miangoleh and Ya\u{g}{\i}z Aksoy},<br />
+		title={Intrinsic Harmonization for Illumination-Aware Compositing},<br />
+		booktitle={Proc. SIGGRAPH Asia},<br />
+		year={2023},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2025 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>

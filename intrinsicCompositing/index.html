@@ -89,7 +89,7 @@
         <table style="text-align:center;"><colgroup><col style="width:33%" /><col style="width:33%" /><col style="width:33%" /><td><a href="https://ccareaga.github.io" target="_blank"><img src="../group/chris.jpg" class="proj-photo" title="Chris"></a></td><td><a href="http://miangoleh.github.io/" target="_blank"><img src="../group/mahdi.jpg" class="proj-photo" title="Mahdi"></a></td><td><a href="../" target="_blank"><img src="../images/yagizsq2.jpg" class="proj-photo" title="Yagiz"></a></td></tr><tr><td><a href="https://ccareaga.github.io" target="_blank">Chris Careaga</a></td><td><a href="http://miangoleh.github.io/" target="_blank">S. Mahdi H. Miangoleh</a></td><td> <a href="../" target="_blank">Yağız Aksoy</a></td></tr></table>
       </div>
       <div class="entry-titleVenue">
-        Proc. SIGGRAPH Asia, 2023<br>Patent pending
+        Proc. SIGGRAPH Asia, 2023
       </div>
     </div><!-- /.entry-wrapper -->
     <img src="https://yaksoy.github.io/images/intrinsicCompositingTeaser.jpg" class="entry-feature-image" alt="Intrinsic Harmonization for Illumination-Aware Compositing" style="margin-top:-40;"><p class="image-caption">We propose an illumination-aware image harmonization approach for in-the-wild imagery. Our method is formulated in the intrinsic image domain. We use off-the-shelf networks to generate albedo, shading and surface normals for the input composite and background image. We first harmonize the albedo of the background and foreground by predicting image editing parameters. Using normals and shading we estimate a simple lighting model for the background illumination. With this lighting model, we render Lambertian shading for the foreground and refine it using a network trained on segmentation datasets via self-supervision. When compared to prior works we are the only method that is capable of modeling realistic lighting effects.</p>
@@ -146,6 +146,62 @@ Despite significant advancements in network-based image harmonization techniques
 <table>
 	<tr>
 	<td class="pub-photocol">
+	<a href="../PhysicalRelighting" target="_blank"><img src="https://yaksoy.github.io/images/research/PhysicalRelighting.gif" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../PhysicalRelighting" target="_blank">Physically Controllable Relighting of Photographs <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		Proc. SIGGRAPH, 2025
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="SIG25-item1" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item1">Abstract</label>
+	  <div class="pub-abstract">
+		We present a self-supervised approach to in-the-wild image relighting that enables fully controllable, physically based illumination editing.
+		We achieve this by combining the physical accuracy of traditional rendering with the photorealistic appearance made possible by neural rendering.
+		Our pipeline works by inferring a colored mesh representation of a given scene using monocular estimates of geometry and intrinsic components.
+		This representation allows users to define their desired illumination configuration in 3D. The scene under the new lighting can then be rendered using a path-tracing engine.
+		We send this approximate rendering of the scene through a feed-forward neural renderer to predict the final photorealistic relighting result.
+		We develop a differentiable rendering process to reconstruct in-the-wild scene illumination, enabling self-supervised training of our neural renderer on raw image collections.
+		Our method represents a significant step in bringing the explicit physical control over lights available in typical 3D computer graphics tools, such as Blender, to in-the-wild relighting.
+	  </div>
+	
+	  <input id="SIG25-item2" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SIG25-PhysicalRelighting.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SIG25-PhysicalRelighting-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Supp.jpg" title="Supplementary" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="SIG25-item3" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		  @INPROCEEDINGS{careagaRelighting,<br />
+		  author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		  title={Physically Controllable Relighting of Photographs},<br />
+		  booktitle={Proc. SIGGRAPH},<br />
+		  year={2025},<br />
+	  } 
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
 	<a href="../intrinsic" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsic.jpg" class="pub-photo" /></a>
 	</td>
 	<td>
@@ -182,6 +238,7 @@ Despite significant advancements in network-based image harmonization techniques
 			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Paper.jpg" title="Paper" /></a></td>
 			<td><a href="https://yaksoy.github.io/papers/TOG23-Intrinsic-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Supp.jpg" title="Supplementary" /></a></td>
 			<td><a href="https://youtu.be/pWtJd3hqL3c" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Video.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsic/Intrinsic_Poster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/TOG23Poster.jpg" title="Poster" /></a></td>
 		</tr></table>
 		</div>
 	
@@ -193,6 +250,10 @@ Despite significant advancements in network-based image harmonization techniques
 		title={Intrinsic Image Decomposition via Ordinal Shading},<br />
 		journal={ACM Trans. Graph.},<br />
 		year={2023},<br />
+		volume = {43},<br />
+		number = {1},<br />
+		articleno = {12},<br />
+		numpages = {24},<br />
 	  }
 	  </div>
 	</div>
@@ -237,6 +298,7 @@ Despite significant advancements in network-based image harmonization techniques
 		<td><a href="https://yaksoy.github.io/papers/CVPR23-RealisticEditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aPaper.jpg" title="Paper" /></a></td>
 		<td><a href="https://yaksoy.github.io/papers/CVPR23-RealisticEditing-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aSupp.jpg" title="Paper" /></a></td>
 		<td><a href="https://youtu.be/5dKUDMnnjuo" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR23aVideo.jpg" title="Video" /></a></td>
+		<td><a href="https://yaksoy.github.io/realisticEditing/CVPR23aPosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aPoster.jpg" title="Poster" /></a></td>
 	</tr></table>
 	</div>
 
@@ -293,6 +355,7 @@ Despite significant advancements in network-based image harmonization techniques
 			<td><a href="https://yaksoy.github.io/papers/CVPR23-IntrinsicFlash-Dataset.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bSupp1.jpg" title="Dataset" /></a></td>
 			<td><a href="https://yaksoy.github.io/papers/CVPR23-IntrinsicFlash-SuppResults.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bSupp2.jpg" title="Supplementary" /></a></td>
 			<td><a href="https://youtu.be/Zs23PKgJCO8" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR23bVideo.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsicFlash/CVPR23bPosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23bPoster.jpg" title="Poster" /></a></td>
 		</tr></table>
 		</div>
 	
@@ -323,7 +386,7 @@ Despite significant advancements in network-based image harmonization techniques
     
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<span>&copy; 2023 Yagiz Aksoy</span>
+<span>&copy; 2025 Yagiz Aksoy</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 

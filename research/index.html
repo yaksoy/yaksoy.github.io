@@ -138,7 +138,63 @@
 		<td><a href="https://www.youtube.com/channel/UCUmv_OnSSWMCkOESVd6607w" target="_blank"><i class="fa fa-youtube fa-3x"></i></a></td>
 </tr></table>
 
-<h3 id="major-works">Major works</h3>
+<h3 id="major-venues">Major venues</h3>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../PhysicalRelighting" target="_blank"><img src="https://yaksoy.github.io/images/research/PhysicalRelighting.gif" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../PhysicalRelighting" target="_blank">Physically Controllable Relighting of Photographs <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		Proc. SIGGRAPH, 2025
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="SIG25-item1" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item1">Abstract</label>
+	  <div class="pub-abstract">
+		We present a self-supervised approach to in-the-wild image relighting that enables fully controllable, physically based illumination editing.
+		We achieve this by combining the physical accuracy of traditional rendering with the photorealistic appearance made possible by neural rendering.
+		Our pipeline works by inferring a colored mesh representation of a given scene using monocular estimates of geometry and intrinsic components.
+		This representation allows users to define their desired illumination configuration in 3D. The scene under the new lighting can then be rendered using a path-tracing engine.
+		We send this approximate rendering of the scene through a feed-forward neural renderer to predict the final photorealistic relighting result.
+		We develop a differentiable rendering process to reconstruct in-the-wild scene illumination, enabling self-supervised training of our neural renderer on raw image collections.
+		Our method represents a significant step in bringing the explicit physical control over lights available in typical 3D computer graphics tools, such as Blender, to in-the-wild relighting.
+	  </div>
+	
+	  <input id="SIG25-item2" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SIG25-PhysicalRelighting.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SIG25-PhysicalRelighting-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Supp.jpg" title="Supplementary" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="SIG25-item3" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		  @INPROCEEDINGS{careagaRelighting,<br />
+		  author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		  title={Physically Controllable Relighting of Photographs},<br />
+		  booktitle={Proc. SIGGRAPH},<br />
+		  year={2025},<br />
+	  } 
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
 
 <hr />
 
@@ -252,64 +308,6 @@
 		author={Sebastian Dille and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
 		title={Intrinsic Single-Image HDR Reconstruction},<br />
 		booktitle={Proc. ECCV},<br />
-		year={2024},<br />
-	  }
-	  </div>
-	</div>
-	</td>
-	</tr>
-	</table>
-
-<hr />
-
-<table>
-	<tr>
-	<td class="pub-photocol">
-	<a href="../bottomup" target="_blank"><img src="https://yaksoy.github.io/images/research/bottomup.jpg" class="pub-photo" /></a>
-	</td>
-	<td>
-	<div class="pub-title">
-		<a href="../bottomup" target="_blank">A Bottom-Up Approach to Class-Agnostic Image Segmentation <i class="fa fa-external-link"></i></a>
-	</div>
-	<div class="pub-authors">
-		<b>Sebastian Dille</b>, <b>Ari Blondal</b>, Sylvain Paris, and <b>Yağız Aksoy</b>
-	</div>
-	<div class="pub-venue">
-		ECCV Workshops, 2024
-	</div>
-	
-	<div class="pub-accordion">
-	  <input id="ECCVW24-item1" name="accordion1" type="checkbox" />
-	  <label for="ECCVW24-item1">Abstract</label>
-	  <div class="pub-abstract">
-		Class-agnostic image segmentation is a crucial component in automating image editing workflows, especially in contexts where object selection traditionally involves interactive tools. 
-        Existing methods in the literature often adhere to top-down formulations, following the paradigm of class-based approaches, where object detection precedes per-object segmentation.
-        In this work, we present a novel bottom-up formulation for addressing the class-agnostic segmentation problem. 
-        We supervise our network directly on the projective sphere of its feature space, employing losses inspired by metric learning literature as well as losses defined in a novel segmentation-space representation.
-        The segmentation results are obtained through a straightforward mean-shift clustering of the estimated features.
-        Our bottom-up formulation exhibits exceptional generalization capability, even when trained on datasets designed for class-based segmentation. We further showcase the effectiveness of our generic approach by addressing the challenging task of cell and nucleus segmentation.
-        We believe that our bottom-up formulation will offer valuable insights into diverse segmentation challenges in the literature.
-	  </div>
-	
-	  <input id="ECCVW24-item2" name="accordion1" type="checkbox" />
-	  <label for="ECCVW24-item2">Manuscript &amp; more</label>
-	  <div class="pub-photolink">
-	  
-		<table><tr>
-			<td><a href="https://yaksoy.github.io/papers/ECCVW24-BottomUp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Paper.jpg" title="Paper" /></a></td>
-			<td><a href="https://yaksoy.github.io/papers/ECCVW24-BottomUp-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Supp.jpg" title="Supplementary" /></a></td>
-			<!-- <td><a href="https://youtu.be/EiyH52BcKkw" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Video.jpg" title="Video"></a></td> -->
-			<td><a href="https://yaksoy.github.io/bottomup/BottomUpPoster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Poster.jpg" title="Poster" /></a></td>
-		</tr></table>
-		</div>
-	
-	  <input id="ECCVW24-item3" name="accordion1" type="checkbox" />
-	  <label for="ECCVW24-item3">BibTeX</label>
-	  <div class="pub-bibtex">
-		@INPROCEEDINGS{dilleBottomup,<br />
-		author={Sebastian Dille and Ari Blondal and Sylvain Paris and Ya\u{g}{\i}z Aksoy},<br />
-		title={A Bottom-Up Approach to Class-Agnostic Image Segmentation},<br />
-		booktitle={Proc. ECCV Workshop},<br />
 		year={2024},<br />
 	  }
 	  </div>
@@ -494,62 +492,6 @@
 <hr />
 
 <table>
-<tr>
-<td class="pub-photocol">
-<a href="../realisticEditing" target="_blank"><img src="https://yaksoy.github.io/images/research/realisticEditing.jpg" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../realisticEditing" target="_blank">Realistic Saliency Guided Image Enhancement <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	<i><b>S. Mahdi H. Miangoleh</b></i>, Zoya Bylinskii, Eric Kee, Eli Shechtman, and <b>Yağız Aksoy</b> 
-</div>
-<div class="pub-venue">
-	CVPR, 2023
-</div>
-
-<div class="pub-accordion">
-  <input id="CVPR23a-item1" name="accordion1" type="checkbox" />
-  <label for="CVPR23a-item1">Abstract</label>
-  <div class="pub-abstract">
-	Common editing operations performed by professional photographers include the cleanup operations: de-emphasizing distracting elements and enhancing subjects. 
-	These edits are challenging, requiring a delicate balance between manipulating the viewer's attention while maintaining photo realism. 
-	While recent approaches can boast successful examples of attention attenuation or amplification, most of them also suffer from frequent unrealistic edits. 
-	We propose a realism loss for saliency-guided image enhancement to maintain high realism across varying image types, while attenuating distractors and amplifying objects of interest. 
-	Evaluations with professional photographers confirm that we achieve the dual objective of realism and effectiveness, and outperform the recent approaches on their own datasets, while requiring a smaller memory footprint and runtime. We thus offer a viable solution for automating image enhancement and photo cleanup operations. 
-</div>
-
-  <input id="CVPR23a-item2" name="accordion1" type="checkbox" />
-  <label for="CVPR23a-item2">Manuscript &amp; more</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/CVPR23-RealisticEditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aPaper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/CVPR23-RealisticEditing-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aSupp.jpg" title="Paper" /></a></td>
-		<td><a href="https://youtu.be/5dKUDMnnjuo" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR23aVideo.jpg" title="Video" /></a></td>
-		<td><a href="https://yaksoy.github.io/realisticEditing/CVPR23aPosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aPoster.jpg" title="Poster" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="CVPR23a-item3" name="accordion1" type="checkbox" />
-  <label for="CVPR23a-item3">BibTeX</label>
-  <div class="pub-bibtex">
-@INPROCEEDINGS{Miangoleh2023Realistic,<br />
-	author={S. Mahdi H. Miangoleh and Zoya Bylinskii and Eric Kee and Eli Shechtman and Ya\u{g}{\i}z Aksoy},<br />
-	title={Realistic Saliency Guided Image Enhancement},<br />
-	journal={Proc. CVPR},<br />
-	year={2023},<br />
-	} 
-  </div>
-</div>
-</td>
-</tr>
-</table>
-
-<hr />
-
-<table>
 	<tr>
 	<td class="pub-photocol">
 	<a href="../intrinsicFlash" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsicFlash.jpg" class="pub-photo" /></a>
@@ -603,6 +545,62 @@
 	</td>
 	</tr>
 	</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../realisticEditing" target="_blank"><img src="https://yaksoy.github.io/images/research/realisticEditing.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../realisticEditing" target="_blank">Realistic Saliency Guided Image Enhancement <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<i><b>S. Mahdi H. Miangoleh</b></i>, Zoya Bylinskii, Eric Kee, Eli Shechtman, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	CVPR, 2023
+</div>
+
+<div class="pub-accordion">
+  <input id="CVPR23a-item1" name="accordion1" type="checkbox" />
+  <label for="CVPR23a-item1">Abstract</label>
+  <div class="pub-abstract">
+	Common editing operations performed by professional photographers include the cleanup operations: de-emphasizing distracting elements and enhancing subjects. 
+	These edits are challenging, requiring a delicate balance between manipulating the viewer's attention while maintaining photo realism. 
+	While recent approaches can boast successful examples of attention attenuation or amplification, most of them also suffer from frequent unrealistic edits. 
+	We propose a realism loss for saliency-guided image enhancement to maintain high realism across varying image types, while attenuating distractors and amplifying objects of interest. 
+	Evaluations with professional photographers confirm that we achieve the dual objective of realism and effectiveness, and outperform the recent approaches on their own datasets, while requiring a smaller memory footprint and runtime. We thus offer a viable solution for automating image enhancement and photo cleanup operations. 
+</div>
+
+  <input id="CVPR23a-item2" name="accordion1" type="checkbox" />
+  <label for="CVPR23a-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/CVPR23-RealisticEditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/CVPR23-RealisticEditing-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aSupp.jpg" title="Paper" /></a></td>
+		<td><a href="https://youtu.be/5dKUDMnnjuo" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR23aVideo.jpg" title="Video" /></a></td>
+		<td><a href="https://yaksoy.github.io/realisticEditing/CVPR23aPosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR23aPoster.jpg" title="Poster" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="CVPR23a-item3" name="accordion1" type="checkbox" />
+  <label for="CVPR23a-item3">BibTeX</label>
+  <div class="pub-bibtex">
+@INPROCEEDINGS{Miangoleh2023Realistic,<br />
+	author={S. Mahdi H. Miangoleh and Zoya Bylinskii and Eric Kee and Eli Shechtman and Ya\u{g}{\i}z Aksoy},<br />
+	title={Realistic Saliency Guided Image Enhancement},<br />
+	journal={Proc. CVPR},<br />
+	year={2023},<br />
+	} 
+  </div>
+</div>
+</td>
+</tr>
+</table>
 
 <hr />
 
@@ -1119,6 +1117,352 @@ that a professional compositing artist requires to process the same content havi
 
 <hr />
 
+<h4>Minor venues</h4>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../bottomup" target="_blank"><img src="https://yaksoy.github.io/images/research/bottomup.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../bottomup" target="_blank">A Bottom-Up Approach to Class-Agnostic Image Segmentation <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Sebastian Dille</b>, <b>Ari Blondal</b>, Sylvain Paris, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ECCV Workshops, 2024
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="ECCVW24-item1" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Class-agnostic image segmentation is a crucial component in automating image editing workflows, especially in contexts where object selection traditionally involves interactive tools. 
+        Existing methods in the literature often adhere to top-down formulations, following the paradigm of class-based approaches, where object detection precedes per-object segmentation.
+        In this work, we present a novel bottom-up formulation for addressing the class-agnostic segmentation problem. 
+        We supervise our network directly on the projective sphere of its feature space, employing losses inspired by metric learning literature as well as losses defined in a novel segmentation-space representation.
+        The segmentation results are obtained through a straightforward mean-shift clustering of the estimated features.
+        Our bottom-up formulation exhibits exceptional generalization capability, even when trained on datasets designed for class-based segmentation. We further showcase the effectiveness of our generic approach by addressing the challenging task of cell and nucleus segmentation.
+        We believe that our bottom-up formulation will offer valuable insights into diverse segmentation challenges in the literature.
+	  </div>
+	
+	  <input id="ECCVW24-item2" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/ECCVW24-BottomUp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/ECCVW24-BottomUp-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Supp.jpg" title="Supplementary" /></a></td>
+			<!-- <td><a href="https://youtu.be/EiyH52BcKkw" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Video.jpg" title="Video"></a></td> -->
+			<td><a href="https://yaksoy.github.io/bottomup/BottomUpPoster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Poster.jpg" title="Poster" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="ECCVW24-item3" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{dilleBottomup,<br />
+		author={Sebastian Dille and Ari Blondal and Sylvain Paris and Ya\u{g}{\i}z Aksoy},<br />
+		title={A Bottom-Up Approach to Class-Agnostic Image Segmentation},<br />
+		booktitle={Proc. ECCV Workshop},<br />
+		year={2024},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../interactiveDepth" target="_blank"><img src="https://yaksoy.github.io/images/research/interactiveDepth.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../interactiveDepth" target="_blank">Interactive Editing of Monocular Depth <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Obumneme Stanley Dukor</b>, <b>S. Mahdi H. Miangoleh</b>, <b>Mahesh Kumar Krishna Reddy</b>, Long Mai, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="pub-accordion">
+  <input id="SIG22a-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item1">Abstract</label>
+  <div class="pub-abstract">
+	Recent advances in computer vision have made 3D structure-aware editing of still photographs a reality. 
+	Such computational photography applications use a depth map that is automatically generated by monocular depth estimation methods to represent the scene structure. 
+	In this work, we present a lightweight, web-based interactive depth editing and visualization tool that adapts low-level conventional image editing operations for geometric manipulation to enable artistic control in the 3D photography workflow. 
+	Our tool provides real-time feedback on the geometry through a 3D scene visualization to make the depth map editing process more intuitive for artists. 
+	Our web-based tool is open-source and platform-independent to support wider adoption of 3D photography techniques in everyday digital photography.
+  </div>
+
+  <input id="SIG22a-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG22a-interactiveDepth.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG22a-interactiveDepth.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://www.youtube.com/embed/C1hrsDypFzM?si=BFrlNQIukPGdNte9" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22a-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22a-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{interactiveDepth,<br />
+	author={Obumneme Stanley Dukor and S. Mahdi H. Miangoleh and Mahesh Kumar Krishna Reddy and Long Mai and Ya\u{g}{\i}z Aksoy},<br />
+	title={Interactive Editing of Monocular Depth},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<h4>Published CMPT 461 / 769 projects</h4>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../NIREditing" target="_blank"><img src="https://yaksoy.github.io/images/research/NIREditing.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../NIREditing" target="_blank">Interactive RGB+NIR Photo Editing <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Samuel Antunes Miranda*, Shahrzad Mirzaei*, Mariam Bebawy*, <b>Sebastian Dille</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2024
+</div>
+
+<div class="pub-accordion">
+  <input id="SIGp24-item1" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item1">Abstract</label>
+  <div class="pub-abstract">
+	Near-infrared imagery offers great possibilities for creative image editing. Lying outside the visual spectrum, the NIR information can effectively serve as a fourth color channel to common RGB. 
+	Compared to the latter, it shows interesting and complementary behavior: its intensity strongly varies with the surface materials in the scene and is less affected by atmospheric perturbations.
+	For these reasons, NIR imaging has been a long-standing topic of interest in research and its integration has been proven successful for applications like false coloring, contrast enhancement, image dehazing, and purification of low-light images. 
+	Recent developments in smartphone technology have simplified the capturing process, making NIR data readily available for broader use outside the research community. 
+	At the same time, existing tools for NIR processing and manipulation are rare and still limited in functionality. 
+	With many solutions lacking specialized features, the editing process is inefficient and cumbersome, making them prone to generate suboptimal results. 
+	To tackle this issue, we introduce a simple and intuitive photo editing tool that combines RGB and NIR properties, offering functions tailored specifically for the RGB+NIR combination, and granting the user the ability to edit and refine images more creatively.
+  </div>
+
+  <input id="SIGp24-item2" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/tNsUQYI7vw8" target="_blank"><img src="https://yaksoy.github.io/images/research/NIREditingVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIGp24-item3" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{NIREditing,<br />
+	author={Samuel Antunes Miranda and Shahrzad Mirzaei and Mariam Bebawy and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
+	title={Interactive RGB+NIR Photo Editing},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2024},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../datamosh" target="_blank"><img src="https://yaksoy.github.io/images/research/datamosh.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../datamosh" target="_blank">Datamoshing with Optical Flow <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Chris Careaga</b>, <b>Mahesh Kumar Krishna Reddy</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Asia Posters, 2023
+</div>
+
+<div class="pub-accordion">
+  <input id="SIGa23p-item1" name="accordion1" type="checkbox" />
+  <label for="SIGa23p-item1">Abstract</label>
+  <div class="pub-abstract">
+	We propose a simple method for emulating the effect of data moshing, without relying on the corruption of encoded video, and explore its use in different application scenarios. 
+	Like traditional data moshing, we apply motion information to mismatched visual data.
+	Our approach uses off-the-shelf optical flow estimation to generate motion vectors for each pixel. 
+	Our core algorithm can be implemented in a handful of lines but unlocks multiple video editing effects. 
+	The use of accurate optical flow rather than compression data also creates a more natural transition without block artifacts. 
+	We hope our method provides artists and content creators with more creative freedom over the process of data moshing.
+  </div>
+
+  <input id="SIGa23p-item2" name="accordion1" type="checkbox" />
+  <label for="SIGa23p-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIGa23p-Datamosh.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/datamoshPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIGa23p-Datamosh.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/datamoshPosterSmall.jpg" title="Poster" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIGa23p-item3" name="accordion1" type="checkbox" />
+  <label for="SIGa23p-item3">BibTeX</label>
+  <div class="pub-bibtex">
+@INPROCEEDINGS{datamosh,<br />
+	author={Chris Careaga and Mahesh Kumar Krishna Reddy and Ya\u{g}{\i}z Aksoy},<br />
+	title={Datamoshing with Optical Flow},<br />
+	booktitle={SIGGRAPH Asia Posters},<br />
+	year={2023},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../dynapix" target="_blank"><img src="https://yaksoy.github.io/images/research/dynapix.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../dynapix" target="_blank">DynaPix: Normal Map Pixelization for Dynamic Lighting <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Gerardo Gandeaga, Denys Iliash, <b>Chris Careaga</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="pub-accordion">
+  <input id="SIG22b-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item1">Abstract</label>
+  <div class="pub-abstract">
+	This work introduces DynaPix, a Krita extension that automatically generates pixelated images and surface normals from an input image. 
+	DynaPix is a tool that aids pixel artists and game developers more efficiently develop 8-bit style games and bring them to life with dynamic lighting through normal maps that can be used in modern game engines such as Unity. 
+	The extension offers artists a degree of flexibility as well as allows for further refinements to generated artwork. 
+	Powered by out of the box solutions, DynaPix is a tool that seamlessly integrates in the artistic workflow.
+  </div>
+
+  <input id="SIG22b-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG22b-DynaPix.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/dynapixPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG22b-DynaPix.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/dynapixPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/1mylyzw6i_U" target="_blank"><img src="https://yaksoy.github.io/images/research/dynapixVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22b-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22b-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{dynapix,<br />
+	author={Gerardo Gandeaga and Denys Iliash and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+	title={Dyna{P}ix: Normal Map Pixelization for Dynamic Lighting},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../parallaxbg" target="_blank"><img src="https://yaksoy.github.io/images/research/parallax.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../parallaxbg" target="_blank">Parallax Background Texture Generation <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Brigham Okano, Shao Yu Shen, <b>Sebastian Dille</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="pub-accordion">
+  <input id="SIG22c-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item1">Abstract</label>
+  <div class="pub-abstract">
+	Art assets for games can be time intensive to produce. 
+	Whether it is a full 3D world, or simpler 2D background, creating good looking assets takes time and skills that are not always readily available. 
+	Time can be saved by using repeating assets, but visible repetition hurts immersion. 
+	Procedural generation techniques can help make repetition less uniform, but do not remove it entirely. 
+	Both approaches leave noticeable levels of repetition in the image, and require significant time and skill investments to produce. 
+	Video game developers in hobby, game jam, or early prototyping situations may not have access to the required time and skill. 
+	We propose a framework to produce layered 2D backgrounds without the need for significant artist time or skill. 
+	In our pipeline, the user provides segmented photographic input, instead of creating traditional art, and receives game-ready assets. 
+	By utilizing photographs as input, we can achieve both a high level of realism for the resulting background texture as well as a shift from manual work away towards computational run-time which frees up developers for other work.
+  </div>
+
+  <input id="SIG22c-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG22c-ParallaxBG.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/parallaxPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG22c-ParallaxBG.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/parallaxPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/_KWdFy3YipI" target="_blank"><img src="https://yaksoy.github.io/images/research/parallaxVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22c-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{parallaxBG,<br />
+	author={Brigham Okano and Shao Yu Shen and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
+	title={Parallax Background Texture Generation},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
 <h4>Theses</h4>
 
 <hr />
@@ -1432,290 +1776,7 @@ that a professional compositing artist requires to process the same content havi
 
 <hr />
 
-<h4>Published CMPT 461 / 769 projects</h4>
-
-<hr />
-
-<table>
-<tr>
-<td class="pub-photocol">
-<a href="../NIREditing" target="_blank"><img src="https://yaksoy.github.io/images/research/NIREditing.jpg" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../NIREditing" target="_blank">Interactive RGB+NIR Photo Editing <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	Samuel Antunes Miranda*, Shahrzad Mirzaei*, Mariam Bebawy*, <b>Sebastian Dille</b>, and <b>Yağız Aksoy</b> 
-</div>
-<div class="pub-venue">
-	SIGGRAPH Posters, 2024
-</div>
-
-<div class="pub-accordion">
-  <input id="SIGp24-item1" name="accordion1" type="checkbox" />
-  <label for="SIGp24-item1">Abstract</label>
-  <div class="pub-abstract">
-	Near-infrared imagery offers great possibilities for creative image editing. Lying outside the visual spectrum, the NIR information can effectively serve as a fourth color channel to common RGB. 
-	Compared to the latter, it shows interesting and complementary behavior: its intensity strongly varies with the surface materials in the scene and is less affected by atmospheric perturbations.
-	For these reasons, NIR imaging has been a long-standing topic of interest in research and its integration has been proven successful for applications like false coloring, contrast enhancement, image dehazing, and purification of low-light images. 
-	Recent developments in smartphone technology have simplified the capturing process, making NIR data readily available for broader use outside the research community. 
-	At the same time, existing tools for NIR processing and manipulation are rare and still limited in functionality. 
-	With many solutions lacking specialized features, the editing process is inefficient and cumbersome, making them prone to generate suboptimal results. 
-	To tackle this issue, we introduce a simple and intuitive photo editing tool that combines RGB and NIR properties, offering functions tailored specifically for the RGB+NIR combination, and granting the user the ability to edit and refine images more creatively.
-  </div>
-
-  <input id="SIGp24-item2" name="accordion1" type="checkbox" />
-  <label for="SIGp24-item2">Manuscript &amp; more</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPaper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPosterSmall.jpg" title="Poster" /></a></td>
-		<td><a href="https://youtu.be/tNsUQYI7vw8" target="_blank"><img src="https://yaksoy.github.io/images/research/NIREditingVideo.jpg" title="Video" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="SIGp24-item3" name="accordion1" type="checkbox" />
-  <label for="SIGp24-item3">BibTeX</label>
-  <div class="pub-bibtex">
-	@INPROCEEDINGS{NIREditing,<br />
-	author={Samuel Antunes Miranda and Shahrzad Mirzaei and Mariam Bebawy and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
-	title={Interactive RGB+NIR Photo Editing},<br />
-	booktitle={SIGGRAPH Posters},<br />
-	year={2024},<br />
-	}
-  </div>
-</div>
-</td>
-</tr>
-</table>
-
-<hr />
-
-<table>
-<tr>
-<td class="pub-photocol">
-<a href="../datamosh" target="_blank"><img src="https://yaksoy.github.io/images/research/datamosh.jpg" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../datamosh" target="_blank">Datamoshing with Optical Flow <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	<b>Chris Careaga</b>, <b>Mahesh Kumar Krishna Reddy</b>, and <b>Yağız Aksoy</b> 
-</div>
-<div class="pub-venue">
-	SIGGRAPH Asia Posters, 2023
-</div>
-
-<div class="pub-accordion">
-  <input id="SIGa23p-item1" name="accordion1" type="checkbox" />
-  <label for="SIGa23p-item1">Abstract</label>
-  <div class="pub-abstract">
-	We propose a simple method for emulating the effect of data moshing, without relying on the corruption of encoded video, and explore its use in different application scenarios. 
-	Like traditional data moshing, we apply motion information to mismatched visual data.
-	Our approach uses off-the-shelf optical flow estimation to generate motion vectors for each pixel. 
-	Our core algorithm can be implemented in a handful of lines but unlocks multiple video editing effects. 
-	The use of accurate optical flow rather than compression data also creates a more natural transition without block artifacts. 
-	We hope our method provides artists and content creators with more creative freedom over the process of data moshing.
-  </div>
-
-  <input id="SIGa23p-item2" name="accordion1" type="checkbox" />
-  <label for="SIGa23p-item2">Manuscript &amp; more</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/SIGa23p-Datamosh.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/datamoshPaper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/SIGa23p-Datamosh.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/datamoshPosterSmall.jpg" title="Poster" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="SIGa23p-item3" name="accordion1" type="checkbox" />
-  <label for="SIGa23p-item3">BibTeX</label>
-  <div class="pub-bibtex">
-@INPROCEEDINGS{datamosh,<br />
-	author={Chris Careaga and Mahesh Kumar Krishna Reddy and Ya\u{g}{\i}z Aksoy},<br />
-	title={Datamoshing with Optical Flow},<br />
-	booktitle={SIGGRAPH Asia Posters},<br />
-	year={2023},<br />
-	}
-  </div>
-</div>
-</td>
-</tr>
-</table>
-
-<hr />
-
-<table>
-<tr>
-<td class="pub-photocol">
-<a href="../dynapix" target="_blank"><img src="https://yaksoy.github.io/images/research/dynapix.jpg" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../dynapix" target="_blank">DynaPix: Normal Map Pixelization for Dynamic Lighting <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	Gerardo Gandeaga, Denys Iliash, <b>Chris Careaga</b>, and <b>Yağız Aksoy</b> 
-</div>
-<div class="pub-venue">
-	SIGGRAPH Posters, 2022
-</div>
-
-<div class="pub-accordion">
-  <input id="SIG22b-item1" name="accordion1" type="checkbox" />
-  <label for="SIG22b-item1">Abstract</label>
-  <div class="pub-abstract">
-	This work introduces DynaPix, a Krita extension that automatically generates pixelated images and surface normals from an input image. 
-	DynaPix is a tool that aids pixel artists and game developers more efficiently develop 8-bit style games and bring them to life with dynamic lighting through normal maps that can be used in modern game engines such as Unity. 
-	The extension offers artists a degree of flexibility as well as allows for further refinements to generated artwork. 
-	Powered by out of the box solutions, DynaPix is a tool that seamlessly integrates in the artistic workflow.
-  </div>
-
-  <input id="SIG22b-item2" name="accordion1" type="checkbox" />
-  <label for="SIG22b-item2">Manuscript &amp; more</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/SIG22b-DynaPix.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/dynapixPaper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/SIG22b-DynaPix.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/dynapixPosterSmall.jpg" title="Poster" /></a></td>
-		<td><a href="https://youtu.be/1mylyzw6i_U" target="_blank"><img src="https://yaksoy.github.io/images/research/dynapixVideo.jpg" title="Video" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="SIG22b-item3" name="accordion1" type="checkbox" />
-  <label for="SIG22b-item3">BibTeX</label>
-  <div class="pub-bibtex">
-	@INPROCEEDINGS{dynapix,<br />
-	author={Gerardo Gandeaga and Denys Iliash and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
-	title={Dyna{P}ix: Normal Map Pixelization for Dynamic Lighting},<br />
-	booktitle={SIGGRAPH Posters},<br />
-	year={2022},<br />
-	}
-  </div>
-</div>
-</td>
-</tr>
-</table>
-
-<hr />
-
-<table>
-<tr>
-<td class="pub-photocol">
-<a href="../parallaxbg" target="_blank"><img src="https://yaksoy.github.io/images/research/parallax.jpg" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../parallaxbg" target="_blank">Parallax Background Texture Generation <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	Brigham Okano, Shao Yu Shen, <b>Sebastian Dille</b>, and <b>Yağız Aksoy</b> 
-</div>
-<div class="pub-venue">
-	SIGGRAPH Posters, 2022
-</div>
-
-<div class="pub-accordion">
-  <input id="SIG22c-item1" name="accordion1" type="checkbox" />
-  <label for="SIG22c-item1">Abstract</label>
-  <div class="pub-abstract">
-	Art assets for games can be time intensive to produce. 
-	Whether it is a full 3D world, or simpler 2D background, creating good looking assets takes time and skills that are not always readily available. 
-	Time can be saved by using repeating assets, but visible repetition hurts immersion. 
-	Procedural generation techniques can help make repetition less uniform, but do not remove it entirely. 
-	Both approaches leave noticeable levels of repetition in the image, and require significant time and skill investments to produce. 
-	Video game developers in hobby, game jam, or early prototyping situations may not have access to the required time and skill. 
-	We propose a framework to produce layered 2D backgrounds without the need for significant artist time or skill. 
-	In our pipeline, the user provides segmented photographic input, instead of creating traditional art, and receives game-ready assets. 
-	By utilizing photographs as input, we can achieve both a high level of realism for the resulting background texture as well as a shift from manual work away towards computational run-time which frees up developers for other work.
-  </div>
-
-  <input id="SIG22c-item2" name="accordion1" type="checkbox" />
-  <label for="SIG22c-item2">Manuscript &amp; more</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/SIG22c-ParallaxBG.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/parallaxPaper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/SIG22c-ParallaxBG.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/parallaxPosterSmall.jpg" title="Poster" /></a></td>
-		<td><a href="https://youtu.be/_KWdFy3YipI" target="_blank"><img src="https://yaksoy.github.io/images/research/parallaxVideo.jpg" title="Video" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="SIG22c-item3" name="accordion1" type="checkbox" />
-  <label for="SIG22c-item3">BibTeX</label>
-  <div class="pub-bibtex">
-	@INPROCEEDINGS{parallaxBG,<br />
-	author={Brigham Okano and Shao Yu Shen and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
-	title={Parallax Background Texture Generation},<br />
-	booktitle={SIGGRAPH Posters},<br />
-	year={2022},<br />
-	}
-  </div>
-</div>
-</td>
-</tr>
-</table>
-
-<hr />
-
-<h4>Other conferences and workshops</h4>
-<hr />
-
-<table>
-<tr>
-<td class="pub-photocol">
-<a href="../interactiveDepth" target="_blank"><img src="https://yaksoy.github.io/images/research/interactiveDepth.jpg" class="pub-photo" /></a>
-</td>
-<td>
-<div class="pub-title">
-	<a href="../interactiveDepth" target="_blank">Interactive Editing of Monocular Depth <i class="fa fa-external-link"></i></a>
-</div>
-<div class="pub-authors">
-	<b>Obumneme Stanley Dukor</b>, <b>S. Mahdi H. Miangoleh</b>, <b>Mahesh Kumar Krishna Reddy</b>, Long Mai, and <b>Yağız Aksoy</b> 
-</div>
-<div class="pub-venue">
-	SIGGRAPH Posters, 2022
-</div>
-
-<div class="pub-accordion">
-  <input id="SIG22a-item1" name="accordion1" type="checkbox" />
-  <label for="SIG22a-item1">Abstract</label>
-  <div class="pub-abstract">
-	Recent advances in computer vision have made 3D structure-aware editing of still photographs a reality. 
-	Such computational photography applications use a depth map that is automatically generated by monocular depth estimation methods to represent the scene structure. 
-	In this work, we present a lightweight, web-based interactive depth editing and visualization tool that adapts low-level conventional image editing operations for geometric manipulation to enable artistic control in the 3D photography workflow. 
-	Our tool provides real-time feedback on the geometry through a 3D scene visualization to make the depth map editing process more intuitive for artists. 
-	Our web-based tool is open-source and platform-independent to support wider adoption of 3D photography techniques in everyday digital photography.
-  </div>
-
-  <input id="SIG22a-item2" name="accordion1" type="checkbox" />
-  <label for="SIG22a-item2">Manuscript &amp; more</label>
-  <div class="pub-photolink">
-  
-	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/SIG22a-interactiveDepth.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthPaper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/SIG22a-interactiveDepth.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthPosterSmall.jpg" title="Poster" /></a></td>
-		<td><a href="https://www.youtube.com/embed/C1hrsDypFzM?si=BFrlNQIukPGdNte9" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/interactiveDepthVideo.jpg" title="Video" /></a></td>
-	</tr></table>
-	</div>
-
-  <input id="SIG22a-item3" name="accordion1" type="checkbox" />
-  <label for="SIG22a-item3">BibTeX</label>
-  <div class="pub-bibtex">
-	@INPROCEEDINGS{interactiveDepth,<br />
-	author={Obumneme Stanley Dukor and S. Mahdi H. Miangoleh and Mahesh Kumar Krishna Reddy and Long Mai and Ya\u{g}{\i}z Aksoy},<br />
-	title={Interactive Editing of Monocular Depth},<br />
-	booktitle={SIGGRAPH Posters},<br />
-	year={2022},<br />
-	}
-  </div>
-</div>
-</td>
-</tr>
-</table>
+<h4>Other works by Yağız</h4>
 
 <hr />
 
