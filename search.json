@@ -17,6 +17,8 @@
   
 
   
+
+  
     ,{
       "title"			: "Code & Data",
       "link"			: "https://yaksoy.github.io/code/",
@@ -83,10 +85,24 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     ,{
-      "title"			: "Group Members",
+      "title"			: "Computational Photography Lab",
       "link"			: "https://yaksoy.github.io/group/",
-      "excerpt"		: "Group Members"
+      "excerpt"		: "CP Lab"
     }
   
 
@@ -106,6 +122,40 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "Media Releases",
+      "link"			: "https://yaksoy.github.io/media/",
+      "excerpt"		: "Media Releases"
+    }
   
 
   
@@ -149,10 +199,22 @@
   
 
   
+
+  
+
+  
     ,{
       "title"			: "Teaching",
       "link"			: "https://yaksoy.github.io/teaching/",
       "excerpt"		: "Teaching"
+    }
+  
+
+  
+    ,{
+      "title"			: "Research Themes",
+      "link"			: "https://yaksoy.github.io/themes/",
+      "excerpt"		: "Research Themes"
     }
   
 
