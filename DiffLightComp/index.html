@@ -5,26 +5,26 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Interactive RGB+NIR Photo Editing &#8211; Yağız Aksoy</title>
-<meta name="description" content="Interactive RGB+NIR Photo Editing">
+<title>Interactive Object Insertion with Differentiable Rendering &#8211; Yağız Aksoy</title>
+<meta name="description" content="Interactive Object Insertion with Differentiable Rendering">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Interactive RGB+NIR Photo Editing">
-<meta name="twitter:description" content="Interactive RGB+NIR Photo Editing">
+<meta name="twitter:title" content="Interactive Object Insertion with Differentiable Rendering">
+<meta name="twitter:description" content="Interactive Object Insertion with Differentiable Rendering">
 
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://yaksoy.github.io/images/NIREditingTeaser.jpg">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/Sig25Poster-LightCompositingTeaser.jpg">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Interactive RGB+NIR Photo Editing">
-<meta property="og:description" content="Interactive RGB+NIR Photo Editing">
-<meta property="og:url" content="https://yaksoy.github.io/NIREditing/">
+<meta property="og:title" content="Interactive Object Insertion with Differentiable Rendering">
+<meta property="og:description" content="Interactive Object Insertion with Differentiable Rendering">
+<meta property="og:url" content="https://yaksoy.github.io/DiffLightComp/">
 <meta property="og:site_name" content="Yağız Aksoy">
 
 <!-- Webmaster Tools verfication -->
@@ -32,7 +32,7 @@
 
 
 
-<link rel="canonical" href="https://yaksoy.github.io/NIREditing/">
+<link rel="canonical" href="https://yaksoy.github.io/DiffLightComp/">
 <link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -83,62 +83,171 @@
       </div>
       <br>
       <!-- <header class="entry-header">-->
-        <h1 class="entry-titleProject" style="margin-top:5px;">Interactive RGB+NIR Photo Editing</h1>
+        <h1 class="entry-titleProject" style="margin-top:5px;">Interactive Object Insertion with Differentiable Rendering</h1>
       <!-- </header>-->
       <div class="entry-titleAuthors">
-        <table style="text-align:center;"><colgroup><col style="width:20%" /><col style="width:20%" /><col style="width:20%" /><col style="width:20%" /><col style="width:20%" /></colgroup><tr><td><img src="samuel.jpg" class="proj-photo" title="Samuel"></td><td><img src="shahrzad.jpg" class="proj-photo" title="Shahrzad"></td><td><img src="mariam.jpg" class="proj-photo" title="Mariam"></td><td><a href="https://sebastian-dille.github.io/" target="_blank"><img src="../group/sebastian.jpg" class="proj-photo" title="Sebastian"></td><td><a href="../" target="_blank"><img src="../images/yagizsq2.jpg" class="proj-photo" title="Yagiz"></td></tr><tr><td>Samuel Antunes Miranda*</td><td>Shahrzad Mirzaei*</td><td>Mariam Bebawy*</td><td><a href="https://sebastian-dille.github.io/" target="_blank">Sebastian Dille</a></td><td><a href="http://yaksoy.github.io" target="_blank">Yağız Aksoy</a></td></tr></table>
+        <table style="text-align:center;"><colgroup><col style="width:25%" /><col style="width:25%" /><col style="width:25%" /><col style="width:25%" /></colgroup><tr><td><img src="weikun.jpg" class="proj-photo" title="Weikun"></td><td><img src="sota.jpg" class="proj-photo" title="Sota"></td><td><a href="https://ccareaga.github.io" target="_blank"><img src="../group/chris.jpg" class="proj-photo" title="Chris"></td><td><a href="../" target="_blank"><img src="../images/yagizsq2.jpg" class="proj-photo" title="Yagiz"></td></tr><tr><td>Weikun Peng*</td><td>Sota Taira*</td><td><a href="https://ccareaga.github.io" target="_blank">Chris Careaga</a></td><td><a href="http://yaksoy.github.io" target="_blank">Yağız Aksoy</a></td></tr></table>
       </div>
       <div class="entry-titleVenue">
-        SIGGRAPH Posters, 2024
+        SIGGRAPH Posters, 2025
       </div>
     </div><!-- /.entry-wrapper -->
-    <img src="https://yaksoy.github.io/images/NIREditingTeaser.jpg" class="entry-feature-image" alt="Interactive RGB+NIR Photo Editing" style="margin-top:-40;"><p class="image-caption">We introduce a simple and intuitive photo editing tool that combines RGB and NIR properties, offering functions tailored specifically for the RGB+NIR combination, and granting the user the ability to edit and refine images more creatively.</p>
+    <img src="https://yaksoy.github.io/images/Sig25Poster-LightCompositingTeaser.jpg" class="entry-feature-image" alt="Interactive Object Insertion with Differentiable Rendering" style="margin-top:-40;"><p class="image-caption">We present an object insertion pipeline and interface that enables iterative editing of illumination-aware composite images. Our pipeline leverages off-the-shelf computer vision methods and differentiable rendering to reconstruct a 3D representation of a given scene. Users can add 3D objects and render them with physically accurate lighting effects.</p>
     <div class="entry-wrapper">
       <div class="entry-contentProject">
         <p style="text-align:center;"><b>Abstract</b></p>
 
 <p>
-	Near-infrared imagery offers great possibilities for creative image editing. Lying outside the visual spectrum, the NIR information can effectively serve as a fourth color channel to common RGB. 
-	Compared to the latter, it shows interesting and complementary behavior: its intensity strongly varies with the surface materials in the scene and is less affected by atmospheric perturbations.
-	For these reasons, NIR imaging has been a long-standing topic of interest in research and its integration has been proven successful for applications like false coloring, contrast enhancement, image dehazing, and purification of low-light images. 
-	Recent developments in smartphone technology have simplified the capturing process, making NIR data readily available for broader use outside the research community. 
-	At the same time, existing tools for NIR processing and manipulation are rare and still limited in functionality. 
-	With many solutions lacking specialized features, the editing process is inefficient and cumbersome, making them prone to generate suboptimal results. 
-	To tackle this issue, we introduce a simple and intuitive photo editing tool that combines RGB and NIR properties, offering functions tailored specifically for the RGB+NIR combination, and granting the user the ability to edit and refine images more creatively.
+	Compositing virtual objects into real-world imagery, referred to as object insertion, has a number of applications across film visual effects, augmented reality, and even interior design. Creating physically realistic composites can be a tedious process requiring an artist to perform manual editing of illumination effects for a given object and background scene. This manual process lacks interactive feedback, making it difficult to finetune aspects of the composite, such as object location, size, and orientation. In this work, we propose a modern framework and accompanying user interface to bring recent advancements in computational photography to artists and designers in an accessible and extensible manner. Specifically, we follow the paper <a href="https://yaksoy.github.io/DiffLightComp" target="_blank">Physically Controllable Relighting of Photographs<i class="fa fa-external-link"></i></a> and leverage state-of-the-art mid-level vision estimations to build a virtual 3D scene from a single image. We then use differentiable rendering and optional user constraints to determine the lighting conditions in the scene. Finally, we allow the user to place 3D objects into the scene and render them using the estimated illumination, resulting in a final realistic composite. Our method brings together ideas from the past decade of inverse rendering research to create an open-source tool for artists and designers.
 </p>
 <p>
-	This work was developed by Samuel, Shahrzad, and Mariam as a class project for <a href="https://yaksoy.github.io/cpim" target="_blank">CMPT 461/769 - Computational Photography</a> at SFU.
+	This work was developed by Weikun and Sota as a class project for <a href="https://yaksoy.github.io/cpim" target="_blank">CMPT 461/769 - Computational Photography</a> at SFU.
 </p>
 
 <p style="text-align:center;"><b>Implementation</b></p>
 
-<p style="text-align:center;"><a href="https://github.com/samuel-antunes/RGB-NiR-Webapp" target="_blank">GitHub Repository for CMPT 461/769 - Computational Photography <i class="fa fa-external-link"></i></a></p>
+<p style="text-align:center;"><a href="https://github.com/willipwk/image-composing" target="_blank">GitHub Repository for CMPT 461/769 - Computational Photography <i class="fa fa-external-link"></i></a></p>
 
 <p style="text-align:center;"><b>Paper</b></p>
 <table style="text-align:center;"><tr>
-		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPaper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG25p-LightAwareCompositing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/2025Postera-Paper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG25p-LightAwareCompositing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/2025Postera-Poster.jpg" title="Poster" /></a></td>
 	</tr></table>
 
 <p style="text-align:center;"><b>Video</b></p>
 
 <p style="text-align:center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tNsUQYI7vw8" frameborder="0"> </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QvYROlkmgGI" frameborder="0"> </iframe>
 </p>
 
 <p style="text-align:center;"><b>BibTeX</b></p>
 <p>
 <div class="pub-bibtex">
-	@INPROCEEDINGS{NIREditing,<br />
-	author={Samuel Antunes Miranda and Shahrzad Mirzaei and Mariam Bebawy and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
-	title={Interactive RGB+NIR Photo Editing},<br />
+	@INPROCEEDINGS{pengTairaCompositing,<br />
+	author={Weikun Peng and Sota Taira and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+	title={Interactive Object Insertion with Differentiable Rendering},<br />
 	booktitle={SIGGRAPH Posters},<br />
-	year={2024},<br />
+	year={2025},<br />
 	}
   </div>
   </p>
 
-<p style="text-align:center;"><b>More posters from <a href="https://yaksoy.github.io/cpim" target="_blank">CMPT 461/769: Computational Photography <i class="fa fa-external-link"></i></a></b></p>
+<p style="text-align:center;"><b>Related Publications</b></p>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../PhysicalRelighting" target="_blank"><img src="https://yaksoy.github.io/images/research/PhysicalRelighting.gif" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../PhysicalRelighting" target="_blank">Physically Controllable Relighting of Photographs <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b> and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		Proc. SIGGRAPH, 2025
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="SIG25-item1" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item1">Abstract</label>
+	  <div class="pub-abstract">
+		We present a self-supervised approach to in-the-wild image relighting that enables fully controllable, physically based illumination editing.
+		We achieve this by combining the physical accuracy of traditional rendering with the photorealistic appearance made possible by neural rendering.
+		Our pipeline works by inferring a colored mesh representation of a given scene using monocular estimates of geometry and intrinsic components.
+		This representation allows users to define their desired illumination configuration in 3D. The scene under the new lighting can then be rendered using a path-tracing engine.
+		We send this approximate rendering of the scene through a feed-forward neural renderer to predict the final photorealistic relighting result.
+		We develop a differentiable rendering process to reconstruct in-the-wild scene illumination, enabling self-supervised training of our neural renderer on raw image collections.
+		Our method represents a significant step in bringing the explicit physical control over lights available in typical 3D computer graphics tools, such as Blender, to in-the-wild relighting.
+	  </div>
+	
+	  <input id="SIG25-item2" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SIG25-PhysicalRelighting.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SIG25-PhysicalRelighting-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/XFJCT3D8t0M" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Video.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/PhysicalRelighting/relight_poster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/Sig25Poster.jpg" title="Poster" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="SIG25-item3" name="accordion1" type="checkbox" />
+	  <label for="SIG25-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		  @INPROCEEDINGS{careagaRelighting,<br />
+		  author={Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		  title={Physically Controllable Relighting of Photographs},<br />
+		  booktitle={Proc. SIGGRAPH},<br />
+		  year={2025},<br />
+	  } 
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../intrinsicCompositing" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsicCompositing.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../intrinsicCompositing" target="_blank">Intrinsic Harmonization for Illumination-Aware Compositing <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Chris Careaga</b>, <b>S. Mahdi H. Miangoleh</b>, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		SIGGRAPH Asia, 2023
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="SigAsia23-item1" name="accordion1" type="checkbox" />
+	  <label for="SigAsia23-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Despite significant advancements in network-based image harmonization techniques, there still exists a domain disparity between typical training pairs and real-world composites encountered during inference. 
+		Most existing methods are trained to reverse global edits made on segmented image regions, which fail to accurately capture the lighting inconsistencies between the foreground and background found in composited images. 
+		In this work, we introduce a self-supervised illumination harmonization approach formulated in the intrinsic image domain. 
+		First, we estimate a simple global lighting model from mid-level vision representations to generate a rough shading for the foreground region. 
+		A network then refines this inferred shading to generate a harmonious re-shading that aligns with the background scene. 
+		In order to match the color appearance of the foreground and background, we utilize ideas from prior harmonization approaches to perform parameterized image edits in the albedo domain. 
+		To validate the effectiveness of our approach, we present results from challenging real-world composites and conduct a user study to objectively measure the enhanced realism achieved compared to state-of-the-art harmonization methods. 
+	  </div>
+	
+	  <input id="SigAsia23-item2" name="accordion1" type="checkbox" />
+	  <label for="SigAsia23-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia23-IntrinsicCompositing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia23-IntrinsicCompositing-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/M9hCUTp8bo4" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia23Video.jpg" title="Video" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="SigAsia23-item3" name="accordion1" type="checkbox" />
+	  <label for="SigAsia23-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{careagaCompositing,<br />
+		author={Chris Careaga and S. Mahdi H. Miangoleh and Ya\u{g}{\i}z Aksoy},<br />
+		title={Intrinsic Harmonization for Illumination-Aware Compositing},<br />
+		booktitle={Proc. SIGGRAPH Asia},<br />
+		year={2023},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
 
 <hr />
 
@@ -193,48 +302,58 @@
 
 <hr />
 
+<p style="text-align:center;"><b>More posters from <a href="https://yaksoy.github.io/cpim" target="_blank">CMPT 461/769: Computational Photography <i class="fa fa-external-link"></i></a></b></p>
+
+<hr />
+
 <table>
 <tr>
 <td class="pub-photocol">
-	<a href="../DiffLightComp" target="_blank"><img src="https://yaksoy.github.io/images/research/2025Poster-LightCompositing.jpg" class="pub-photo" /></a>
+<a href="../NIREditing" target="_blank"><img src="https://yaksoy.github.io/images/research/NIREditing.jpg" class="pub-photo" /></a>
 </td>
 <td>
 <div class="pub-title">
-	<a href="../DiffLightComp" target="_blank">Interactive Object Insertion with Differentiable Rendering <i class="fa fa-external-link"></i></a>
+	<a href="../NIREditing" target="_blank">Interactive RGB+NIR Photo Editing <i class="fa fa-external-link"></i></a>
 </div>
 <div class="pub-authors">
-	Weikun Peng*, Sota Taira*, <b>Chris Careaga</b>, and <b>Yağız Aksoy</b> 
+	Samuel Antunes Miranda*, Shahrzad Mirzaei*, Mariam Bebawy*, <b>Sebastian Dille</b>, and <b>Yağız Aksoy</b> 
 </div>
 <div class="pub-venue">
-	SIGGRAPH Posters, 2025
+	SIGGRAPH Posters, 2024
 </div>
 
 <div class="pub-accordion">
-  <input id="SIG25a-item1" name="accordion1" type="checkbox" />
-  <label for="SIG25a-item1">Abstract</label>
+  <input id="SIGp24-item1" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item1">Abstract</label>
   <div class="pub-abstract">
-	We develop an object insertion pipeline and interface that enables iterative editing of illumination-aware composite images. Our pipeline leverages off-the-shelf computer vision methods and differentiable rendering to reconstruct a 3D representation of a given scene. Users can add 3D objects and render them with physically accurate lighting effects.
+	Near-infrared imagery offers great possibilities for creative image editing. Lying outside the visual spectrum, the NIR information can effectively serve as a fourth color channel to common RGB. 
+	Compared to the latter, it shows interesting and complementary behavior: its intensity strongly varies with the surface materials in the scene and is less affected by atmospheric perturbations.
+	For these reasons, NIR imaging has been a long-standing topic of interest in research and its integration has been proven successful for applications like false coloring, contrast enhancement, image dehazing, and purification of low-light images. 
+	Recent developments in smartphone technology have simplified the capturing process, making NIR data readily available for broader use outside the research community. 
+	At the same time, existing tools for NIR processing and manipulation are rare and still limited in functionality. 
+	With many solutions lacking specialized features, the editing process is inefficient and cumbersome, making them prone to generate suboptimal results. 
+	To tackle this issue, we introduce a simple and intuitive photo editing tool that combines RGB and NIR properties, offering functions tailored specifically for the RGB+NIR combination, and granting the user the ability to edit and refine images more creatively.
   </div>
 
-  <input id="SIG25a-item2" name="accordion1" type="checkbox" />
-  <label for="SIG25a-item2">Manuscript &amp; more</label>
+  <input id="SIGp24-item2" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item2">Manuscript &amp; more</label>
   <div class="pub-photolink">
   
 	<table><tr>
-		<td><a href="https://yaksoy.github.io/papers/SIG25p-LightAwareCompositing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/2025Postera-Paper.jpg" title="Paper" /></a></td>
-		<td><a href="https://yaksoy.github.io/papers/SIG25p-LightAwareCompositing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/2025Postera-Poster.jpg" title="Poster" /></a></td>
-		<td><a href="https://youtu.be/QvYROlkmgGI" target="_blank"><img src="https://yaksoy.github.io/images/research/2025Postera-Video.jpg" title="Video" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/tNsUQYI7vw8" target="_blank"><img src="https://yaksoy.github.io/images/research/NIREditingVideo.jpg" title="Video" /></a></td>
 	</tr></table>
 	</div>
 
-  <input id="SIG25a-item3" name="accordion1" type="checkbox" />
-  <label for="SIG25a-item3">BibTeX</label>
+  <input id="SIGp24-item3" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item3">BibTeX</label>
   <div class="pub-bibtex">
-	@INPROCEEDINGS{pengTairaCompositing,<br />
-	author={Weikun Peng and Sota Taira and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
-	title={Interactive Object Insertion with Differentiable Rendering},<br />
+	@INPROCEEDINGS{NIREditing,<br />
+	author={Samuel Antunes Miranda and Shahrzad Mirzaei and Mariam Bebawy and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
+	title={Interactive RGB+NIR Photo Editing},<br />
 	booktitle={SIGGRAPH Posters},<br />
-	year={2025},<br />
+	year={2024},<br />
 	}
   </div>
 </div>
