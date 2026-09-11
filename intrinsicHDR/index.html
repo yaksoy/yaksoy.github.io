@@ -147,6 +147,68 @@ We show that dividing the problem into two simpler sub-tasks improves performanc
 <table>
 	<tr>
 	<td class="pub-photocol">
+	<a href="../RecurrentHDR" target="_blank"><img src="https://yaksoy.github.io/images/research/RecurrentHDR.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../RecurrentHDR" target="_blank">Recurrent Dynamic Range Extension <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Sebastian Dille</b>, <b>Keru Fu</b>, <b>S. Mahdi H. Miangoleh</b>, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		SIGGRAPH Asia, 2026
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="SigAsia26-item1" name="accordion1" type="checkbox" />
+	  <label for="SigAsia26-item1">Abstract</label>
+	  <div class="pub-abstract">
+		We present an approach to progressively extend the highlights of an image.
+		Instead of reconstructing the full dynamic range of a complex scene directly,
+		we learn a simpler task first:
+		We extend the dynamic range of an input image by a single exposure value.
+		Once this is mastered, we retrieve the full HDR image for the scene by executing
+		our network recurrently, progressively increasing the dynamic range of the input.
+		Our formulation is agnostic to the input dynamic range and targets a bounded output domain.
+		This enables us to use widely available RAW images for the reconstruction task and adapt
+		adversarial losses to construct realistic images.
+		By incorporating Memory Replay for backpropagation, we can train our network recurrently
+		over multiple inference stages and reduce reconstruction errors.
+		As a consequence, our system reconstructs challenging long-tailed HDR scenes robustly
+		and shows powerful recovery of bright light sources and highlights.
+	  </div>
+	
+	  <input id="SigAsia26-item2" name="accordion1" type="checkbox" />
+	  <label for="SigAsia26-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia26-RecurrentHDR.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia26Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia26-RecurrentHDR-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia26Supp.jpg" title="Supplementary" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="SigAsia26-item3" name="accordion1" type="checkbox" />
+	  <label for="SigAsia26-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{dilleRecurrentHDR,<br />
+			author={Sebastian Dille and Keru Fu and S. Mahdi H. Miangoleh and Ya\u{g}{\i}z Aksoy},<br />
+			title={Recurrent Dynamic Range Extension},<br />
+			booktitle={Proc. SIGGRAPH Asia},<br />
+			year={2026},<br />
+		  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
 	<a href="../intrinsic" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsic.jpg" class="pub-photo" /></a>
 	</td>
 	<td>
@@ -332,7 +394,7 @@ We show that dividing the problem into two simpler sub-tasks improves performanc
     
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<span>&copy; 2025 Yagiz Aksoy</span>
+<span>&copy; 2026 Yagiz Aksoy</span>
   </footer>
 </div><!-- /.footer-wrapper -->
 
