@@ -1,0 +1,715 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Physically-Based Models of Dynamic Range Extension &#8211; Yağız Aksoy</title>
+<meta name="description" content="Physically-Based Models of Dynamic Range Extension">
+
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Physically-Based Models of Dynamic Range Extension">
+<meta name="twitter:description" content="Physically-Based Models of Dynamic Range Extension">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yaksoy.github.io/images/sebastianPhDTeaser.jpg">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Physically-Based Models of Dynamic Range Extension">
+<meta property="og:description" content="Physically-Based Models of Dynamic Range Extension">
+<meta property="og:url" content="https://yaksoy.github.io/dr-dille/">
+<meta property="og:site_name" content="Yağız Aksoy">
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="googleb0479c04a25255c3">
+
+
+
+<link rel="canonical" href="https://yaksoy.github.io/dr-dille/">
+<link href="https://yaksoy.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yağız Aksoy Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://yaksoy.github.io/assets/css/main.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="https://yaksoy.github.io/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="https://yaksoy.github.io/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://yaksoy.github.io/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://yaksoy.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://yaksoy.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://yaksoy.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://yaksoy.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://yaksoy.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="page">
+
+<div id="main" role="main">
+  <article class="entry">
+    <div class="entry-wrapper">
+      <br>
+      <div class="entry-titleLogos">
+        <table><colgroup><col style="width:50%" /><col style="width:50%" /></colgroup><tr><td style="text-align:left"><a href="https://www.sfu.ca/computing.html" target="_blank"><img src="../images/sfu.png" class="proj-logo" title="SFU"></a></td><td style="text-align:right"><a href="../group/" target="_blank"><img src="../images/cplab-full.png" class="proj-logo" title="CPLab" style="float:right;"></a></td></tr></table>
+      </div>
+      <br>
+      <!-- <header class="entry-header">-->
+        <h1 class="entry-titleProject" style="margin-top:5px;">Physically-Based Models of Dynamic Range Extension</h1>
+      <!-- </header>-->
+      <div class="entry-titleAuthors">
+        <table style="text-align:center;"><tr><td><a href="https://sebastian-dille.github.io/" target="_blank"><img src="../group/sebastian.jpg" class="proj-photo" title="Sebastian"></a></td></tr><tr><td><a href="https://sebastian-dille.github.io/" target="_blank">Sebastian Dille</a></td></tr></table>
+      </div>
+      <div class="entry-titleVenue">
+        PhD Thesis<br> Simon Fraser University, 2026
+      </div>
+    </div><!-- /.entry-wrapper -->
+    <img src="https://yaksoy.github.io/images/sebastianPhDTeaser.jpg" class="entry-feature-image" alt="Physically-Based Models of Dynamic Range Extension" style="margin-top:-40;"><p class="image-caption">We present different models for reconstructing HDR images with realistic, perceptually accurate highlights from a single photo. We apply physical principles for our formulation to break up the HDR reconstruction into a set of simpler sub-tasks. <b>IntrinsicHDR</b> Differentiating albedo and shading enables shallow neural networks with dedicated supervision. <b>DisentangledHDR</b> Disentangling the diffuse information from directed light allows training on diverse RAW data. <b>RecurrentHDR</b> The constrained reconstruction of a single exposure step opens up the recurrent recovery of bright HDR highlights for everyday photographs.</p>
+    <div class="entry-wrapper">
+      <div class="entry-contentProject">
+        <hr />
+
+<p style="text-align:center;"><b>Thesis Defense Presentation</b></p>
+
+<p style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AwAv4Lx14rY" frameborder="0"> </iframe>
+</p>
+
+<hr />
+
+<p style="text-align:center;"><b>Dissertation</b></p>
+<table style="text-align:center;"><tr>
+		<td><a href="https://summit.sfu.ca/item/40586" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SFU26SebastianPaper.jpg" title="Thesis" /></a></td>
+	</tr></table>
+
+<hr />
+
+<p style="text-align:center;"><b>Intrinsic Single-Image HDR Reconstruction</b></p>
+
+<table style="text-align:center;"><tr>
+		<td><img width="700" src="intrinsicHDR.jpg" title="IntrinsicHDR Teaser" /></td>
+	</tr></table>
+
+<p>
+We formulate dynamic range extension in the intrinsic domain.
+The intrinsic image formation model allows us to separate the reconstruction of reflectance from that of illumination. 
+Both components react differently to clipping: While the dynamic range of the illumination is reduced and local details in the highlights are lost, the surface colors become desaturated. 
+By applying the intrinsic model, we approach their reconstruction with separate, specialized networks.
+We show that our separation of reflectance and illumination enables more precise supervision and improves performance on a wide variety of photographs. 
+We can compress the highlight distribution when training the shading network without compromising color accuracy in albedo reconstruction. 
+The new formulation allows us to recover images with high-fidelity and vivid colors.
+</p>
+
+<hr />
+
+<p style="text-align:center;"><b>Highlight Reconstruction through Diffuse and Directed Light</b></p>
+
+<table style="text-align:center;"><tr>
+		<td><img width="700" src="disentangledHDR.jpg" title="DisentangledHDR Teaser" /></td>
+	</tr></table>
+
+<p>
+In this chapter, we focus on the different reflective properties of the diverse objects in natural scenes.
+Diffuse surfaces reflect incoming light uniformly in every direction and have soft highlights with moderate brightness.
+Their appearance differs substantially from the intense light of specular reflections and active light sources directed towards the camera.
+We divide the image into the <i>diffuse image</i> and a residual component containing <i>directed</i> light from specular reflections and visible light sources.
+</p>
+<p>
+Crucially for our goal, the isolated diffuse image already contains large parts of the color information and spans only a moderate dynamic range due to the absence of bright specular extrema.
+Accurate diffuse components can thus be retrieved without problem from widely available RAW photos and do not differ significantly from the ones obtained from true HDR images. 
+As a result, our disentangled modeling of diffuse and non-diffuse highlight reconstruction recovers a realistic dynamic range while preserving details from the diffuse input.
+</p>
+
+<hr />
+
+<p style="text-align:center;"><b>Recurrent Dynamic Range Extension</b></p>
+
+<table style="text-align:center;"><tr>
+		<td><img width="700" src="recurrentHDR.jpg" title="RecurrentHDR Teaser" /></td>
+	</tr></table>
+
+<p>
+Our recurrent approach takes on the extension task from a photographic perspective and lastly break up the dynamic range itself. 
+Instead of recovering the complex HDR image in a single step, we train a neural network to extend the dynamic range of its input by a single exposure value.
+This simpler goal amounts to effectively doubling the luminance range, while our network learns to estimate realistic content in a limited range. 
+Executing the forward pass recurrently on the previous estimations then extends the dynamic range step-by-step until the desired contrast is reached or the clipped pixels are completely reconstructed.
+Our recurrent model of dynamic range extension generalizes to images in the wild, while recovering long-tailed physically-accurate highlights even for challenging specular reflections and active light sources.
+</p>
+
+<hr />
+<!-- 
+<p style="text-align:center;"><b>Abstract</b></p>
+
+<p>
+Natural scenes contain a wide range of intensities spanning multiple orders of magnitude. This high dynamic range (HDR) can be perceived by our visual system without problem. However, the low dynamic range (LDR) of common cameras fails to capture the rich contrast, and most casual photos have lost colors and details in saturated pixels. Dynamic range extension aims to revert the clipping. Restoring the lost information in the highlights not only results in more realistic images, but also enables the physical modeling of light and opens up many downstream applications, such as image-based lighting and illumination-aware image editing. In this thesis, we approach this task using three novel formulations. Leveraging the physical properties of the scene, our models tame the long-tailed distribution of HDR radiance and relax the dependency on large HDR datasets by separating the problem into simpler sub-tasks. Looking into the image formation process, we observe important differences between the intrinsic components. For one, separating illumination from reflectance enables us to extend the dynamic range of the former
+without compressing the latter. Analogously, we can adapt to different material properties by separating moderate diffuse reflectance from the bright directed light of active light sources. Or, we take inspiration from the exposure mechanisms within the camera and progressively extend the dynamic range of an input image by one exposure value at a time. Our novel formulations allow for dedicated networks with a more precise supervision. We can drastically extend the limited diversity of HDR data by learning diffuse reflectance or a single-EV extension from widely available RAW image collections. This provides our models with a strong prior over natural images, combined with a realistic highlight distribution learned from full HDR data. Our novel perspectives improve performance and enable generalization to everyday photographs. We evaluate our approaches extensively on various benchmarks, including a novel multi-illuminant dataset. Our models show state-of-the-art results against a wide set of baselines, generate vivid colors, and reproduce bright highlights with a wide dynamic range. We outperform heavy diffusion-based networks with our streamlined architectures and create 4K results in less than a second.
+</p> -->
+
+<p style="text-align:center;"><b>BibTeX</b></p>
+<p>
+<div class="pub-bibtex">
+	@PHDTHESIS{dilleHDRphd,<br />
+	author={Sebastian Dille},<br />
+	title={Physically-Based Models of Dynamic Range Extension},<br />
+	year={2026},<br />
+	school={Simon Fraser University},<br />
+  }
+  </div>
+  </p>
+
+<hr />
+
+<p style="text-align:center;"><b>CPLab at Sebastian's defense on May 22, 2026</b></p>
+
+<table style="text-align:center;"><tr>
+		<td><img width="700" src="sebastiangroup.jpg" title="DisentangledHDR Teaser" /></td>
+	</tr></table>
+
+<hr />
+
+<p style="text-align:center;"><b>At Sebastian's farewell event</b></p>
+
+<table style="text-align:center;"><tr>
+		<td><img width="700" src="sebastianplate.jpg" title="DisentangledHDR Teaser" /></td>
+	</tr></table>
+
+<hr />
+
+<p style="text-align:center;"><b>CPLab Publications Led by Sebastian</b></p>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../RecurrentHDR" target="_blank"><img src="https://yaksoy.github.io/images/research/RecurrentHDR.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../RecurrentHDR" target="_blank">Recurrent Dynamic Range Extension <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Sebastian Dille</b>, <b>Keru Fu</b>, <b>S. Mahdi H. Miangoleh</b>, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		SIGGRAPH Asia, 2026
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="SigAsia26-item1" name="accordion1" type="checkbox" />
+	  <label for="SigAsia26-item1">Abstract</label>
+	  <div class="pub-abstract">
+		We present an approach to progressively extend the highlights of an image.
+		Instead of reconstructing the full dynamic range of a complex scene directly,
+		we learn a simpler task first:
+		We extend the dynamic range of an input image by a single exposure value.
+		Once this is mastered, we retrieve the full HDR image for the scene by executing
+		our network recurrently, progressively increasing the dynamic range of the input.
+		Our formulation is agnostic to the input dynamic range and targets a bounded output domain.
+		This enables us to use widely available RAW images for the reconstruction task and adapt
+		adversarial losses to construct realistic images.
+		By incorporating Memory Replay for backpropagation, we can train our network recurrently
+		over multiple inference stages and reduce reconstruction errors.
+		As a consequence, our system reconstructs challenging long-tailed HDR scenes robustly
+		and shows powerful recovery of bright light sources and highlights.
+	  </div>
+	
+	  <input id="SigAsia26-item2" name="accordion1" type="checkbox" />
+	  <label for="SigAsia26-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia26-RecurrentHDR.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia26Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/SigAsia26-RecurrentHDR-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SigAsia26Supp.jpg" title="Supplementary" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="SigAsia26-item3" name="accordion1" type="checkbox" />
+	  <label for="SigAsia26-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{dilleRecurrentHDR,<br />
+			author={Sebastian Dille and Keru Fu and S. Mahdi H. Miangoleh and Ya\u{g}{\i}z Aksoy},<br />
+			title={Recurrent Dynamic Range Extension},<br />
+			booktitle={Proc. SIGGRAPH Asia},<br />
+			year={2026},<br />
+		  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../intrinsicHDR" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsicHDR.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../intrinsicHDR" target="_blank">Intrinsic Single-Image HDR Reconstruction <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Sebastian Dille*</b>, <b>Chris Careaga*</b>, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ECCV, 2024
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="ECCV24-item1" name="accordion1" type="checkbox" />
+	  <label for="ECCV24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		The low dynamic range (LDR) of common cameras fails to capture the rich contrast in natural scenes, resulting in loss of color and details in saturated pixels. 
+		Reconstructing the high dynamic range (HDR) of luminance present in the scene from single LDR photographs is an important task with many applications in computational photography and realistic display of images.
+		The HDR reconstruction task aims to infer the lost details using the context present in the scene, requiring neural networks to understand high-level geometric and illumination cues. 
+		This makes it challenging for data-driven algorithms to generate accurate and high-resolution results.
+		In this work, we introduce a physically-inspired remodeling of the HDR reconstruction problem in the intrinsic domain. 
+		The intrinsic model allows us to train separate networks to extend the dynamic range in the shading domain and to recover lost color details in the albedo domain. 
+		We show that dividing the problem into two simpler sub-tasks improves performance in a wide variety of photographs.
+	  </div>
+	
+	  <input id="ECCV24-item2" name="accordion1" type="checkbox" />
+	  <label for="ECCV24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/ECCV24-IntrinsicHDR.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/ECCV24-IntrinsicHDR-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Supp.jpg" title="Supplementary" /></a></td>
+			<td><a href="https://youtu.be/EiyH52BcKkw" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Video.jpg" title="Video" /></a></td>
+			<td><a href="https://yaksoy.github.io/intrinsicHDR/IntrinsicHDRPoster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCV24Poster.jpg" title="Poster" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="ECCV24-item3" name="accordion1" type="checkbox" />
+	  <label for="ECCV24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{dilleIntrinsicHDR,<br />
+		author={Sebastian Dille and Chris Careaga and Ya\u{g}{\i}z Aksoy},<br />
+		title={Intrinsic Single-Image HDR Reconstruction},<br />
+		booktitle={Proc. ECCV},<br />
+		year={2024},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+	<tr>
+	<td class="pub-photocol">
+	<a href="../bottomup" target="_blank"><img src="https://yaksoy.github.io/images/research/bottomup.jpg" class="pub-photo" /></a>
+	</td>
+	<td>
+	<div class="pub-title">
+		<a href="../bottomup" target="_blank">A Bottom-Up Approach to Class-Agnostic Image Segmentation <i class="fa fa-external-link"></i></a>
+	</div>
+	<div class="pub-authors">
+		<b>Sebastian Dille</b>, <b>Ari Blondal</b>, Sylvain Paris, and <b>Yağız Aksoy</b>
+	</div>
+	<div class="pub-venue">
+		ECCV Workshops, 2024
+	</div>
+	
+	<div class="pub-accordion">
+	  <input id="ECCVW24-item1" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item1">Abstract</label>
+	  <div class="pub-abstract">
+		Class-agnostic image segmentation is a crucial component in automating image editing workflows, especially in contexts where object selection traditionally involves interactive tools. 
+        Existing methods in the literature often adhere to top-down formulations, following the paradigm of class-based approaches, where object detection precedes per-object segmentation.
+        In this work, we present a novel bottom-up formulation for addressing the class-agnostic segmentation problem. 
+        We supervise our network directly on the projective sphere of its feature space, employing losses inspired by metric learning literature as well as losses defined in a novel segmentation-space representation.
+        The segmentation results are obtained through a straightforward mean-shift clustering of the estimated features.
+        Our bottom-up formulation exhibits exceptional generalization capability, even when trained on datasets designed for class-based segmentation. We further showcase the effectiveness of our generic approach by addressing the challenging task of cell and nucleus segmentation.
+        We believe that our bottom-up formulation will offer valuable insights into diverse segmentation challenges in the literature.
+	  </div>
+	
+	  <input id="ECCVW24-item2" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item2">Manuscript &amp; more</label>
+	  <div class="pub-photolink">
+	  
+		<table><tr>
+			<td><a href="https://yaksoy.github.io/papers/ECCVW24-BottomUp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Paper.jpg" title="Paper" /></a></td>
+			<td><a href="https://yaksoy.github.io/papers/ECCVW24-BottomUp-supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Supp.jpg" title="Supplementary" /></a></td>
+			<!-- <td><a href="https://youtu.be/EiyH52BcKkw" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Video.jpg" title="Video"></a></td> -->
+			<td><a href="https://yaksoy.github.io/bottomup/BottomUpPoster.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/ECCVW24Poster.jpg" title="Poster" /></a></td>
+		</tr></table>
+		</div>
+	
+	  <input id="ECCVW24-item3" name="accordion1" type="checkbox" />
+	  <label for="ECCVW24-item3">BibTeX</label>
+	  <div class="pub-bibtex">
+		@INPROCEEDINGS{dilleBottomup,<br />
+		author={Sebastian Dille and Ari Blondal and Sylvain Paris and Ya\u{g}{\i}z Aksoy},<br />
+		title={A Bottom-Up Approach to Class-Agnostic Image Segmentation},<br />
+		booktitle={Proc. ECCV Workshop},<br />
+		year={2024},<br />
+	  }
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../highresdepth" target="_blank"><img src="https://yaksoy.github.io/images/research/highresdepth.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../highresdepth" target="_blank">Boosting Monocular Depth Estimation Models to High Resolution <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<i><b>S. Mahdi H. Miangoleh*</b></i>, <i><b>Sebastian Dille*</b></i>, Long Mai, Sylvain Paris, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	CVPR, 2021
+</div>
+
+<div class="pub-accordion">
+  <input id="CVPR21-item1" name="accordion1" type="checkbox" />
+  <label for="CVPR21-item1">Abstract</label>
+  <div class="pub-abstract">
+	Neural networks have shown great abilities in estimating depth from a single image. 
+	However, the inferred depth maps are well below one-megapixel resolution and often lack fine-grained details, which limits their practicality. 
+	Our method builds on our analysis on how the input resolution and the scene structure affects depth estimation performance. 
+	We demonstrate that there is a trade-off between a consistent scene structure and the high-frequency details, and merge low- and high-resolution estimations to take advantage of this duality using a simple depth merging network. 
+	We present a double estimation method that improves the whole-image depth estimation and a patch selection method that adds local details to the final result. 
+	We demonstrate that by merging estimations at different resolutions with changing context, we can generate multi-megapixel depth maps with a high level of detail using a pre-trained model.
+</div>
+
+  <input id="CVPR21-item2" name="accordion1" type="checkbox" />
+  <label for="CVPR21-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/CVPR21-HighResDepth.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR21Paper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/CVPR21-HighResDepth-Supp.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR21Supp.jpg" title="Paper" /></a></td>
+		<td><a href="https://youtu.be/lDeI17pHlqo" target="_blank"><img src="https://yaksoy.github.io/images/research/CVPR21Video.jpg" title="Video" /></a></td>
+		<td><a href="https://yaksoy.github.io/highresdepth/CVPR21PosterSm.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/CVPR21Poster.jpg" title="Poster" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="CVPR21-item3" name="accordion1" type="checkbox" />
+  <label for="CVPR21-item3">BibTeX</label>
+  <div class="pub-bibtex">
+@INPROCEEDINGS{Miangoleh2021Boosting,<br />
+	author={S. Mahdi H. Miangoleh and Sebastian Dille and Long Mai and Sylvain Paris and Ya\u{g}{\i}z Aksoy},<br />
+	title={Boosting Monocular Depth Estimation Models to High-Resolution via Content-Adaptive Multi-Resolution Merging},<br />
+	journal={Proc. CVPR},<br />
+	year={2021},<br />
+	} 
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<p style="text-align:center;"><b>Published CMPT 461 Projects Supervised by Sebastian</b></p>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../VETI" target="_blank"><img src="https://yaksoy.github.io/images/research/veti.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../VETI" target="_blank">VETI: 3D-Guided Visual Effect Tuning on Images <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Mingrui Zhao*, Duc Anh Nguyen*, Gnanavel Premnath, <b>Sebastian Dille</b>, <b>S. Mahdi H. Miangoleh</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Asia Posters, 2026
+</div>
+
+<div class="pub-accordion">
+  <input id="SIGa26p-item1" name="accordion1" type="checkbox" />
+  <label for="SIGa26p-item1">Abstract</label>
+  <div class="pub-abstract">
+	We present VETI, a framework that offers physically motivated image editing while remaining fully anchored to the input photograph. VETI poses photo editing as an interactive process within a rendering engine. It provides direct access to the physical properties of the scene by grounding lighting, object materials, and color palettes in an actual 3D representation of the image. Artists can edit real-world photographs with powerful tools typically reserved for synthetic assets, such as palette swatches, BSDF channels, and light rigs. Reflections and illumination changes are rendered realistically, replacing tedious painting of the approximated effects.
+  </div>
+
+  <input id="SIGa26p-item2" name="accordion1" type="checkbox" />
+  <label for="SIGa26p-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIGa26p-VETI.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/2026Poster-Paper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIGa26p-VETI.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/2026Poster-Poster.jpg" title="Poster" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIGa26p-item3" name="accordion1" type="checkbox" />
+  <label for="SIGa26p-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{zhaoNguyenVETI,<br />
+	author={Mingrui Zhao and Duc Anh Nguyen and Gnanavel Premnath and Sebastian Dille and S. Mahdi H. Miangoleh and Ya\u{g}{\i}z Aksoy},<br />
+	title={VETI: 3D-Guided Visual Effect Tuning on Imagess},<br />
+	booktitle={SIGGRAPH Asia Posters},<br />
+	year={2026},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+	<a href="../2DGraphicsComp" target="_blank"><img src="https://yaksoy.github.io/images/research/2025Poster-LogoCompositing.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../2DGraphicsComp" target="_blank">Physically-Based Compositing of 2D Graphics <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Tyrus Tracey, Stefan Diaconu, <b>Sebastian Dille</b>, <b>S. Mahdi H. Miangoleh</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2025
+</div>
+
+<div class="pub-accordion">
+  <input id="SIG25b-item1" name="accordion1" type="checkbox" />
+  <label for="SIG25b-item1">Abstract</label>
+  <div class="pub-abstract">
+	We propose an interactive pipeline that enables the seamless integration of a 2D logo into a target image, adapting to the surface geometry and lighting conditions of the scene to ensure realistic appearance.
+  </div>
+
+  <input id="SIG25b-item2" name="accordion1" type="checkbox" />
+  <label for="SIG25b-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG25p-2DGraphicCompositing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/2025Posterb-Paper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG25p-2DGraphicCompositing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/2025Posterb-Poster.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/Z8e22OwXgEs" target="_blank"><img src="https://yaksoy.github.io/images/research/2025Posterb-Video.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG25b-item3" name="accordion1" type="checkbox" />
+  <label for="SIG25b-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{traceyDiaconuCompositing,<br />
+	author={Tyrus Tracey and Stefan Diaconu and Sebastian Dille and S. Mahdi H. Miangoleh and Ya\u{g}{\i}z Aksoy},<br />
+	title={Physically-Based Compositing of {2D} Graphics},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2025},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../NIREditing" target="_blank"><img src="https://yaksoy.github.io/images/research/NIREditing.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../NIREditing" target="_blank">Interactive RGB+NIR Photo Editing <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Samuel Antunes Miranda*, Shahrzad Mirzaei*, Mariam Bebawy*, <b>Sebastian Dille</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2024
+</div>
+
+<div class="pub-accordion">
+  <input id="SIGp24-item1" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item1">Abstract</label>
+  <div class="pub-abstract">
+	Near-infrared imagery offers great possibilities for creative image editing. Lying outside the visual spectrum, the NIR information can effectively serve as a fourth color channel to common RGB. 
+	Compared to the latter, it shows interesting and complementary behavior: its intensity strongly varies with the surface materials in the scene and is less affected by atmospheric perturbations.
+	For these reasons, NIR imaging has been a long-standing topic of interest in research and its integration has been proven successful for applications like false coloring, contrast enhancement, image dehazing, and purification of low-light images. 
+	Recent developments in smartphone technology have simplified the capturing process, making NIR data readily available for broader use outside the research community. 
+	At the same time, existing tools for NIR processing and manipulation are rare and still limited in functionality. 
+	With many solutions lacking specialized features, the editing process is inefficient and cumbersome, making them prone to generate suboptimal results. 
+	To tackle this issue, we introduce a simple and intuitive photo editing tool that combines RGB and NIR properties, offering functions tailored specifically for the RGB+NIR combination, and granting the user the ability to edit and refine images more creatively.
+  </div>
+
+  <input id="SIGp24-item2" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIGp24-NIREditing.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/NIREditingPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/tNsUQYI7vw8" target="_blank"><img src="https://yaksoy.github.io/images/research/NIREditingVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIGp24-item3" name="accordion1" type="checkbox" />
+  <label for="SIGp24-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{NIREditing,<br />
+	author={Samuel Antunes Miranda and Shahrzad Mirzaei and Mariam Bebawy and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
+	title={Interactive RGB+NIR Photo Editing},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2024},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
+<tr>
+<td class="pub-photocol">
+<a href="../parallaxbg" target="_blank"><img src="https://yaksoy.github.io/images/research/parallax.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="../parallaxbg" target="_blank">Parallax Background Texture Generation <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	Brigham Okano, Shao Yu Shen, <b>Sebastian Dille</b>, and <b>Yağız Aksoy</b> 
+</div>
+<div class="pub-venue">
+	SIGGRAPH Posters, 2022
+</div>
+
+<div class="pub-accordion">
+  <input id="SIG22c-item1" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item1">Abstract</label>
+  <div class="pub-abstract">
+	Art assets for games can be time intensive to produce. 
+	Whether it is a full 3D world, or simpler 2D background, creating good looking assets takes time and skills that are not always readily available. 
+	Time can be saved by using repeating assets, but visible repetition hurts immersion. 
+	Procedural generation techniques can help make repetition less uniform, but do not remove it entirely. 
+	Both approaches leave noticeable levels of repetition in the image, and require significant time and skill investments to produce. 
+	Video game developers in hobby, game jam, or early prototyping situations may not have access to the required time and skill. 
+	We propose a framework to produce layered 2D backgrounds without the need for significant artist time or skill. 
+	In our pipeline, the user provides segmented photographic input, instead of creating traditional art, and receives game-ready assets. 
+	By utilizing photographs as input, we can achieve both a high level of realism for the resulting background texture as well as a shift from manual work away towards computational run-time which frees up developers for other work.
+  </div>
+
+  <input id="SIG22c-item2" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item2">Manuscript &amp; more</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://yaksoy.github.io/papers/SIG22c-ParallaxBG.pdf" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/parallaxPaper.jpg" title="Paper" /></a></td>
+		<td><a href="https://yaksoy.github.io/papers/SIG22c-ParallaxBG.jpg" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/parallaxPosterSmall.jpg" title="Poster" /></a></td>
+		<td><a href="https://youtu.be/_KWdFy3YipI" target="_blank"><img src="https://yaksoy.github.io/images/research/parallaxVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+
+  <input id="SIG22c-item3" name="accordion1" type="checkbox" />
+  <label for="SIG22c-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	@INPROCEEDINGS{parallaxBG,<br />
+	author={Brigham Okano and Shao Yu Shen and Sebastian Dille and Ya\u{g}{\i}z Aksoy},<br />
+	title={Parallax Background Texture Generation},<br />
+	booktitle={SIGGRAPH Posters},<br />
+	year={2022},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+
+      </div><!-- /.entry-contentProject -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<span>&copy; 2026 Yagiz Aksoy</span>
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = 'https://yaksoy.github.io';
+</script>
+
+<!-- Include Latex style math -->
+<!-- https://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://yaksoy.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://yaksoy.github.io/assets/js/scripts.min.js"></script>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11195487; 
+var sc_invisible=1; 
+var sc_security="112d9b46"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11195487/0/112d9b46/1/"
+alt="shopify analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>

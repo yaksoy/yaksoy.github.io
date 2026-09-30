@@ -154,6 +154,56 @@ and shows powerful recovery of bright light sources and highlights.
 <hr />
 
 <table>
+<tr>
+<td class="pub-photocol">
+<a href="https://yaksoy.github.io/dr-dille/" target="_blank"><img src="https://yaksoy.github.io/images/research/sebastianphd.jpg" class="pub-photo" /></a>
+</td>
+<td>
+<div class="pub-title">
+	<a href="https://yaksoy.github.io/dr-dille/" target="_blank">Physically-Based Models of Dynamic Range Extension <i class="fa fa-external-link"></i></a>
+</div>
+<div class="pub-authors">
+	<b>Sebastian Dille</b>
+</div>
+<div class="pub-venue">
+	PhD Thesis, Simon Fraser University, 2026
+</div>
+
+<div class="pub-accordion">
+	<input id="SFU26seb-item1" name="accordion1" type="checkbox" />
+	<label for="SFU26seb-item1">Abstract</label>
+	<div class="pub-abstract">
+		Natural scenes contain a wide range of intensities spanning multiple orders of magnitude. This high dynamic range (HDR) can be perceived by our visual system without problem. However, the low dynamic range (LDR) of common cameras fails to capture the rich contrast, and most casual photos have lost colors and details in saturated pixels. Dynamic range extension aims to revert the clipping. Restoring the lost information in the highlights not only results in more realistic images, but also enables the physical modeling of light and opens up many downstream applications, such as image-based lighting and illumination-aware image editing. In this thesis, we approach this task using three novel formulations. Leveraging the physical properties of the scene, our models tame the long-tailed distribution of HDR radiance and relax the dependency on large HDR datasets by separating the problem into simpler sub-tasks. Looking into the image formation process, we observe important differences between the intrinsic components. For one, separating illumination from reflectance enables us to extend the dynamic range of the former without compressing the latter. Analogously, we can adapt to different material properties by separating moderate diffuse reflectance from the bright directed light of active light sources. Or, we take inspiration from the exposure mechanisms within the camera and progressively extend the dynamic range of an input image by one exposure value at a time. Our novel formulations allow for dedicated networks with a more precise supervision. We can drastically extend the limited diversity of HDR data by learning diffuse reflectance or a single-EV extension from widely available RAW image collections. This provides our models with a strong prior over natural images, combined with a realistic highlight distribution learned from full HDR data. Our novel perspectives improve performance and enable generalization to everyday photographs. We evaluate our approaches extensively on various benchmarks, including a novel multi-illuminant dataset. Our models show state-of-the-art results against a wide set of baselines, generate vivid colors, and reproduce bright highlights with a wide dynamic range. We outperform heavy diffusion-based networks with our streamlined architectures and create 4K results in less than a second.
+  </div>
+  
+  <input id="SFU26seb-item2" name="accordion1" type="checkbox" />
+  <label for="SFU26seb-item2">Thesis and Presentation</label>
+  <div class="pub-photolink">
+  
+	<table><tr>
+		<td><a href="https://summit.sfu.ca/item/40586" target="_blank"><img width="200" src="https://yaksoy.github.io/images/research/SFU26SebastianPaper.jpg" title="Thesis" /></a></td>
+		<td><a href="https://youtu.be/AwAv4Lx14rY" target="_blank"><img src="https://yaksoy.github.io/images/research/SFU26SebastianVideo.jpg" title="Video" /></a></td>
+	</tr></table>
+	</div>
+  
+  <input id="SFU26seb-item3" name="accordion1" type="checkbox" />
+  <label for="SFU26seb-item3">BibTeX</label>
+  <div class="pub-bibtex">
+	  @PHDTHESIS{dilleHDRphd,<br />
+	  author={Sebastian Dille},<br />
+	  title={Physically-Based Models of Dynamic Range Extension},<br />
+	  year={2026},<br />
+	  school={Simon Fraser University},<br />
+	}
+  </div>
+</div>
+</td>
+</tr>
+</table>
+
+<hr />
+
+<table>
 	<tr>
 	<td class="pub-photocol">
 	<a href="../intrinsicHDR" target="_blank"><img src="https://yaksoy.github.io/images/research/intrinsicHDR.jpg" class="pub-photo" /></a>
